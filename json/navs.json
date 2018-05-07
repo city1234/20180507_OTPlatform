@@ -1,0 +1,358 @@
+{
+    "contentManagement": [{
+            "title": "账号管理",
+            "icon": "&#xe673;",
+            "href": "",
+            "spread": false,
+            "children": [{
+                    "title": "基本资料",
+                    "icon": "",
+                    "href": "page/user/userInfo.html",
+                    "spread": false
+                },
+                {
+                    "title": "大股东",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": ""
+                },
+                {
+                    "title": "股东",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": ""
+                },
+                {
+                    "title": "总代",
+                    "icon": "",
+                    "href": "page/account/addnone1stmember.html",
+                    "spread": false,
+                    "target": ""
+                },
+                {
+                    "title": "代理",
+                    "icon": "",
+                    "href": "page/account/agentList.html",
+                    "spread": false,
+                    "target": ""
+                },
+                {
+                    "title": "会员",
+                    "icon": "",
+                    "href": "page/account/memberList.html",
+                    "spread": false,
+                    "target": ""
+                },
+                {
+                    "title": "返点设置",
+                    "icon": "",
+                    "href": "page/rebate/rebateList.html",
+                    "spread": false,
+                    "target": ""
+                }
+            ]
+        },
+        {
+            "title": "现金系统",
+            "icon": "&#xe672;",
+            "href": "",
+            "spread": false,
+            "children": [{
+                    "title": "新线上付款设定",
+                    "icon": "",
+                    "href": "",
+                    "spread": false
+                },
+                {
+                    "title": "层级管理",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": ""
+                },
+                {
+                    "title": "支付平台设定",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "thirdChildren": [{
+                            "title": "线上入款",
+                            "icon": "",
+                            "href": "page/finance/storeList.html",
+                            "target": ""
+                        },
+                        {
+                            "title": "线上出款",
+                            "icon": "",
+                            "href": "",
+                            "spread": false,
+                            "target": ""
+                        },
+                        {
+                            "title": "公司入款设定",
+                            "icon": "",
+                            "href": "",
+                            "spread": false,
+                            "target": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "出入款记录",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": "",
+                    "thirdChildren": [{
+                            "title": "入款历史记录",
+                            "icon": "",
+                            "href": "",
+                            "spread": false
+                        },
+                        {
+                            "title": "出款记录",
+                            "icon": "",
+                            "href": "",
+                            "spread": false,
+                            "target": "_blank"
+                        }
+                    ]
+                },
+                {
+                    "title": "人工线上存提",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": "",
+                    "thirdChildren": [{
+                            "title": "人工存入",
+                            "icon": "",
+                            "href": "page/agent/agentDeposit.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "人工提出",
+                            "icon": "",
+                            "href": "",
+                            "spread": false,
+                            "target": "_blank"
+                        },
+                        {
+                            "title": "批次处理",
+                            "icon": "",
+                            "href": "",
+                            "spread": false,
+                            "target": "_blank"
+                        }
+                    ]
+                },
+                {
+                    "title": "额度转换",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": "",
+                    "thirdChildren": [{
+                            "title": "人工额度转换",
+                            "icon": "",
+                            "href": "",
+                            "spread": false
+                        },
+                        {
+                            "title": "额度转换记录",
+                            "icon": "",
+                            "href": "",
+                            "spread": false,
+                            "target": "_blank"
+                        }
+                    ]
+                },
+                {
+                    "title": "子现金系统",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": "",
+                    "thirdChildren": [{
+                            "title": "会员记录",
+                            "icon": "",
+                            "href": "page/subFinance/memberFinance.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "代理记录",
+                            "icon": "",
+                            "href": "page/subFinance/agentFinance.html",
+                            "spread": false
+                        }
+                    ]
+                },
+                {
+                    "title": "稽核查询",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": "",
+                    "thirdChildren": [{
+                            "title": "取款稽核查询",
+                            "icon": "",
+                            "href": "",
+                            "spread": false
+                        },
+                        {
+                            "title": "即时稽核查询",
+                            "icon": "",
+                            "href": "",
+                            "spread": false,
+                            "target": "_blank"
+                        }
+                    ]
+                },
+                {
+                    "title": "账号查询",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": "",
+                    "thirdChildren": [{
+                            "title": "会员查询",
+                            "icon": "",
+                            "href": "",
+                            "spread": false
+                        },
+                        {
+                            "title": "代理查询",
+                            "icon": "",
+                            "href": "",
+                            "spread": false,
+                            "target": "_blank"
+                        }
+                    ]
+                },
+                {
+                    "title": "出入款总账",
+                    "icon": "",
+                    "href": " ",
+                    "spread": false,
+                    "target": "_blank"
+                }
+            ]
+        },
+        {
+            "title": "运营管理",
+            "icon": "&#xe674;",
+            "href": "",
+            "spread": false,
+            "children": [{
+                    "title": "返水设置",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": ""
+                },
+                {
+                    "title": "返水统计",
+                    "icon": "",
+                    "href": "page/agent/backwater.html",
+                    "spread": false
+                },
+                {
+                    "title": "返水查询",
+                    "icon": "",
+                    "href": "page/rebateSearch/rebateSearchList.html",
+                    "spread": false,
+                    "target": ""
+                },
+                {
+                    "title": "代理返水查询",
+                    "icon": "",
+                    "href": "page/agent/agentBackwater.html",
+                    "spread": false,
+                    "target": ""
+                }
+            ]
+        },
+        {
+            "title": "平台管理",
+            "icon": "&#xe675;",
+            "href": "",
+            "spread": false
+        },
+        {
+            "title": "报表管理",
+            "icon": "&#xe676;",
+            "href": "",
+            "spread": false
+        },
+        {
+            "title": "注单管理",
+            "icon": "&#xe671;",
+            "href": "",
+            "spread": false
+        },
+        {
+            "title": "角色管理",
+            "icon": "&#xe670;",
+            "href": "",
+            "spread": false
+        },
+        {
+            "title": "日志管理",
+            "icon": "&#xe677;",
+            "href": "",
+            "spread": false
+        }
+    ],
+    "memberCenter": [{
+            "title": "用户中心",
+            "icon": "&#xe612;",
+            "href": "",
+            "spread": false
+        },
+        {
+            "title": "会员等级",
+            "icon": "icon-vip",
+            "href": "",
+            "spread": false
+        }
+    ],
+    "systemeSttings": [{
+        "title": "系统基本参数",
+        "icon": "&#xe631;",
+        "href": "",
+        "spread": false
+    }, {
+        "title": "系统日志",
+        "icon": "icon-log",
+        "href": "",
+        "spread": false
+    }, {
+        "title": "友情链接",
+        "icon": "&#xe64c;",
+        "href": "",
+        "spread": false
+    }, {
+        "title": "图标管理",
+        "icon": "&#xe857;",
+        "href": "",
+        "spread": false
+    }],
+    "seraphApi": [{
+        "title": "三级联动模块",
+        "icon": "icon-mokuai",
+        "href": "",
+        "spread": false
+    }, {
+        "title": "bodyTab模块",
+        "icon": "icon-mokuai",
+        "href": "",
+        "spread": false
+    }, {
+        "title": "三级菜单",
+        "icon": "icon-mokuai",
+        "href": "",
+        "spread": false
+    }]
+}
