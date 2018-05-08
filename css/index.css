@@ -16,11 +16,30 @@
     padding-left: 1.8em;
 }
 
-.layui-nav .layui-this[thirdchildren] a[layer3].active{
+.layui-nav .layui-this[thirdchildren] a[layer3].active {
     display: block;
-    background: url(../images/arrow.png) right center no-repeat rgba(255,255,255,0.1) !important;  
+    background: url(../images/arrow.png) right center no-repeat rgba(255, 255, 255, 0.1) !important;
     background-position-x: -100px;
 }
+
+
+/* 20180505 3rd nav Setting --Sharlene */
+
+.layui-nav-tree dd[thirdchildren].layui-this {
+    background-color: transparent;
+}
+
+.layui-nav [thirdchildren] cite {
+    font-size: 0.9em;
+    padding-left: 1.8em;
+}
+
+.layui-nav .layui-this[thirdchildren] a[layer3].active {
+    display: block;
+    background: url(../images/arrow.png) right center no-repeat rgba(255, 255, 255, 0.1) !important;
+    background-position-x: -100px;
+}
+
 
 /* .layui-nav .layui-this a[layer2].active{
     display: block;
@@ -262,7 +281,7 @@ iframe {
 
 .hideMenu {
     float: left;
-    width: 20px;
+    width: 24px!important;
     height: 20px;
     margin-top: 15px;
     font-size: 17px;
@@ -407,6 +426,7 @@ iframe {
 
 .layui-nav-itemed .layui-nav-child a {
     padding-left: 40px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 
@@ -426,11 +446,15 @@ iframe {
     border: none;
     transition: all 0.3s;
     background: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid #e6e6e6;
 }
 
 .component .layui-input::placeholder {
-    color: #ccc;
+    color: rgba(233, 233, 233, 0.5);
+}
+
+.component .layui-input .layui-icon {
+    color: rgba(233, 233, 233, 0.5);
 }
 
 .component .layui-input:focus {
@@ -475,7 +499,7 @@ iframe {
 #top_tabs_box {
     padding-right: 138px;
     height: 40px;
-    border-bottom: 1px solid #e2e2e2;
+    /* border-bottom: 1px solid #e2e2e2; */
 }
 
 #top_tabs {
@@ -485,7 +509,7 @@ iframe {
 
 .layui-tab-title .layui-this {
     background-color: #fff;
-    color: #244d8c;
+    color: #55acee;
 }
 
 .layui-tab-title .layui-this:after {

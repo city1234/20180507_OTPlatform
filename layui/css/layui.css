@@ -153,10 +153,13 @@ pre {
     word-wrap: break-word
 }
 
+
+/* 2018/05/08 Amanda */
+
 body {
     line-height: 24px;
     font: 14px Helvetica Neue, Helvetica, PingFang SC, \5FAE\8F6F\96C5\9ED1, Tahoma, Arial, sans-serif;
-    font-family: "MicrosoftYaHei";
+    font-family: "Microsoft Yahei";
 }
 
 hr {
@@ -894,7 +897,9 @@ a cite {
 }
 
 .layui-layout-admin .layui-header {
+    color: #343434;
     background-color: #ededed;
+    border-bottom: 2px solid #d4eafa;
 }
 
 .layui-layout-admin .layui-side {
@@ -905,7 +910,7 @@ a cite {
 
 .layui-layout-admin .layui-body {
     top: 60px;
-    bottom: 44px
+    /* bottom: 44px */
 }
 
 .layui-layout-admin .layui-main {
@@ -1734,7 +1739,9 @@ a cite {
 
 .layui-bg-black,
 .layui-bg-blue,
+
 /* , */
+
 .layui-bg-purple,
 .layui-bg-cyan,
 .layui-bg-green,
@@ -1885,15 +1892,16 @@ hr {
     cursor: pointer
 }
 
-.layui-btn:hover {
+
+/* .layui-btn:hover {
     opacity: .8;
     filter: alpha(opacity=80);
     color: #fff
-}
+} */
 
 .layui-btn:active {
-    opacity: 1;
-    filter: alpha(opacity=100)
+    background-color: #c9c9c9;
+    color: #fff;
 }
 
 .layui-btn+.layui-btn {
@@ -1946,22 +1954,70 @@ hr {
 /* 20180502 Layui btn button setting: Normal btn Background-color --Sharlene*/
 
 .layui-btn-normal {
-    background-color: #55acee;
+    background-color: #1e9fff
+}
+
+.layui-btn-normal:hover {
+    background-color: #1a8fe6
 }
 
 .layui-btn-warm {
     background-color: #FFB800
 }
 
-.layui-btn-danger {
-    background-color: #FF5722
+.layui-btn-warm:hover {
+    background-color: #e5a500
 }
 
-.layui-btn-disabled,
-.layui-btn-disabled:active,
-.layui-btn-disabled:hover {
+.layui-btn-danger {
+    background-color: #ff5823
+}
+
+.layui-btn-danger:hover {
+    background-color: #e75021
+}
+
+.layui-btn-gray {
+    background-color: #eaeaea;
+    color: #666666;
+}
+
+.layui-btn-gray:hover {
+    color: #666666;
+}
+
+.layui-btn-gray.active {
+    background-color: #003ea4;
+    color: #fff;
+}
+
+
+/* 2018/05/08 Amanda */
+
+.layui-btn-restore {
+    background-color: #019688
+}
+
+.layui-btn-restore:hover {
+    background-color: #008878
+}
+
+.layui-btn-authority {
+    background-color: #50bd54
+}
+
+.layui-btn-authority:hover {
+    background-color: #47a648
+}
+
+.layui-btn-disabled {
+    background-color: #fff;
+    color: #c9c9c9;
     border: 1px solid #e6e6e6;
-    background-color: #FBFBFB;
+}
+
+.layui-btn-disabled.active {
+    border: 1px solid #e6e6e6;
     color: #C9C9C9;
     cursor: not-allowed;
     opacity: 1
@@ -2058,7 +2114,12 @@ hr {
 .layui-input::-webkit-input-placeholder,
 .layui-select::-webkit-input-placeholder,
 .layui-textarea::-webkit-input-placeholder {
-    line-height: 1.3
+    line-height: 1.3;
+    color: #999;
+}
+
+.layui-disabled::-webkit-input-placeholder {
+    color: #666;
 }
 
 .layui-input,
@@ -3211,7 +3272,7 @@ input.layui-login::placeholder {
 }
 
 .layui-table-page>div {
-    float:right;
+    float: right;
     height: 26px
 }
 
@@ -3629,6 +3690,22 @@ body .layui-table-tips .layui-layer-content {
     display: none
 }
 
+
+/* 20180508 2nd 3rd nav background Setting --Sharlene */
+
+
+/* .layui-nav-tree .layui-nav-child dd.layui-this, */
+
+.layui-nav-tree .layui-nav-child dd.layui-this a[layer2],
+
+/* .layui-nav-tree .layui-this, */
+
+.layui-nav-tree .layui-this>a[layer2],
+.layui-nav-tree .layui-this>a[layer2]:hover {
+    background-color: #487fcc !important;
+    color: #fff !important;
+}
+
 .layui-nav-tree {
     width: 200px;
     padding: 0
@@ -3654,6 +3731,14 @@ body .layui-table-tips .layui-layer-content {
 }
 
 
+/* 20180508 2nd nav Vertical-align Setting --Sharlene */
+
+.layui-nav-tree .layui-nav-item a i.layui-icon[data-icon] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
 /* .layui-nav-tree .layui-nav-bar {
     width: 5px;
     height: 0;
@@ -3675,14 +3760,14 @@ body .layui-table-tips .layui-layer-content {
     color: #fff !important
 }
 
-.layui-nav-tree .layui-nav-child .layui-this > a[layer2],
-.layui-nav-tree .layui-nav-child .layui-this > a[layer2].active {
+.layui-nav-tree .layui-nav-child .layui-this>a[layer2],
+.layui-nav-tree .layui-nav-child .layui-this>a[layer2].active {
     /* background: url(../../images/arrow.png) right center no-repeat #487fcc !important; */
     background-image: url(../../images/arrow.png), url(../../images/clickthird.svg);
-    background-position: right center , left center;
+    background-position: right center, left center;
     background-repeat: no-repeat, no-repeat;
-    background-size: auto, 30px ;
-    background-position-x:auto, -12px;
+    background-size: auto, 30px;
+    background-position-x: auto, -12px;
     color: #fff !important;
 }
 
@@ -3705,6 +3790,27 @@ body .layui-table-tips .layui-layer-content {
 .layui-nav-tree .layui-nav-child a:hover {
     background: 0 0;
     color: #fff
+}
+
+.layui-nav-itemed .layui-nav-child dd.active {
+    background-image: url(../../images/clickthird.svg) !important;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    color: #fff !important;
+}
+
+
+/* 20180508 2nd layer nav style */
+
+.layui-nav-tree .layui-nav-child .layui-this>a[layer2] {
+    /* background: url(../../images/arrow.png) right center no-repeat #487fcc !important; */
+    background-image: url(../../images/arrow.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: auto;
+    color: #fff !important;
 }
 
 .layui-nav-tree .layui-nav-more {
@@ -3901,14 +4007,14 @@ body .layui-table-tips .layui-layer-content {
     top: 1px;
     text-align: center;
     font-size: 14px;
-    color: #244d8c;
+    /* color: #244d8c; */
     transition: all .2s;
     -webkit-transition: all .2s
 }
 
 .layui-tab-title li .layui-tab-close:hover {
     border-radius: 2px;
-    background-color: #244d8c;
+    background-color: #55acee;
     color: #fff
 }
 
@@ -4669,120 +4775,161 @@ body .layui-util-face .layui-layer-content {
 
 
 /* 20180502 StoreList btn sepc --Sharlene */
+
+
 /* 20180503 accountAgentList btn sepc --Sharlene */
+
 .storeList .layui-btn+.layui-btn,
-.agentList .layui-btn+.layui-btn{
+.agentList .layui-btn+.layui-btn {
     margin-left: -3px;
 }
+
 .storeList .layui-inline,
-.agentList .layui-inline{
+.agentList .layui-inline {
     display: inline-block;
     margin-right: 20px !important;
 }
+
 .storeList .layui-inline:last-child,
-.agentList .layui-inline:last-child{
+.agentList .layui-inline:last-child {
     margin-right: 0px !important;
 }
 
 
 /* 20180502 StoreList form sepc --Sharlene */
+
+
 /* 20180504 reBateList form sepc --Sharlene */
+
 .storeList .layui-form-item,
 .agentList .layui-form-item,
-.rebateList .layui-form-item{
+.rebateList .layui-form-item {
     margin-bottom: 0;
 }
+
 .storeList .layui-inline .layui-form-label,
 .agentList .layui-inline .layui-form-label,
-.rebateList .layui-inline .layui-form-label{
+.rebateList .layui-inline .layui-form-label {
     width: auto;
     padding: 9px 0px;
 }
 
 .storeList .layui-inline .layui-input-block,
 .agentList .layui-inline .layui-input-block,
-.rebateList .layui-inline .layui-input-block{
+.rebateList .layui-inline .layui-input-block {
     display: inline-block;
     margin-left: auto;
 }
 
 .agentList .layui-input-block,
-.rebateList .layui-input-block{
+.rebateList .layui-input-block {
     width: 140px;
 }
 
+
 /* 20180504 StoreList,Agent Setting: blockquote, search result--Sharlene */
+
 .storeList blockquote,
 .agentList blockquote,
-.rebateList blockquote{
+.rebateList blockquote {
     margin-bottom: 30px;
 }
+
 div.searchAgent,
-div.searchMember{
+div.searchMember {
     margin-top: 5px;
     margin-bottom: 12px;
     vertical-align: middle;
     letter-spacing: 0.04em;
 }
+
 div.searchAgent a,
-div.searchMember a{
+div.searchMember a {
     margin-right: 5px;
     margin-top: -3px;
 }
 
-.line-height2-5{
+.line-height2-5 {
     line-height: 2.5;
 }
 
-.rebateSearchSum{
-    display:inline-block;
+.rebateSearchSum {
+    display: inline-block;
     z-index: 999;
     position: fixed;
     bottom: 0 !important;
     padding: 0px 0 10px 10px;
 }
 
-.rebateSearchSum p{
+.rebateSearchSum p {
     background-color: white;
     padding: 10px;
 }
 
 table.rebateChargeoff th,
-table.rebateChargeoff td{
+table.rebateChargeoff td {
     text-align: center;
 }
 
-table.rebateChargeoff  .layui-input-block{
+table.rebateChargeoff .layui-input-block {
     margin-left: 0;
     min-height: auto;
 }
-div.page-shift{
+
+div.page-shift {
     position: fixed;
     bottom: 0;
-    left:0;
+    left: 0;
     background-color: #fff;
 }
-.layui-table-page.page-shift > div{
-    margin-right: 10px;
-} 
 
-.layui-layer-content{
-    text-align:center;
+.layui-table-page.page-shift>div {
+    margin-right: 10px;
 }
 
-.layui-icon.info-icon{
+.layui-layer-content {
+    text-align: center;
+}
+
+.layui-icon.info-icon {
     font-size: 2.2em !important;
     line-height: 2.3;
     color: #55acee;
 }
-.layui-icon.info-icon:hover{
+
+.layui-icon.info-icon:hover {
     opacity: 0.7;
 }
 
-td[data-field="rebateSearchListName"]{
-    color:#55acee;
+td[data-field="rebateSearchListName"] {
+    color: #55acee;
 }
 
-.userinfo .layui-input-block{
+.userinfo .layui-input-block {
     margin-bottom: 15px !important;
+}
+
+
+/* 20180508 4th nav Spec Setting -- Sharlene */
+
+.nav-4th .layui-btn {
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 10px;
+    /* margin-right: 5px; */
+}
+
+.nav-4th .layui-btn:last-child {
+    margin-right: 0;
+}
+
+
+/* 20180508 welcome page Setting —Sharlene */
+
+.childrenBody.welcome {
+    padding: 0;
+}
+
+.welcome {
+    background: url("../../images/welcome.jpg") no-repeat top center;
 }

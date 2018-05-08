@@ -17,6 +17,7 @@
 
 <body class="childrenBody">
     <div class="backwater">
+        <!-- <h2 class="title layui-left">返水统计</h2> -->
         <form class="layui-form">
             <div class="layui-form-item">
                 <label class="layui-form-label">日期查询：</label>
@@ -85,28 +86,28 @@
 
     <script src="../../layui/layui.js"></script>
     <!-- ▼ 日期弹窗 ▼ -->
-<script>
-    //日期彈窗
-    layui.use('laydate', function(){
-    var laydate = layui.laydate;
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
 
-    //自定义格式
-    laydate.render({
-        elem: '#dateStart'
-        ,format: 'yyyy-MM-dd'
-        // ,value: '2018-01-01'
-    });
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd'
+                    // ,value: '2018-01-01'
+            });
 
-    laydate.render({
-        elem: '#dateEnd'
-        ,format: 'yyyy-MM-dd'
-        // ,value: '2018-01-01'
-    });
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd'
+                    // ,value: '2018-01-01'
+            });
 
 
-    });
-    //Demo
-    layui.use('form', function() {
+        });
+        //Demo
+        layui.use('form', function() {
             var form = layui.form;
 
             //监听提交
@@ -115,7 +116,7 @@
                 return false;
             });
         });
-</script>
+    </script>
 </body>
 
 </html>

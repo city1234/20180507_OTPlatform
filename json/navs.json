@@ -27,7 +27,7 @@
                 {
                     "title": "总代",
                     "icon": "",
-                    "href": "page/account/addnone1stmember.html",
+                    "href": "",
                     "spread": false,
                     "target": ""
                 },
@@ -246,13 +246,6 @@
             "href": "",
             "spread": false,
             "children": [{
-                    "title": "返水设置",
-                    "icon": "",
-                    "href": "",
-                    "spread": false,
-                    "target": ""
-                },
-                {
                     "title": "返水统计",
                     "icon": "",
                     "href": "page/agent/backwater.html",

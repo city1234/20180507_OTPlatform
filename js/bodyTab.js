@@ -50,9 +50,10 @@ layui.define(["element", "jquery"], function(exports) {
                     ulHtml += '<dl class="layui-nav-child">';
                     for (var j = 0; j < data[i].children.length; j++) {
                         if (data[i].children[j].target == "_blank") { // 第二层
-                            ulHtml += '<dd><a layer2 onclick="clicksecond(this)" data-url="' + data[i].children[j].href + '" target="' + data[i].children[j].target + '">';
+                            ulHtml += '<dd onclick="clicksecond(this)"><a layer2 data-url="' + data[i].children[j].href + '" target="' + data[i].children[j].target + '">';
+                            
                         } else {
-                            ulHtml += '<dd><a layer2 onclick="clicksecond(this)" data-url="' + data[i].children[j].href + '">';
+                            ulHtml += '<dd onclick="clicksecond(this)"><a layer2 data-url="' + data[i].children[j].href + '">';
                         }
                         if (data[i].children[j].icon != undefined && data[i].children[j].icon != '') {
                             if (data[i].children[j].icon.indexOf("icon-") != -1) {
@@ -340,12 +341,23 @@ layui.define(["element", "jquery"], function(exports) {
             }, 100);
         })
         // 点击 第二层 展开第三层
+        // 20180508 2rd layer action
     $("body").on("click", "[layer2]", function() {
-        var layer3 = $(this).parent().next()
+        var layer2 =  $(this).parent()
+        var layer3 = layer2.next()
+        var layer3Open = ''
         console.info(layer3)
         if (layer3.attr('thirdChildren')) {
             layer3.toggleClass('hide')
+            var layer3Open = layer3.hasClass('hide')?false:true
         }
+        //layer3Open 第三次 是否 是显示的状态
+        if(layer3Open){
+            layer2.addClass('active')
+        }else{
+            layer2.removeClass('active')
+        }
+
     })
 
     //删除tab
@@ -455,19 +467,33 @@ layui.define(["element", "jquery"], function(exports) {
 //     element.classList.toggle("active");
 //  }
 
-// function clicksecond(thisElement) {
-// 	var seconds = document.getElementsByTagName("a[layer2]");
+
+
+// function clickthird(thisElement) {
+// 	var elements = document.getElementsByTagName("a");
 //     for (var i = 0; i < elements.length; i++) {
-//     	// seconds[i].classList.remove("active");
+//     	elements[i].classList.remove("active");
 //     }
-//     thisElement.classList.toggle("active");
+    
+//     thisElement.classList.add("active");
 // }
 
+// 20180508 3rd layer action
 function clickthird(thisElement) {
 	var elements = document.getElementsByTagName("a");
     for (var i = 0; i < elements.length; i++) {
-    	elements[i].classList.remove("active");
+        elements[i].classList.remove("active");
+        // elements[i].parentNode.parentNode.classList.remove("active");
     }
-    
+    // thisElement.parentNode.parentNode.previousSibling.classList.add("active");
     thisElement.classList.add("active");
+    
 }
+
+// function clicksecond(thisElement) {
+// 	var seconds = document.getElementsByTagName('dd');
+//     for (var i = 0; i < seconds.length; i++) {
+//         seconds[i].classList.remove("active");
+//     }
+//     thisElement.classList.add("active");
+// }

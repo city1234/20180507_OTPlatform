@@ -200,7 +200,7 @@
 
 form input.layui-input[disabled] {
     background: #f2f2f2;
-    color: #595963 !important;
+    color: #666 !important;
 }
 
 .user_right {
@@ -1039,6 +1039,14 @@ h2.method {
 }
 
 
+/* 2018/05/08 Amanda */
+
+#userFaceBtn {
+    color: #343434;
+    border: 1px solid #e6e6e6;
+}
+
+
 /*响应式*/
 
 @media screen and (max-width:450px) {
@@ -1142,7 +1150,20 @@ h2.method {
     }
 }
 
-.addtemplate .rebate,
+
+/* 2018/05/08 Amanda  */
+
+.addtemplate .rebate {
+    background-color: #f2f2f2;
+    display: block;
+    padding: 9px 15px;
+    /* width: 100%; */
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
 .addagentone1stmember .rebate {
     padding: 9px 15px;
     width: 85px;
@@ -1163,9 +1184,17 @@ h2.method {
     margin-left: 0;
 }
 
+
+/* 2018/05/08 Amanda */
+
+.backwater {
+    margin-top: 15px;
+}
+
 .backwater .title {
     font-size: 24px;
     margin-bottom: 15px;
+    text-align: center
 }
 
 .backwater .layui-form-label {
@@ -1207,6 +1236,10 @@ h2.method {
     line-height: 38px;
 }
 
+.addagent span {
+    color: #ff5823;
+}
+
 .addtemplate .layui-layer-title,
 .addagentone1stmember .layui-layer-title {
     padding: 0 20px;
@@ -1226,11 +1259,40 @@ h2.method {
 }
 
 .addtemplate .addtemplateBasic {
-    margin-bottom: 5%;
+    margin: 15px 0;
 }
 
-.addtemplate .addtemplateBasic .layui-form-label {
-    width: 90px;
+
+/* 20180508 Amanda */
+
+.addtemplate .addtemplateBasic .layui-form-item,
+.addtemplate .rebatebox .layui-input-block,
+.backwater .layui-input-block {
+    margin-bottom: 15px;
+}
+
+.addtemplate .addtemplateBasic .layui-form-item .layui-form-label,
+.addtemplate .layui-form-item .rebatebox .layui-form-label,
+.addagentone1stmember .layui-form-label {
+    width: 100px;
+    text-align: left;
+}
+
+.addtemplate .layui-form-item .rebatebox .desc {
+    color: #666;
+}
+
+.addtemplate .layui-form-item .layui-input-inline,
+.backwater .layui-form-item .layui-inline {
+    width: 150px !important;
+}
+
+.addtemplate .layui-form-item .layui-form-label span,
+.addagentone1stmember span {
+    display: inline-block;
+    line-height: 1.2;
+    width: 15px;
+    color: #ff5823;
 }
 
 .addtemplate .addtemplateBasic .layui-inline {
@@ -1238,19 +1300,31 @@ h2.method {
 }
 
 .addtemplate .addtemplateButton {
-    margin: 5% 0 0 15px;
+    margin: 20px 0 0 130px;
+}
+
+.addtemplate .addtemplateButton .layui-btn {
+    width: 150px;
 }
 
 .agentbackwater table {
     margin-top: 25px;
 }
 
+
+/* 2018/05/08 */
+
 .backwater .title {
-    padding: 0 20px;
+    margin: 0 auto;
+    display: inline-block;
+    width: 50%;
+    padding: 0 15px;
+    text-align: left;
 }
 
 .backwater button {
-    margin: 0 20px;
+    margin-left: 120px;
+    width: 150px
 }
 
 
@@ -1258,4 +1332,15 @@ h2.method {
 
 .loginBody .layui-form-label {
     width: 60px;
+}
+
+
+/* 2018/05/08 amanda */
+
+.userinfo .layui-form-label,
+.backwater .layui-form-label,
+.addtemplate .layui-form-label {
+    text-align: left;
+    width: 85px;
+    color: #343434;
 }
