@@ -4900,7 +4900,9 @@ div.page-shift {
     opacity: 0.7;
 }
 
-td[data-field="rebateSearchListName"] {
+td[data-field="rebateSearchListName"],
+td[data-field="rebateModuleName"],
+td[data-field="rebateBet"] {
     color: #55acee;
 }
 
@@ -4930,7 +4932,7 @@ td[data-field="rebateSearchListName"] {
 }
 
 .welcome {
-    background: url("../../images/welcome.jpg") no-repeat top center;
+    background: url("../../images/welcome.png") no-repeat top center;
 }
 
 Sharlene Liao,
@@ -4948,7 +4950,6 @@ Sharlene Liao,
 .childrenBody #memberTable table.layui-table th,
 .childrenBody #memberTable table.layui-table td {
     padding: 5px 8px;
-    ;
 }
 
 .layui-layer-content iframe {

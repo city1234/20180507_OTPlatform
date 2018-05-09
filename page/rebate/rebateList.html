@@ -31,7 +31,18 @@
             </form>
 
         </blockquote>
-        <table id="rebateList" lay-filter="rebateList"></table>
+        <table id="rebateList" lay-filter="rebateList">
+            <div class="attention">
+                <ol>
+                    <li>1.当模板被使用时，不可修改、删除模板；</li>
+                    <li>2.当模板A替换为模板B时，若替换的模板，最低值比原模版大，最高值比原模板小；那么不可修改；</br>若替换的模板，最低值与最高值大于等于原模板的值，则可替换原模板的值；</br>
+                        若替换的模板，最低值比原模版小，最高值比原模版大；则可以替换原模版的值；并且下级代理值均按照原有设置的值不改变</br>
+                        对应下级的可设置范围再一级级的下放；</br>
+                    </li>
+                    <li>3.有效总投注、返点上限，针对单一会员设置；在页面双击可修改</li>
+                </ol>
+            </div>
+        </table>
 
         <!--编辑状态-->
         <script type="text/html" id="rebateEdit">

@@ -26,9 +26,9 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     // {field: 'agentPaymentSystem', title: '支付类型',  align:'center',templet:"#agentPaymentSystem"},
                     { field: 'agentBalance', title: '账户余额', width: 180, align: 'center' },
                     { field: 'agentSubAgent', title: '下级代理', width: 100, align: "center" },
-                    { field: 'agentSubMember', title: '下级会员', width: 100, align: "center" },
+                    { field: 'agentSubMember', title: '直属会员', width: 100, align: "center" },
                     { field: 'agentLevel', title: '层级', width: 70, align: "center" },
-                    { field: 'agentRebate', title: '返点明细', width: 100, align: 'center' },
+                    { field: 'agentRebate', title: '返点', width: 100, align: 'center' },
                     { field: 'agentAccount', title: '账号', width: 100, align: 'center', templet: "#agentAccount" },
                     { field: 'agentBet', title: '投注', width: 100, align: 'center', templet: "#agentBet" },
                     // {field: 'agentTop', title: '是否置顶', align:'center', templet:function(d){
@@ -202,7 +202,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 data = obj.data;
 
             if (layEvent === 'Supdetail') { //上級路徑
-                layer.confirm('<p>大大股东：' + obj.data.bigestShare + '</p><p>大股东：' + obj.data.bigShare + '</p><p>股东：' + obj.data.share + '</p><p>总代：' + obj.data.mainAgent + '</p>', { title: '上级路径' },
+                layer.confirm('</p><p>大股东：' + obj.data.bigShare + '</p><p>股东：' + obj.data.share + '</p><p>总代：' + obj.data.mainAgent + '</p>', { title: '上级路径' },
                     function(index) {
                         // $.get("删除文章接口",{
                         //     agentId : data.agentId  //将需要删除的agentId作为参数传入
@@ -217,7 +217,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                         tableIns.reload();
                         layer.close(index);
                     });
-            } else if (layEvent === 'Rebatedetail') { //返点明细
+            } else if (layEvent === 'Rebatedetail') { //返点
                 layer.confirm('<table class="layui-table"><colgroup><col width="180"><col width="180"></colgroup><thead><tr><th>返点平台</th><th>明细</th></tr></thead>' +
                     '<tbody><tr><td>AG</td><td>' +
                     obj.data.RebateAG +
@@ -227,7 +227,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     obj.data.RebateBB +
                     '%</td></tr><tr><td>ALLBET</td><td>' +
                     obj.data.RebateALLBET +
-                    '%</td></tr></tbody></table>', { title: '返点明细' },
+                    '%</td></tr></tbody></table>', { title: '返点' },
                     function(index) {
                         tableIns.reload();
                         layer.close(index);
