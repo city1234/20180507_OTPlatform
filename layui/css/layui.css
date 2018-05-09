@@ -4932,3 +4932,47 @@ td[data-field="rebateSearchListName"] {
 .welcome {
     background: url("../../images/welcome.jpg") no-repeat top center;
 }
+
+Sharlene Liao,
+[09.05.18 12:50]
+/* 20180509 iframed table input Setting — Sharlene */
+
+.childrenBody #memberTable {
+    width: 730px;
+}
+
+.childrenBody #memberTable table.layui-table {
+    padding: 0;
+}
+
+.childrenBody #memberTable table.layui-table th,
+.childrenBody #memberTable table.layui-table td {
+    padding: 5px 8px;
+    ;
+}
+
+.layui-layer-content iframe {
+    margin-top: 10px;
+    border: 0;
+}
+
+#memberTable .layui-input-block {
+    margin-left: 0;
+    font-size: 0.9em;
+}
+
+#memberTable td .layui-form-checkbox[lay-skin=primary] span {
+    display: block;
+    padding: 0px 0px 0px 5px !important;
+    width: 90px;
+    white-space: normal;
+}
+
+#memberTable .layui-input-block {
+    width: 130px;
+}
+
+#memberTable .layui-form-checkbox[lay-skin=primary] i {
+    display: inline-block;
+    /* float: left; */
+}

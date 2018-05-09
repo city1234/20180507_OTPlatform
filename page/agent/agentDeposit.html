@@ -15,71 +15,73 @@
 </head>
 
 <body class="childrenBody">
-    <blockquote class="layui-elem-quote quoteBox">
-        <label>会员账号：</label>
-        <div class="layui-input-inline">
-            <input type="text" class="layui-input searchVal" placeholder="请输入搜索内容">
-        </div>
-        <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
-    </blockquote>
-    <div class="layui-form">
+    <div class="agentDeposit">
+        <blockquote class="layui-elem-quote quoteBox">
+            <label>会员账号：</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input searchVal" placeholder="请输入搜索内容">
+            </div>
+            <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+        </blockquote>
+        <div class="layui-form">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="250">
+                    <col width="200">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>人工存入</th>
+                        <th>人工存入</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>账号</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>现金余额</td>
+                        <td>
+                            0.0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>存入金额</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>动态口令</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </td>
+                        <td>
 
-        <table class="layui-table">
-            <colgroup>
-                <col width="80">
-                <col width="250">
-                <col width="80">
-                <col width="250">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th>人工存入</th>
-                    <th>人工存入</th>
-                    <th>备注</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>账号</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>现金余额</td>
-                    <td>
-                        0.0</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>存入金额</td>
-                    <td>
-                        <div class="layui-inline">
-                            <input type="text" class="layui-input">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="layui-inline">
-                            <input type="text" class="layui-input">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>动态口令</td>
-                    <td>
-                        <div class="layui-inline">
-                            <input type="text" class="layui-input">
-                        </div>
-                    </td>
-                    <td>
-
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="magt10 layui-center">
-            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">确认</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="magt10 layui-left">
+                <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">确认</button>
+            </div>
         </div>
     </div>
+
+
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="../../js/index.js"></script>
     <script>
