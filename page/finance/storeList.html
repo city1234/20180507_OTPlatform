@@ -17,14 +17,14 @@
 <body class="childrenBody">
     <form class="layui-form storeList">
         <div class="nav-4th">
-                <a class="layui-btn layui-btn-gray active">商号信息查询</a>
-                <a class="layui-btn layui-btn-gray">银行商家对应表</a>
-                <a class="layui-btn layui-btn-gray">设定商号顺序</a>
-                <a class="layui-btn layui-btn-gray">设定商号停用金额</a>
-                <a class="layui-btn layui-btn-gray">金额次数统计</a>
-                <a class="layui-btn layui-btn-gray">商家信息查询</a>
-                <a class="layui-btn layui-btn-gray">支付白名单</a>
-                <a class="layui-btn layui-btn-gray">订单号查询</a>
+            <a class="layui-btn layui-btn-gray active">商号信息查询</a>
+            <a class="layui-btn layui-btn-gray">银行商家对应表</a>
+            <a class="layui-btn layui-btn-gray">设定商号顺序</a>
+            <a class="layui-btn layui-btn-gray">设定商号停用金额</a>
+            <a class="layui-btn layui-btn-gray">金额次数统计</a>
+            <a class="layui-btn layui-btn-gray">商家信息查询</a>
+            <a class="layui-btn layui-btn-gray">支付白名单</a>
+            <a class="layui-btn layui-btn-gray">订单号查询</a>
         </div>
         <blockquote class="layui-elem-quote quoteBox">
             <form class="layui-form">
@@ -34,8 +34,8 @@
 				</div>
 				<a class="layui-btn search_btn" data-type="reload">搜索</a>
             </div> -->
-            <!-- 20180508 btn Grouping -Sharlene -->
-                <div class="layui-inline layui-btn-group"> 
+                <!-- 20180508 btn Grouping -Sharlene -->
+                <div class="layui-inline layui-btn-group">
                     <a class="layui-btn layui-btn-normal">启用区</a>
                     <a class="layui-btn layui-btn-primary">停用区</a>
                 </div>
@@ -96,9 +96,9 @@
 
         <!--操作-->
         <script type="text/html" id="storeListBar">
-            <a class="layui-btn layui-btn-xs" lay-event="del">停用</a>
-            <a class="layui-btn layui-btn-xs layui-btn-danger">恢复</a>
             <a class="layui-btn layui-btn-xs layui-btn-normal">修改商家资讯</a>
+            <a class="layui-btn layui-btn-xs layui-btn-restore">恢复</a>
+            <a class="layui-btn layui-btn-xs layui-btn-disabled" lay-event="del">停用</a>
             <!-- <a class="layui-btn layui-btn-xs layui-btn-primary" lay-event="edit">修改商家资讯</a> -->
         </script>
     </form>
