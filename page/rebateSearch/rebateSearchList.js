@@ -23,9 +23,9 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 { field: 'rebateSearchListName', title: '事件名称', width: 110, align: "center", edit: "text" },
                 {
                     field: 'rebateSearchListTime',
-                    title: '注册时间',
+                    title: '创建时间',
                     align: 'center',
-                    sort: "true",
+                    // sort: "true",
                     minWidth: 130,
                     templet: function(d) {
                         return d.rebateSearchListTime.substring(0, 10);
@@ -35,7 +35,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     field: 'rebateSearchListStart',
                     title: '返水区间（起）',
                     align: 'center',
-                    sort: "true",
+                    // sort: "true",
                     minWidth: 140,
                     templet: function(d) {
                         return d.rebateSearchListStart.substring(0, 10);
@@ -45,7 +45,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     field: 'rebateSearchListEnd',
                     title: '返水区间（迄）',
                     align: 'center',
-                    sort: "true",
+                    // sort: "true",
                     minWidth: 140,
                     templet: function(d) {
                         return d.rebateSearchListEnd.substring(0, 10);
@@ -55,7 +55,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 // {field: 'rebateSearchListPaymentSystem', title: '支付类型',  align:'center',templet:"#rebateSearchListPaymentSystem"},
                 { field: 'rebateSearchListSum', title: '总人数/总金额', width: 130, align: 'center' },
                 { field: 'rebateSearchListWait', title: '待返水人数/金额', width: 150, align: "center" },
-                { field: 'rebateSearchListDetail', title: '查询明细', width: 300, align: "center", templet: "#rebateSearchListDetail" }
+                { field: 'rebateSearchListDetail', title: '查询明细', width: 330, align: "center", templet: "#rebateSearchListDetail" }
             ]
         ],
 
@@ -140,16 +140,14 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
 })
 
-layui.use('table', function() {
+layui.use('table', function(){
     var table = layui.table;
-
+    
     //监听单元格编辑
-    table.on('edit(rebateSearchList)', function(obj) {
-        var value = obj.value //得到修改后的值
-            ,
-            data = obj.data //得到所在行所有键值
-            ,
-            field = obj.field; //得到字段
-        layer.msg('编号： ' + data.rebateSearchListId + '， ' + '  事件名称更改为：' + value);
+    table.on('edit(rebateSearchList)', function(obj){
+      var value = obj.value //得到修改后的值
+      ,data = obj.data //得到所在行所有键值
+      ,field = obj.field; //得到字段
+      layer.msg('编号： '+ data.rebateSearchListId +'， ' + '  事件名称更改为：'+ value);
     });
-});
+  });
