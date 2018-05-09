@@ -80,7 +80,7 @@ iframe {
 .closeBox .layui-nav-child dd.layui-this,
 .top_menu .layui-nav-child dd.layui-this {
     background: none;
-    color: #333;
+    color: #343434;
 }
 
 .layui-nav .layui-nav-child a:hover,
@@ -536,7 +536,7 @@ iframe {
     position: absolute;
     right: 0;
     background-color: #fff !important;
-    color: #000;
+    color: #343434 !important;
     /* border-left: 1px solid #e2e2e2; */
     /* border-bottom: 1px solid #e2e2e2; */
 }
@@ -546,8 +546,17 @@ iframe {
 }
 
 .closeBox .layui-nav-item>a,
-.closeBox .layui-nav-item>a:hover {
-    color: #000;
+.closeBox .layui-nav-child .layui-nav .layui-nav-item a {
+    color: #343434;
+}
+
+.closeBox .layui-nav-child dd:hoverr {
+    background-color: #2a63b4 !important;
+    color: #fff !important;
+}
+
+.closeBox .layui-nav .layui-nav-child a:hover {
+    background-color: transparent!improtant;
 }
 
 .closeBox .layui-nav-child {
@@ -560,6 +569,7 @@ iframe {
 }
 
 .closeBox a i.caozuo {
+    color: #343434;
     font-size: 20px;
     position: absolute;
     top: 1px;
@@ -567,11 +577,11 @@ iframe {
 }
 
 .closeBox a span.layui-nav-more {
-    border-color: #333 transparent transparent;
+    border-color: #343434 transparent transparent;
 }
 
 .closeBox a span.layui-nav-more.layui-nav-mored {
-    border-color: transparent transparent #333;
+    border-color: transparent transparent #343434;
 }
 
 

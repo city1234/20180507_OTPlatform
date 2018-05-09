@@ -51,7 +51,7 @@ layui.define(["element", "jquery"], function(exports) {
                     for (var j = 0; j < data[i].children.length; j++) {
                         if (data[i].children[j].target == "_blank") { // 第二层
                             ulHtml += '<dd onclick="clicksecond(this)"><a layer2 data-url="' + data[i].children[j].href + '" target="' + data[i].children[j].target + '">';
-                            
+
                         } else {
                             ulHtml += '<dd onclick="clicksecond(this)"><a layer2 data-url="' + data[i].children[j].href + '">';
                         }
@@ -85,7 +85,7 @@ layui.define(["element", "jquery"], function(exports) {
                                 // } else {
                                 //     ulHtml += '<li><a layer3 data-url="' + data[i].children[j].thirdChildren[i3].href + '"' + '">';
                                 // }
-                                
+
                                 ulHtml += '<cite>' + data[i].children[j].thirdChildren[i3].title + '</cite>'
 
                             }
@@ -316,45 +316,45 @@ layui.define(["element", "jquery"], function(exports) {
 
     //切换后获取当前窗口的内容
     $("body").on("click", ".top_tab li", function() {
-            var curmenu = '';
-            var menu = JSON.parse(window.sessionStorage.getItem("menu"));
-            if (window.sessionStorage.getItem("menu")) {
-                curmenu = menu[$(this).index() - 1];
-            }
-            if ($(this).index() == 0) {
-                window.sessionStorage.setItem("curmenu", '');
-            } else {
-                window.sessionStorage.setItem("curmenu", JSON.stringify(curmenu));
-                if (window.sessionStorage.getItem("curmenu") == "undefined") {
-                    //如果删除的不是当前选中的tab,则将curmenu设置成当前选中的tab
-                    if (curNav != JSON.stringify(delMenu)) {
-                        window.sessionStorage.setItem("curmenu", curNav);
-                    } else {
-                        window.sessionStorage.setItem("curmenu", JSON.stringify(menu[liIndex - 1]));
-                    }
+        var curmenu = '';
+        var menu = JSON.parse(window.sessionStorage.getItem("menu"));
+        if (window.sessionStorage.getItem("menu")) {
+            curmenu = menu[$(this).index() - 1];
+        }
+        if ($(this).index() == 0) {
+            window.sessionStorage.setItem("curmenu", '');
+        } else {
+            window.sessionStorage.setItem("curmenu", JSON.stringify(curmenu));
+            if (window.sessionStorage.getItem("curmenu") == "undefined") {
+                //如果删除的不是当前选中的tab,则将curmenu设置成当前选中的tab
+                if (curNav != JSON.stringify(delMenu)) {
+                    window.sessionStorage.setItem("curmenu", curNav);
+                } else {
+                    window.sessionStorage.setItem("curmenu", JSON.stringify(menu[liIndex - 1]));
                 }
             }
-            element.tabChange(tabFilter, $(this).attr("lay-id")).init();
-            bodyTab.changeRegresh($(this).index());
-            setTimeout(function() {
-                bodyTab.tabMove();
-            }, 100);
-        })
+        }
+        element.tabChange(tabFilter, $(this).attr("lay-id")).init();
+        bodyTab.changeRegresh($(this).index());
+        setTimeout(function() {
+            bodyTab.tabMove();
+        }, 100);
+    })
 
-        // 点击 第二层 展开第三层
-        // 20180508 2rd layer action
+    // 点击 第二层 展开第三层
+    // 20180508 2rd layer action
     $("body").on("click", "[layer2]", function() {
-        var layer2 =  $(this).parent()
+        var layer2 = $(this).parent()
         var layer3 = layer2.next()
         var layer3Open = ''
         console.info(layer3)
 
         if (layer3.attr('thirdChildren')) {
             layer3.toggleClass('hide')
-            var layer3Open = layer3.hasClass('hide')?false:true
+            var layer3Open = layer3.hasClass('hide') ? false : true
             layer3.classList.remove('display')
         }
-        
+
         //layer3Open 第三次 是否 是显示的状态
         // if(layer3Open){
         //     layer2.addClass('active')
@@ -431,7 +431,7 @@ layui.define(["element", "jquery"], function(exports) {
                     }
                 })
             } else {
-                layer.msg("没有可以关闭的窗口了@_@");
+                layer.msg("没有可以关闭的窗口了");
             }
             //渲染顶部窗口
             tab.tabMove();
@@ -448,7 +448,7 @@ layui.define(["element", "jquery"], function(exports) {
                 }
             })
         } else {
-            layer.msg("没有可以关闭的窗口了@_@");
+            layer.msg("没有可以关闭的窗口了");
         }
         //渲染顶部窗口
         tab.tabMove();
@@ -478,20 +478,20 @@ layui.define(["element", "jquery"], function(exports) {
 //     for (var i = 0; i < elements.length; i++) {
 //     	elements[i].classList.remove("active");
 //     }
-    
+
 //     thisElement.classList.add("active");
 // }
 
 // 20180508 3rd layer action
 function clickthird(thisElement) {
-	var elements = document.getElementsByTagName("a");
+    var elements = document.getElementsByTagName("a");
     for (var i = 0; i < elements.length; i++) {
         elements[i].classList.remove("active");
         // elements[i].parentNode.parentNode.classList.remove("active");
     }
     // thisElement.parentNode.parentNode.previousSibling.classList.add("active");
     thisElement.classList.add("active");
-    
+
 }
 
 // function clicksecond(thisElement) {
@@ -507,5 +507,5 @@ function clickthird(thisElement) {
 //         elements[i].classList.remove("active");
 //     }
 //     thisElement.classList.add("active");
-    
+
 // }
