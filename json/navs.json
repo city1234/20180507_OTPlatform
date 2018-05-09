@@ -60,7 +60,7 @@
             "href": "",
             "spread": false,
             "children": [{
-                    "title": "新线上付款设定",
+                    "title": "存取款设定",
                     "icon": "",
                     "href": "",
                     "spread": false
@@ -91,7 +91,7 @@
                             "target": ""
                         },
                         {
-                            "title": "公司入款设定",
+                            "title": "线下入款",
                             "icon": "",
                             "href": "",
                             "spread": false,
@@ -170,7 +170,7 @@
                     ]
                 },
                 {
-                    "title": "子现金系统",
+                    "title": "现金流查询",
                     "icon": "",
                     "href": "",
                     "spread": false,

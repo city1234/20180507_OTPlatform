@@ -16,7 +16,7 @@
 <form class="layui-form agentList">
 	<blockquote class="layui-elem-quote quoteBox">
 		<form class="layui-form">
-			<div class="layui-inline">
+			<!-- <div class="layui-inline">
 				<div class="layui-form-item">
 						<label class="layui-form-label">时间（美东时间）</label>
 						<div class="layui-input-block">
@@ -26,13 +26,16 @@
 						  </select>
 						</div>
 					</div>
-			</div>
+			</div> -->
 			<div class="layui-inline">
-				<div class="layui-input-inline">
-					<input type="text" class="layui-input" id="dateStart" placeholder="开始时间">
-				</div>
-				<div class="layui-input-inline">
-					<input type="text" class="layui-input" id="dateEnd" placeholder="结束时间">
+				<div class="layui-form-item">
+					<label class="layui-form-label">时间（美东时间）</label>
+					<div class="layui-input-inline">
+						<input type="text" class="layui-input" id="dateStart" placeholder="开始时间">
+					</div>
+					<div class="layui-input-inline">
+						<input type="text" class="layui-input" id="dateEnd" placeholder="结束时间">
+					</div>
 				</div>
 			</div>
 			<div class="layui-inline">
@@ -59,12 +62,12 @@
 				<div class="layui-inline">
 					<a class="layui-btn layui-btn-normal">查询</a>
 				</div>
-				<div class="layui-inline">
-					<a class="layui-btn layui-btn-normal">数据导出</a>
-				</div>
-				<!-- <div class="layui-inline">
+				<div class="layui-inline data-output">
+					<a class="layui-btn layui-btn-primary">数据导出</a>
+					<div class="layui-inline">
 						<i class="layui-icon info-icon"> &#xe60b;</i>
-				</div> -->
+					</div>
+				</div>
 		</form>
 		
 	</blockquote>
@@ -144,12 +147,12 @@
                 type:1,
                 // skin: 'layui-layer-nobg',
 				closeBtn:1,
-				btn: '关闭全部',
+				// btn: '关闭全部',
 				btnAlign: 'c',
 				shadeClose:true,
                 title:'查询类别',
-                area:['780px','550px'],
-				content:'<iframe src="memberTable.html" width="100%" height="420"></iframe>'
+                area:['800px','94%'],
+				content:'<iframe src="memberTable.html" width="100%" height="97%"></iframe>'
 					
             });
         }

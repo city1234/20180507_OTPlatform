@@ -125,7 +125,7 @@ layui.define(["element", "jquery"], function(exports) {
                 $(".navBar").height($(window).height() - 210);
             })
         }
-        //         $(".navBar ul").html('<li class="layui-nav-item layui-this"><a data-url="page/main.html"><i class="layui-icon" data-icon=""></i><cite>后台首页</cite></a></li>').append(_this.navBar(dataStr)).height($(window).height() - 210);
+        //$(".navBar ul").html('<li class="layui-nav-item layui-this"><a data-url="page/main.html"><i class="layui-icon" data-icon=""></i><cite>后台首页</cite></a></li>').append(_this.navBar(dataStr)).height($(window).height() - 210);
 
     //是否点击窗口切换刷新页面
     Tab.prototype.changeRegresh = function(index) {
@@ -340,6 +340,7 @@ layui.define(["element", "jquery"], function(exports) {
                 bodyTab.tabMove();
             }, 100);
         })
+
         // 点击 第二层 展开第三层
         // 20180508 2rd layer action
     $("body").on("click", "[layer2]", function() {
@@ -347,16 +348,19 @@ layui.define(["element", "jquery"], function(exports) {
         var layer3 = layer2.next()
         var layer3Open = ''
         console.info(layer3)
+
         if (layer3.attr('thirdChildren')) {
             layer3.toggleClass('hide')
             var layer3Open = layer3.hasClass('hide')?false:true
+            layer3.classList.remove('display')
         }
+        
         //layer3Open 第三次 是否 是显示的状态
-        if(layer3Open){
-            layer2.addClass('active')
-        }else{
-            layer2.removeClass('active')
-        }
+        // if(layer3Open){
+        //     layer2.addClass('active')
+        // }else{
+        //     layer2.removeClass('active')
+        // }
 
     })
 
@@ -491,9 +495,17 @@ function clickthird(thisElement) {
 }
 
 // function clicksecond(thisElement) {
-// 	var seconds = document.getElementsByTagName('dd');
+// 	var seconds = document.getElementsByTagName('dd a[layer2]');
 //     for (var i = 0; i < seconds.length; i++) {
-//         seconds[i].classList.remove("active");
+//         seconds[i].parentElement.nextSibling.classList.remove("hide");
+//     }
+//     thisElement.parentElement.nextSibling.classList.add("hide");
+// }
+// function clicksecond(thisElement) {
+// 	var elements = document.getElementsByTagName("a[layer2]");
+//     for (var i = 0; i < elements.length; i++) {
+//         elements[i].classList.remove("active");
 //     }
 //     thisElement.classList.add("active");
+    
 // }
