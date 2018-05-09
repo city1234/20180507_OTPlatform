@@ -4891,9 +4891,11 @@ div.page-shift {
 }
 
 .layui-icon.info-icon {
-    font-size: 2.2em !important;
-    line-height: 2.3;
-    color: #55acee;
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: -1px;
+    font-size: 1.7em !important;
+    color: #555;
 }
 
 .layui-icon.info-icon:hover {
@@ -4957,6 +4959,38 @@ Sharlene Liao,
     border: 0;
 }
 
+
+/* 20180509 iframed table input Setting — Sharlene */
+
+.childrenBody.memberTable {
+    padding: 0 5px;
+}
+
+.childrenBody #memberTable {
+    width: 730px;
+}
+
+.childrenBody #memberTable table.layui-table {
+    padding: 0;
+}
+
+.childrenBody #memberTable table.layui-table th,
+.childrenBody #memberTable table.layui-table td {
+    padding: 5px 8px;
+}
+
+
+/* 20180509 寬度設定 */
+
+.childrenBody #memberTable table.layui-table th {
+    text-align: left;
+}
+
+.layui-layer-content iframe {
+    margin-top: 10px;
+    border: 0;
+}
+
 #memberTable .layui-input-block {
     margin-left: 0;
     font-size: 0.9em;
@@ -4965,15 +4999,18 @@ Sharlene Liao,
 #memberTable td .layui-form-checkbox[lay-skin=primary] span {
     display: block;
     padding: 0px 0px 0px 5px !important;
-    width: 90px;
+    width: 95px;
     white-space: normal;
 }
 
-#memberTable .layui-input-block {
-    width: 130px;
+
+/* 20180509 Data Output button --Sharlene */
+
+.layui-inline.data-output {
+    float: right !important;
 }
 
-#memberTable .layui-form-checkbox[lay-skin=primary] i {
-    display: inline-block;
-    /* float: left; */
+input#dateStart,
+input#dateEnd {
+    font-size: 0.9em;
 }
