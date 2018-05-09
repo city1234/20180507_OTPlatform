@@ -281,7 +281,7 @@ iframe {
 
 .hideMenu {
     float: left;
-    width: 24px!important;
+    width: 24px !important;
     height: 20px;
     margin-top: 15px;
     font-size: 17px;
@@ -787,6 +787,10 @@ iframe {
 .logo {
     line-height: 50px !important;
     max-height: 50px !important;
+}
+
+.header .logo {
+    border-bottom: 1px solid #326cc8;
 }
 
 .mobileTopLevelMenus {
