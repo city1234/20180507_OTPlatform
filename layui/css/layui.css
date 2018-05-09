@@ -4903,7 +4903,7 @@ div.page-shift {
 }
 
 td[data-field="rebateSearchListName"],
-td[data-field="rebateModuleName"],
+td[data-field="rebateSupLimit"],
 td[data-field="rebateBet"] {
     color: #55acee;
 }
