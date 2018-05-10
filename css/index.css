@@ -75,17 +75,22 @@ iframe {
     border: none;
 }
 
+
+/* 20180510 closeBox Spec Setting: Link props — Sharlene */
+
 .top_menu.layui-nav .layui-nav-child dd.layui-this a,
 .closeBox.layui-nav .layui-nav-child dd.layui-this a,
-.closeBox .layui-nav-child dd.layui-this,
+.closeBox.layui-nav .layui-nav-item a .closeBox.layui-nav-child dd.layui-this,
 .top_menu .layui-nav-child dd.layui-this {
+    transition: all .3s;
+    -webkit-transition: all .3s;
     background: none;
     color: #343434;
 }
 
-.layui-nav .layui-nav-child a:hover,
-.layui-nav .layui-nav-child dd.layui-this a:hover {
-    /* background-color: #5FB878; */
+.closeBox.layui-nav .layui-nav-child>dd>a:hover,
+.closeBox.layui-nav .layui-nav-child dd:hover {
+    background-color: #487fcc;
     color: #fff;
 }
 
@@ -556,7 +561,7 @@ iframe {
 }
 
 .closeBox .layui-nav .layui-nav-child a:hover {
-    background-color: transparent!improtant;
+    background-color: transparent !improtant;
 }
 
 .closeBox .layui-nav-child {
