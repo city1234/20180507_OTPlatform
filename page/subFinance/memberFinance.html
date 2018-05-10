@@ -42,7 +42,7 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">会员查询：</label>
 					<div class="layui-input-block">
-						<input type="text" class="layui-input searchVal" placeholder="请输入会员" />
+						<input type="text" class="layui-input searchVal" placeholder="请输入会员账号" />
 					</div>
 				</div>
 			</div>
@@ -71,28 +71,28 @@
 		</form>
 		
 	</blockquote>
-	<table id="agentFinance" lay-filter="agentFinance"></table>
+	<table id="memberFinance" lay-filter="memberFinance"></table>
 	<!--额度转换状态-->
-	<script type="text/html" id="subagentFinanceType">
-		{{#  if( d.subagentFinanceType == "0"){ }}
+	<script type="text/html" id="subMemberFinanceType">
+		{{#  if( d.subMemberFinanceType == "0"){ }}
 		<span>层级-额度转换</span>
-		{{#  } else if( d.subagentFinanceType == "1") { }}
+		{{#  } else if( d.subMemberFinanceType == "1") { }}
 		<span>系统-新增快开额度</span>
-		{{#  } else if( d.subagentFinanceType == "2") { }}
+		{{#  } else if( d.subMemberFinanceType == "2") { }}
 		<span>API存入</span>
-		{{#  } else if( d.subagentFinanceType == "3") { }}
+		{{#  } else if( d.subMemberFinanceType == "3") { }}
 		<span>API取出</span>
-		{{#  } else if( d.subagentFinanceType == "4") { }}
+		{{#  } else if( d.subMemberFinanceType == "4") { }}
 		<span>开分-机率</span>
-		{{#  } else if( d.subagentFinanceType == "5") { }}
+		{{#  } else if( d.subMemberFinanceType == "5") { }}
 		<span>洗分-机率</span>
-		{{#  } else if( d.subagentFinanceType == "6") { }}
+		{{#  } else if( d.subMemberFinanceType == "6") { }}
 		<span>钱包存入</span>
-		{{#  } else if( d.subagentFinanceType == "7") { }}
+		{{#  } else if( d.subMemberFinanceType == "7") { }}
 		<span>钱包取出</span>
-		{{#  } else if( d.subagentFinanceType == "8") { }}
+		{{#  } else if( d.subMemberFinanceType == "8") { }}
 		<span>API存入异常</span>
-		{{#  } else if( d.subagentFinanceType == "9") { }}
+		{{#  } else if( d.subMemberFinanceType == "9") { }}
 		<span>API取出异常</span>
 		{{#  } else { }}
 		<span>资料异常</span>
@@ -100,7 +100,7 @@
 	</script>
 
 <script type="text/javascript" src="../../layui/layui.js"></script>
-<script type="text/javascript" src="agentFinance.js"></script>
+<script type="text/javascript" src="memberFinance.js"></script>
 <!-- <script>
 		layui.use('layer', function(){ //独立版的layer无需执行这一句
 		//   var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句

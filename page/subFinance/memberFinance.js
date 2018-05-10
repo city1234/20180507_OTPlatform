@@ -8,7 +8,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
     //新闻列表
     var tableIns = table.render({
-        elem: '#MemberFinance',
+        elem: '#memberFinance',
         url: '../../json/subFinanceMember.json',
         cellMinWidth: 95,
         page: true,
@@ -18,7 +18,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         id: "memberFinanceTable",
         cols: [
             [
-                { field: 'subMemberFinanceId', title: '序号', width: 100, align: "center" },
+                { field: 'subMemberFinanceId', title: '序号', width: 150, align: "center" },
                 { field: 'subMemberFinanceMemberId', title: '会员账号', align: "center" },
                 { field: 'subMemberFinanceType', title: '交易类型', align: "center", templet: "#subMemberFinanceType" },
                 { field: 'subMemberFinanceAmount', title: '金额', width: 120, align: "center" },
@@ -33,7 +33,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                         return d.subMemberFinanceTime.substring(0, 10);
                     }
                 },
-                { field: 'subMemberFinanceList', title: '单号', width: 150, align: "center" },
+                { field: 'subMemberFinanceList', title: '单号', width: 200, align: "center" },
                 { field: 'subMemberFinanceNote', title: '备注', width: 250, align: "center" }
             ]
         ]

@@ -18,7 +18,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         id: "agentFinanceTable",
         cols: [
             [
-                { field: 'subagentFinanceId', title: '序号', width: 100, align: "center" },
+                { field: 'subagentFinanceId', title: '序号', width: 150, align: "center" },
                 { field: 'subagentFinanceMemberId', title: '代理账号', align: "center" },
                 { field: 'subagentFinanceType', title: '交易类型', align: "center", templet: "#subagentFinanceType" },
                 { field: 'subagentFinanceAmount', title: '金额', width: 120, align: "center" },
@@ -33,7 +33,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                         return d.subagentFinanceTime.substring(0, 10);
                     }
                 },
-                { field: 'subagentFinanceList', title: '单号', width: 150, align: "center" },
+                { field: 'subagentFinanceList', title: '单号', width: 200, align: "center" },
                 { field: 'subagentFinanceNote', title: '备注', width: 250, align: "center" }
             ]
         ]
