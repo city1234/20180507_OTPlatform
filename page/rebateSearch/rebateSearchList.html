@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../css/public.css" media="all" />
 </head>
 
-<body class="childrenBody">
+<body class="childrenBody rebateSearchList">
     <form class="layui-form agentList">
         <blockquote class="layui-elem-quote quoteBox">
             <form class="layui-form">
@@ -69,11 +69,10 @@
 
         </blockquote>
         <table id="rebateSearchList" lay-filter="rebateSearchList">
-            <div class="rebateSearchSum">
+            <!-- <div class="rebateSearchSum">
                 <p>总金额： <span>6169.90</span></p>
-            </div>
+            </div> -->
         </table>
-
 
 
 
@@ -84,9 +83,13 @@
             <span>待处理</span> {{# }}}
         </script>
 
+
+
         <script type="text/html" id="rebateSearchListDetail">
             {{# if( d.rebateSearchListDetail == "0"){ }}
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="rebateChargeoff.html">返水/冲销明细</a> {{# } else { }}
+            <a> </a>
+            {{# } else if( d.rebateSearchListDetail == "1") { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="rebateChargeoff.html">返水/冲销明细</a> {{# } else if( d.rebateSearchListDetail == "2") { }}
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="rebateChargeoff.html">返水/冲销明细</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="rebatePanding.html">待返水明细</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="pageDel()">删除事件</a> {{# }}}
@@ -143,9 +146,6 @@
                 content: '确定要删除事件吗？'
             });
         }
-    </script>
-
-    <script>
     </script>
 
 

@@ -1373,3 +1373,18 @@ h2.method {
     left: 20px;
     line-height: 25px;
 }
+
+.rebateSearchList tr[data-index="5"] td {
+    border-right: none !important;
+    /* display: none !important; */
+}
+
+.rebateSearchList tr[data-index="5"] td[data-field="rebateSearchListName"] input.layui-input.layui-table-edit {
+    display: none !important;
+}
+
+.rebateSearchList tr[data-index="5"] td[data-field="rebateSearchListWait"] {
+    border-left: 1px solid #e6e6e6 !important;
+    border-right: 1px solid #e6e6e6 !important;
+    display: block !important;
+}
