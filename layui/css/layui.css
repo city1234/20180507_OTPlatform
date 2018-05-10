@@ -18,7 +18,7 @@
 /* 20180503 Color setting: red -- Sharlene*/
 
 .layui-red {
-    color: #f00 !important;
+    color: #ff5823 !important;
 }
 
 
@@ -1881,7 +1881,7 @@ hr {
     height: 38px;
     line-height: 38px;
     padding: 0 15px;
-    background-color: #009688;
+    /* background-color: #009688; */
     color: #fff;
     white-space: nowrap;
     text-align: center;
@@ -1968,12 +1968,14 @@ hr {
     background-color: #e5a500
 }
 
-.layui-btn-danger {
-    background-color: #ff5823
+.layui-btn-border-danger {
+    border: 1px solid #ff5823;
+    color: #ff5823;
 }
 
-.layui-btn-danger:hover {
-    background-color: #e75021
+.layui-btn-border-danger:hover {
+    background-color: #ff5823;
+    color: #fff;
 }
 
 .layui-btn-gray {
@@ -1987,6 +1989,24 @@ hr {
 
 .layui-btn-gray.active {
     background-color: #003ea4;
+    color: #fff;
+}
+
+.layui-btn-danger {
+    background-color: #ff5823
+}
+
+.layui-btn-danger:hover {
+    background-color: #e75021
+}
+
+.layui-btn-border-normal {
+    border: 1px solid #3e8ef0;
+    color: #3e8ef0;
+}
+
+.layui-btn-border-normal:hover {
+    background-color: #3e8ef0;
     color: #fff;
 }
 
@@ -2042,7 +2062,7 @@ hr {
 
 .layui-btn-xs {
     height: 22px;
-    line-height: 22px;
+    line-height: 20px;
     padding: 0 5px;
     font-size: 12px
 }
@@ -5013,4 +5033,9 @@ Sharlene Liao,
 input#dateStart,
 input#dateEnd {
     font-size: 0.9em;
+}
+
+a.th-link {
+    color: #343434;
+    cursor: pointer;
 }

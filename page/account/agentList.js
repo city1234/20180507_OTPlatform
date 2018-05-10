@@ -25,7 +25,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     { field: 'agentSup', title: '上级', width: 80, align: "center" },
                     // {field: 'agentPaymentSystem', title: '支付类型',  align:'center',templet:"#agentPaymentSystem"},
                     { field: 'agentBalance', title: '账户余额', width: 180, align: 'center' },
-                    { field: 'agentSubAgent', title: '下级代理', width: 100, align: "center" },
+                    { field: 'agentSubAgent', title: '<a href="searchAgent.html" class="th-link">下级代理</a>', width: 100, align: "center"},
                     { field: 'agentSubMember', title: '直属会员', width: 100, align: "center" },
                     { field: 'agentLevel', title: '层级', width: 70, align: "center" },
                     { field: 'agentRebate', title: '返点', width: 100, align: 'center' },
