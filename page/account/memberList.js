@@ -20,15 +20,15 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 [
                     // {type: "checkbox", fixed:"left", width:50},
                     { field: 'agentId', title: '序号', width: 70, align: "center" },
-                    { field: 'agentName', title: '用户名', width: 120, align: "center" },
-                    { field: 'agentNickName', title: '昵称', width: 120, align: "center" },
-                    { field: 'agentSup', title: '上级', width: 100, align: "center" },
+                    { field: 'agentName', title: '用户名', width: 150, align: "center" },
+                    { field: 'agentNickName', title: '昵称', width: 150, align: "center" },
+                    { field: 'agentSup', title: '上级', width: 120, align: "center" },
                     // {field: 'agentPaymentSystem', title: '支付类型',  align:'center',templet:"#agentPaymentSystem"},
-                    { field: 'agentBalance', title: '账户余额', width: 120, align: 'center' },
+                    { field: 'agentBalance', title: '账户余额', width: 200, align: 'center' },
                     // { field: 'agentLevel', title: '层级', width: 60, align: "center" },
-                    { field: 'agentRebate', title: '返点', width: 100, align: 'center' },
-                    { field: 'agentAccount', title: '账号', width: 100, align: 'center', templet: "#agentAccount" },
-                    { field: 'agentBet', title: '投注', width: 80, align: 'center', templet: "#agentBet" },
+                    { field: 'agentRebate', title: '返点', width: 130, align: 'center' },
+                    { field: 'agentAccount', title: '账号', width: 130, align: 'center', templet: "#agentAccount" },
+                    { field: 'agentBet', title: '投注', width: 130, align: 'center', templet: "#agentBet" },
                     // {field: 'agentTop', title: '是否置顶', align:'center', templet:function(d){
                     //     return '<input type="checkbox" name="agentTop" lay-filter="agentTop" lay-skin="switch" lay-text="是|否" '+d.agentTop+'>'
                     // }},
@@ -37,12 +37,12 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                         title: '注册时间',
                         align: 'center',
                         sort: "true",
-                        minWidth: 150,
+                        width: 250,
                         templet: function(d) {
                             return d.agentTime.substring(0, 10);
                         }
                     },
-                    { field: 'agentLogin', title: '登录', width: 80, align: "center" },
+                    { field: 'agentLogin', title: '登录', width: 100, align: "center" },
                     { title: '操作', width: 260, templet: '#agentListBar', fixed: "right", align: "center" },
                 ]
             ]

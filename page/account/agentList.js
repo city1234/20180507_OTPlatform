@@ -211,8 +211,8 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                         layer.close(index);
                         // })
                     });
-            } else if (layEvent === 'Leveldetail') { //上級路徑
-                layer.confirm(obj.data.Level1 + obj.data.Level2 + obj.data.Level3 + obj.data.Level4 + obj.data.Level5 + obj.data.Level6, { title: '账号层级' },
+            } else if (layEvent === 'Leveldetail') { //层级路徑
+                layer.confirm(obj.data.Level1 + obj.data.Level2 + obj.data.Level3 + obj.data.Level4 + obj.data.Level5 + obj.data.Level6, { title: '<span>okok02</span>层级路径' },
                     function(index) {
                         tableIns.reload();
                         layer.close(index);

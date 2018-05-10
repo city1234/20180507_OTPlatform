@@ -1225,7 +1225,12 @@ h2.method {
 }
 
 .addagent .addlstUser {
-    width: 25%;
+    width: auto;
+    margin-right: 10px;
+}
+
+.addagent .addlstUser:last-child {
+    margin-right: 0;
 }
 
 .addagent .addlstUser span,
