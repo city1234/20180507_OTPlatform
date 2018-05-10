@@ -1931,8 +1931,8 @@ hr {
 .layui-btn .layui-icon {
     margin-right: 3px;
     font-size: 18px;
-    vertical-align: bottom;
-    vertical-align: middle\9
+    /* vertical-align: bottom; */
+    vertical-align: middle;
 }
 
 .layui-btn-primary {
