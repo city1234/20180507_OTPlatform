@@ -80,24 +80,24 @@
             </form>
 
         </blockquote>
-        <table id="agentList" lay-filter="agentList"></table>
+        <table id="memberList" lay-filter="memberList"></table>
         <!--审核状态-->
-        <script type="text/html" id="agentAccount">
-            {{# if( d.agentAccount == "0"){ }}
-            <span class="layui-blue">启用</span> {{# } else if( d.agentAccount == "1") { }}
-            <span class="layui-red">停用</span> {{# } else if( d.agentAccount == "2") { }}
+        <script type="text/html" id="memberAccount">
+            {{# if( d.memberAccount == "0"){ }}
+            <span class="layui-blue">启用</span> {{# } else if( d.memberAccount == "1") { }}
+            <span class="layui-red">停用</span> {{# } else if( d.memberAccount == "2") { }}
             <span class="layui-red">冻结</span> {{# }}}
         </script>
 
-        <script type="text/html" id="agentBet">
-            {{# if( d.agentBet == "0"){ }}
+        <script type="text/html" id="memberBet">
+            {{# if( d.memberBet == "0"){ }}
             <span class="layui-blue">启用</span> {{# } else { }}
             <span class="layui-red">停用</span> {{# }}}
         </script>
 
         <!--操作-->
-        <script type="text/html" id="agentListBar">
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../agent/memberEdit.html">修改</a>
+        <script type="text/html" id="memberListBar">
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../member/memberEdit.html">修改</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="info">信息</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal">操作记录</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="authority">查看</a>
