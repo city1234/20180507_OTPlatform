@@ -18,11 +18,23 @@
     <form class="layui-form rebateList">
         <blockquote class="layui-elem-quote quoteBox">
             <form class="layui-form">
+                    <div class="layui-inline">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">模板状态：</label>
+                                <div class="layui-input-block">
+                                    <select name="arrange3" lay-verify="required">
+                                    <option value="0">全部</option>
+                                    <option value="1">已使用</option>
+                                    <option value="2">未使用</option>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
                 <div class="layui-inline">
                     <div class="layui-input-inline">
-                        <input type="text" class="layui-input searchVal" placeholder="请输入搜索内容" />
+                        <input type="text" class="layui-input searchVal" placeholder="请输入模版名称" />
                     </div>
-                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">搜索</a>
+                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
                 </div>
 
                 <div class="layui-inline">
@@ -33,15 +45,9 @@
         </blockquote>
         <table id="rebateList" lay-filter="rebateList">
             <div class="attention">
-                <ol>
-                    <li>1.当模板被使用时，不可修改、删除模板；</li>
-                    <li>2.当模板A替换为模板B时；</br> &nbsp;&nbsp;&nbsp;若替换的模板，最低值比原模版大，最高值比原模板小；那么不可替换；
-                        </br>&nbsp;&nbsp;&nbsp;若替换的模板，最低值比原模板大，最高值比原模板大，则么可以替换；</br>
-                        &nbsp;&nbsp;&nbsp;若替换的模板，最低值比原模板小，最高值比原模板小；那么不可替换；</br>
-                        &nbsp;&nbsp;&nbsp;若替换的模板，最低值比原模版小，最高值比原模版大；则可以替换原模版的值；并且下级代理值均按照原有设置的值不改变；对应下级的可设置范围再一级级的下放；</br>
-                    </li>
-                    <li>3.有效总投注、返点上限，针对单一会员设置；在页面双击可修改</li>
-                </ol>
+                    若替换的模板，最低值比原模版小（等于），最高值比原模版大（等于）；则可以替换原模版的值；<br>
+                    并且下级代理值均按照原有设置的值不改变；对应下级的可设置范围再一级级的人工下放；<br>
+                    模板替换时，不受有效投注/返点上限的影响；
             </div>
         </table>
 
@@ -49,19 +55,37 @@
         <script type="text/html" id="rebateEdit">
             {{# if( d.rebateEdit == "0"){ }}
             <a class="layui-btn layui-btn-xs layui-btn-border-normal">查看</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal">模版使用中</a> {{# } else if( d.rebateEdit == "1"){ }}
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../rebate/rebateEdit.html">修改</a> {{# } else { }}
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="edit">修改</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-danger">删除</a> {{# }}}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal">模版使用中</a> 
+            {{# } else if( d.rebateEdit == "1"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../rebate/rebateEdit.html">修改</a> 
+            {{# } else { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../rebate/rebateEdit.html">修改</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger"  method="offset" onclick="pageDel()">删除</a> 
+            {{# }}}
         </script>
 
         <!--操作-->
-        <script type="text/html" id="rebateListBar">
+        <!-- <script type="text/html" id="rebateListBar">
             <a class="layui-btn layui-btn-xs" lay-event="add">添加</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="info">信息</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="edit">修改</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-danger" lay-event="authority">删除</a>
-        </script>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" lay-event="del">删除</a>
+        </script> -->
+        <script>
+                // 删除弹窗
+                function pageDel() {
+                    layer.open({
+                        type: 1,
+                        closeBtn: 1,
+                        btn: ['确定', '取消'],
+                        btnAlign: 'c',
+                        shadeClose: true,
+                        title: '删除模板',
+                        area: ['260px', '160px'],
+                        content: '确定要删除模板吗？'
+                    });
+                }
+            </script>
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="rebateList.js"></script>

@@ -701,7 +701,7 @@ h2.method {
 } */
 
 .loginBody .layui-form-item.layui-input-active label {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 
@@ -1125,10 +1125,13 @@ h2.method {
     line-height: 38px;
 }
 
+
+/* 20180522 */
+
 .addagent .rebasebox .desc,
 .addagentone1stmember .rebasebox .desc {
     display: inline-block;
-    width: 150px;
+    width: 160px;
     height: 38px;
     line-height: 1.3;
     line-height: 38px;
@@ -1292,10 +1295,13 @@ h2.method {
     width: 150px !important;
 }
 
+
+/* 20180522 */
+
 .addtemplate .layui-form-item .layui-form-label span,
 .addagentone1stmember span {
     display: inline-block;
-    line-height: 1.2;
+    /* line-height: 1.2; */
     width: 15px;
     color: #ff5823;
 }
@@ -1386,4 +1392,13 @@ h2.method {
     border-left: 1px solid #e6e6e6 !important;
     border-right: 1px solid #e6e6e6 !important;
     display: block !important;
+}
+
+
+/* 20180522 */
+
+span.mark {
+    width: auto;
+    display: inline-block;
+    font-size: 14px;
 }

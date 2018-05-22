@@ -16,7 +16,11 @@
 
 <body class="childrenBody">
     <form class="layui-form agentList">
-        <div class="searchAgent"><a class="layui-btn layui-btn-xs layui-btn-normal" href="agentList.html"><i class="layui-icon">&#xe603;</i>  返回上頁</a><span>上级代理：okok111/okok222/okok333/okok444</span></div>
+        <div class="searchAgent">
+            <a class="layui-btn layui-btn-xs layui-btn-normal" href="agentList.html">
+                <i class="layui-icon">&#xe603;</i> 返回上頁</a>
+            <span>上级代理：okok111/okok222/okok333/okok444</span>
+        </div>
 
         <blockquote class="layui-elem-quote quoteBox">
 
@@ -36,18 +40,18 @@
                         <!-- <label class="layui-form-label">层级：</label> -->
                         <div class="layui-input-block">
                             <select name="level" lay-verify="required">
-								<option value="0">全部层级</option>
-								<option value="1">一级代理</option>
-								<option value="2">二级代理</option>
-								<option value="3">三级代理</option>
-								<option value="4">四级代理</option>
+                                <option value="0">全部层级</option>
+                                <option value="1">一级代理</option>
+                                <option value="2">二级代理</option>
+                                <option value="3">三级代理</option>
+                                <option value="4">四级代理</option>
                                 <option value="5">五级代理</option>
                                 <option value="6">六级代理</option>
-								<option value="7">七级代理</option>
-								<option value="8">八级代理</option>
-								<option value="9">九级代理</option>
-								<option value="10">十级代理</option>
-						  </select>
+                                <option value="7">七级代理</option>
+                                <option value="8">八级代理</option>
+                                <option value="9">九级代理</option>
+                                <option value="10">十级代理</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -55,12 +59,12 @@
                     <div class="layui-form-item">
                         <div class="layui-input-block">
                             <select name="arrange3" lay-verify="required">
-							<option value="0">全部</option>
-							<option value="1">正常</option>
-                            <option value="2">停用</option>
-                            <option value="3">链锁</option>
-                            <option value="4">冻结</option>
-						  </select>
+                                <option value="0">全部</option>
+                                <option value="1">正常</option>
+                                <option value="2">停用</option>
+                                <option value="3">链锁</option>
+                                <option value="4">冻结</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -69,18 +73,18 @@
                     <div class="layui-form-item">
                         <div class="layui-input-block">
                             <select name="arrange4" lay-verify="required">
-							<option value="0">账号查询</option>
-							<option value="1">真实姓名</option>
-                            <option value="2">手机</option>
-                            <option value="3">QQ</option>
-							<option value="4">E-mail</option>
-						  </select>
+                                <option value="0">账号查询</option>
+                                <option value="1">真实姓名</option>
+                                <option value="2">手机</option>
+                                <option value="3">QQ</option>
+                                <option value="4">E-mail</option>
+                            </select>
                         </div>
                         <div class="layui-input-block">
                             <select name="arrange4" lay-verify="required">
-							<option value="0">模糊查询</option>
-							<option value="1">精确查询</option>
-						  </select>
+                                <option value="0">模糊查询</option>
+                                <option value="1">精确查询</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -114,9 +118,9 @@
 
         <!--操作-->
         <script type="text/html" id="agentListBar">
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal">添加</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="addsubagent.html">添加</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="info">信息</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal">修改</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editsubagent.html">修改</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="authority">权限</a>
         </script>
     </form>

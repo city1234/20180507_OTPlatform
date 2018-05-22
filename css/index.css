@@ -8,7 +8,7 @@
 }
 
 .hide {
-    display: none
+    display: none;
 }
 
 .layui-nav [thirdchildren] cite {
@@ -553,15 +553,6 @@ iframe {
 .closeBox .layui-nav-item>a,
 .closeBox .layui-nav-child .layui-nav .layui-nav-item a {
     color: #343434;
-}
-
-.closeBox .layui-nav-child dd:hoverr {
-    background-color: #2a63b4 !important;
-    color: #fff !important;
-}
-
-.closeBox .layui-nav .layui-nav-child a:hover {
-    background-color: transparent !improtant;
 }
 
 .closeBox .layui-nav-child {
