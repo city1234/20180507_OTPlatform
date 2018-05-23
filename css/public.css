@@ -180,7 +180,7 @@
     padding-bottom: 0;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1200px) {
     .history_box {
         height: auto !important;
         overflow-y: inherit;
@@ -390,7 +390,7 @@ form input.layui-input[disabled] {
     to {
         font-size: 0;
         opacity: 0;
-        top: 100px
+        top: 100px;
     }
 }
 
@@ -402,7 +402,7 @@ form input.layui-input[disabled] {
     to {
         font-size: 0;
         opacity: 0;
-        top: 100px
+        top: 100px;
     }
 }
 
@@ -414,7 +414,7 @@ form input.layui-input[disabled] {
     to {
         font-size: 0;
         opacity: 0;
-        top: 100px
+        top: 100px;
     }
 }
 
@@ -559,7 +559,7 @@ form input.layui-input[disabled] {
 }
 
 .icons li:hover {
-    background: rgba(13, 10, 49, .9);
+    background: rgba(13, 10, 49, 0.9);
     border-radius: 5px;
     color: #fff;
 }
@@ -964,7 +964,18 @@ h2.method {
     color: #f00;
 }
 
-@media screen and (max-width:1050px) {
+#Images li .operate .file {
+    float: right;
+    margin: 9px 11px 0 0;
+    font-size: 20px !important;
+    cursor: pointer;
+}
+
+#Images li .operate .file:hover {
+    color: #1e9fff;
+}
+
+@media screen and (max-width: 1050px) {
     #Images li {
         width: 24%;
     }
@@ -976,7 +987,7 @@ h2.method {
     }
 }
 
-@media screen and (max-width:432px) {
+@media screen and (max-width: 432px) {
     #Images li {
         width: 99%;
     }
@@ -1048,7 +1059,7 @@ h2.method {
 
 /*响应式*/
 
-@media screen and (max-width:450px) {
+@media screen and (max-width: 450px) {
     #userFaceBtn {
         height: 30px;
         line-height: 30px;
@@ -1091,11 +1102,14 @@ h2.method {
 }
 
 .addagent input,
-.addagent.title {
+.addagent.title,
+.addmainagent input,
+.addmainagent.title {
     float: left;
 }
 
 .addagent select,
+.addmainagent select,
 .backwater select {
     height: 38px;
     line-height: 1.3;
@@ -1111,11 +1125,13 @@ h2.method {
 /* 2018/05/03 Amanda */
 
 .addagent .rebasebox,
+.addmainagent .rebasebox,
 .addagentone1stmember .rebasebox {
     margin-bottom: 15px;
 }
 
 .addagent .rebasebox .title,
+.addmainagent .rebasebox .title,
 .addagentone1stmember .rebasebox .title {
     display: inline-block;
     width: 80px;
@@ -1129,6 +1145,7 @@ h2.method {
 /* 20180522 */
 
 .addagent .rebasebox .desc,
+.addmainagent .rebasebox .desc,
 .addagentone1stmember .rebasebox .desc {
     display: inline-block;
     width: 160px;
@@ -1196,55 +1213,68 @@ h2.method {
 .backwater .title {
     font-size: 24px;
     margin-bottom: 15px;
-    text-align: center
+    text-align: center;
 }
 
 .backwater .layui-form-label {
     width: auto;
 }
 
-.addagent .layui-form-select .layui-edge {
+.addagent .layui-form-select .layui-edge,
+.addmainagent .layui-form-select .layui-edge {
     margin-top: 15px;
 }
 
 
 /* 20180504 Amanda */
 
-.addagent .layui-layer-title {
+.addagent .layui-layer-title,
+.addmainagent .layui-layer-title {
     padding: 0 20px;
 }
 
 .addagent .layui-icon,
+.addmainagent .layui-icon,
 .addtemplate .layui-icon {
     cursor: pointer;
 }
 
 .addagent .addlstUser,
+.addmainagent .addlstUser,
 .addagent .addlstUser span,
-.addagent .addlstUser input {
+.addmainagent .addlstUser span,
+.addagent .addlstUser input,
+.addmainagent .addlstUser input {
     display: inline-block;
     color: #343434;
 }
 
-.addagent .addlstUser {
+.addagent .addlstUser,
+.addmainagent .addlstUser {
     width: auto;
     margin-right: 10px;
 }
 
-.addagent .addlstUser:last-child {
+.addagent .addlstUser:last-child,
+.addmainagent .addlstUser:last-child {
     margin-right: 0;
 }
 
 .addagent .addlstUser span,
-.addagent .addlstUser input {
+.addmainagent .addlstUser span,
+.addagent .addlstUser input,
+.addmainagent .addlstUser input {
     float: left;
 }
 
-.addagent .addlstUser span {
+.addagent .addlstUser span,
+.addmainagent .addlstUser span {
     line-height: 38px;
 }
 
-.addagent span {
+.addagent span,
+.addmainagent span,
+.addhierarchy span {
     color: #ff5823;
 }
 
@@ -1335,7 +1365,7 @@ h2.method {
 
 .backwater button {
     margin-left: 120px;
-    width: 150px
+    width: 150px;
 }
 
 
@@ -1357,10 +1387,26 @@ h2.method {
 }
 
 
+/* 20180523 Sharlene */
+
+.addhierarchy .layui-form-label {
+    width: 100px !important;
+}
+
+
 /* 2018/05/09 Amanda */
 
+.hierarchy.layui-table,
 .agentDeposit .layui-table {
     width: auto;
+}
+
+.hierarchy.layui-table td {
+    text-align: center;
+}
+
+.hierarchy {
+    overflow-x: scroll;
 }
 
 .agentDeposit .magt10 {
@@ -1401,4 +1447,8 @@ span.mark {
     width: auto;
     display: inline-block;
     font-size: 14px;
+}
+
+.image .layui-block {
+    margin-bottom: 15px;
 }

@@ -63,7 +63,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         }, 500);
     })
 
-    //搜索【此功能需要后台配合，所以暂时没有动态效果演示】
+    //查询【此功能需要后台配合，所以暂时没有动态效果演示】
     $(".search_btn").on("click", function() {
         if ($(".searchVal").val() != '') {
             table.reload("searchMemberTable", {
@@ -71,11 +71,11 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     curr: 1 //重新从第 1 页开始
                 },
                 where: {
-                    key: $(".searchVal").val() //搜索的关键字
+                    key: $(".searchVal").val() //查询的关键字
                 }
             })
         } else {
-            layer.msg("请输入搜索的内容");
+            layer.msg("请输入查询的内容");
         }
     });
 
@@ -150,27 +150,6 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
     $(".agentedit_btn").click(function() {
             agentedit();
         })
-        //批量删除
-        // $(".delAll_btn").click(function(){
-        //     var checkStatus = table.checkStatus('agentListTable'),
-        //         data = checkStatus.data,
-        //         agentId = [];
-        //     if(data.length > 0) {
-        //         for (var i in data) {
-        //             agentId.push(data[i].agentId);
-        //         }
-        //         layer.confirm('确定删除选中的文章？', {icon: 3, title: '提示信息'}, function (index) {
-        //             // $.get("删除文章接口",{
-        //             //     agentId : agentId  //将需要删除的agentId作为参数传入
-        //             // },function(data){
-        //             tableIns.reload();
-        //             layer.close(index);
-        //             // })
-        //         })
-        //     }else{
-        //         layer.msg("请选择需要删除的文章");
-        //     }
-        // })
 
     //上級查看
     table.on('tool(agentList)', function(obj) {

@@ -14,17 +14,53 @@
     <link rel="stylesheet" href="../../css/public.css" media="all" />
 </head>
 
-<body class="childrenBody">
+<body class="childrenBody image">
     <form class="layui-form">
-        <blockquote class="layui-elem-quote news_search">
-            <div class="layui-inline">
-                <input type="checkbox" name="selectAll" id="selectAll" lay-filter="selectAll" lay-skin="primary" title="全选">
+        <blockquote class="layui-elem-quote">
+            <div class="searchAgent">
+                <a class="layui-btn layui-btn-sm layui-btn-normal" href="images.html">
+                    图库</a>
+                <a class="layui-btn layui-btn-sm layui-btn-normal" href="column.html">
+                    栏目</a>
+                <a class="layui-btn layui-btn-sm layui-btn-normal" href="uploadList.html">
+                    待上传</a>
+                <a class="layui-btn layui-btn-sm layui-btn-normal" href="alreadyuploadList.html">
+                    已上传</a>
             </div>
-            <div class="layui-inline">
-                <a class="layui-btn layui-btn-sm layui-btn-danger batchDel">批量删除</a>
+            <div class="layui-block">
+                <span class="title">标题：</span>
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input searchVal" placeholder="请输入搜索内容">
+                    </div>
+                    <a class="layui-btn search_btn layui-btn-sm layui-btn-normal" data-type="reload">搜索</a>
+                </div>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="test1">
+                    <i class="layui-icon">&#xe654;</i>新增图片
+                </button>
             </div>
-            <div class="layui-inline">
-                <a class="layui-btn layui-btn-sm uploadNewImg">上传新图片</a>
+            <div class="layui-block">
+                <span class="title">分组：</span>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-normal" id="test1">
+                    <i class="layui-icon">&#xe654;</i>新增分组
+                </button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-normal">
+                    未分组
+                </button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-normal">
+                    <i class="layui-icon">&#xe640;</i>的地方大放送
+                </button>
+            </div>
+            <div class="layui-block">
+                <span class="title">全选：</span>
+                <input type="checkbox" name="selectAll" id="selectAll" lay-filter="selectAll" lay-skin="primary" title="">
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-normal">
+                    移动至分组
+                </button>
+                <div class="layui-inline">
+                    <a class="layui-btn layui-btn layui-btn-sm layui-btn-danger batchDel">
+                        <i class="layui-icon">&#xe640;</i>删除</a>
+                </div>
             </div>
         </blockquote>
         <ul class="layer-photos-demo" id="Images"></ul>

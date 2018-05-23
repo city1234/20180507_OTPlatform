@@ -27,7 +27,7 @@
                 {
                     "title": "总代",
                     "icon": "",
-                    "href": "",
+                    "href": "page/account/addmainagent.html",
                     "spread": false,
                     "target": ""
                 },
@@ -68,7 +68,7 @@
                 {
                     "title": "层级管理",
                     "icon": "",
-                    "href": "",
+                    "href": "page/finance/hierarchy.html",
                     "spread": false,
                     "target": ""
                 },
@@ -133,18 +133,22 @@
                             "spread": false
                         },
                         {
+                            "title": "人工存入(厅主)",
+                            "icon": "",
+                            "href": "page/agent/lobbyDeposit.html",
+                            "spread": false
+                        },
+                        {
                             "title": "人工提出",
                             "icon": "",
-                            "href": "",
-                            "spread": false,
-                            "target": "_blank"
+                            "href": "page/agent/agentDeposit.html",
+                            "spread": false
                         },
                         {
                             "title": "批次处理",
                             "icon": "",
                             "href": "",
-                            "spread": false,
-                            "target": "_blank"
+                            "spread": false
                         }
                     ]
                 },
@@ -271,7 +275,13 @@
             "title": "平台管理",
             "icon": "&#xe675;",
             "href": "",
-            "spread": false
+            "spread": false,
+            "children": [{
+                "title": "网站咨询系统",
+                "icon": "",
+                "href": "page/img/images.html",
+                "spread": false
+            }]
         },
         {
             "title": "报表管理",

@@ -17,9 +17,9 @@
 <body class="childrenBody">
     <div class="agentDeposit">
         <blockquote class="layui-elem-quote quoteBox">
-            <label>会员账号：</label>
+            <label>账号：</label>
             <div class="layui-input-inline">
-                <input type="text" class="layui-input searchVal" placeholder="请输入查询内容">
+                <input type="text" class="layui-input searchVal" placeholder="请输入搜索内容">
             </div>
             <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
         </blockquote>
@@ -32,8 +32,7 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>人工存入</th>
-                        <th>人工存入</th>
+                        <th colspan="2">人工提出</th>
                         <th>备注</th>
                     </tr>
                 </thead>
@@ -45,12 +44,11 @@
                     </tr>
                     <tr>
                         <td>现金余额</td>
-                        <td>
-                            0.0</td>
+                        <td>0.0</td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>存入金额</td>
+                        <td>出款</td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input">
@@ -63,21 +61,41 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>动态口令</td>
+                        <td>优惠稽核</td>
                         <td>
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input" placeholder="未绑定请留空">
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="" lay-skin="primary" title="清除稽核点">
                             </div>
-                            <!-- <p class="layui-red">*如无设置可不用填写</p> -->
                         </td>
                         <td>
-
-                        </td>
                     </tr>
                     <tr>
-                        <td>我的余额</td>
-                        <td colspan="2">
-                            <span class="layui-red">140,23.00</span>
+                        <td>常态性稽核</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="" lay-skin="primary" title="清除稽核点">
+                            </div>
+                        </td>
+                        <td>
+                    </tr>
+                    <tr>
+                        <td>提出项目</td>
+                        <td>
+                            <div class="layui-inline">
+                                <div class="layui-form-item">
+                                    <select name="" >
+                                        <option value="0">重复出款</option>
+                                        <option value="1">公司入款误存</option>
+                                        <option value="2">会员负数回冲</option>
+                                        <option value="3">手动申请出款</option>
+                                        <option value="4">扣除非法下注派彩</option>
+                                        <option value="5">放弃存款优惠</option>
+                                        <option value="6">其他</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
                         </td>
                     </tr>
                 </tbody>
@@ -87,7 +105,6 @@
             </div>
         </div>
     </div>
-
 
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="../../js/index.js"></script>

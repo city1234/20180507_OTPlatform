@@ -71,9 +71,9 @@
                 </div>
                 <div class="layui-inline">
                     <div class="layui-input-inline">
-                        <input type="text" class="layui-input searchVal" placeholder="请输入搜索内容" />
+                        <input type="text" class="layui-input searchVal" placeholder="请输入查询内容" />
                     </div>
-                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">搜索</a>
+                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
                 </div>
 
                 <div class="layui-inline">
@@ -82,7 +82,8 @@
             </form>
 
         </blockquote>
-        <table id="agentList" lay-filter="agentList"></table>
+        <table id="agentList" lay-filter="agentList">
+        </table>
         <!--审核状态-->
         <script type="text/html" id="agentAccount">
             {{# if( d.agentAccount == "0"){ }}
@@ -101,7 +102,7 @@
         <script type="text/html" id="agentListBar">
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/addnone1stagent.html">添加</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="info">信息</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="../account/edit1stagent.html">修改</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal">修改</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="authority">权限</a>
         </script>
     </form>

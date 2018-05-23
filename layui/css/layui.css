@@ -4996,6 +4996,25 @@ Sharlene Liao,
 }
 
 
+/* 20180523 iframed table input Setting — Sharlene */
+
+.childrenBody.hierarchyTable {
+    margin: 0;
+    padding: 0 5px;
+}
+
+.childrenBody #hierarchyTable table.layui-table {
+    width: 390px;
+    margin: 0;
+    padding: 0;
+}
+
+.childrenBody #hierarchyTable table.layui-table th,
+.childrenBody #hierarchyTable table.layui-table td {
+    padding: 5px 8px;
+}
+
+
 /* 20180509 寬度設定 */
 
 .childrenBody #memberTable table.layui-table th {
@@ -5007,6 +5026,7 @@ Sharlene Liao,
     border: 0;
 }
 
+#hierarchyTable .layui-input-block,
 #memberTable .layui-input-block {
     margin-left: 0;
     font-size: 0.9em;
@@ -5016,6 +5036,15 @@ Sharlene Liao,
     display: block;
     padding: 0px 0px 0px 5px !important;
     width: 95px;
+    white-space: normal;
+}
+
+
+/* 20180522 Sharlene 寬度設定 */
+
+#hierarchyTable td .layui-form-checkbox[lay-skin=primary] span {
+    display: block;
+    padding: 0px 0px 0px 5px !important;
     white-space: normal;
 }
 
