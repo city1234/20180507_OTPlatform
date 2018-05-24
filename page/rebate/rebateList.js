@@ -21,7 +21,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 // {type: "checkbox", fixed:"left", width:50},
                 { field: 'rebateId', title: '序号', width: 100, align: "center" },
                 { field: 'rebateModuleName', title: '用户名', width: 400, align: "center" },
-                { field: 'rebateBet', title: '有效投注', width: 250, align: 'center', edit: "text"},
+                { field: 'rebateBet', title: '有效投注', width: 250, align: 'center', edit: "text" },
                 {
                     field: 'rebateSupLimit',
                     title: '返点上限',
@@ -147,28 +147,28 @@ layui.use('table', function() {
             ,
             field = obj.field; //得到字段
         // layer.confirm(data.rebateModuleName + '  数据更改为：' + value + '<br>是否修改金额');
-        if (value.length < 16 ) {
+        if (value.length < 16) {
             layer.open({
-            type: 1,
-            closeBtn: 1,
-            btn: ['确定','取消'],
-            btnAlign: 'c',
-            shadeClose: true,
-            title: '温馨提示',
-            area: ['350px', '150px'],
-            content: '是否修改金额'
-        });
-    } else {
-        layer.open({
-            type: 1,
-            closeBtn: 1,
-            btn: ['确定','取消'],
-            btnAlign: 'c',
-            shadeClose: true,
-            title: '温馨提示',
-            area: ['350px', '150px'],
-            content: '最大长度为15位，支持填写小数点后两位、数字'
-        });
-    }
+                type: 1,
+                closeBtn: 1,
+                btn: ['确定', '取消'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '温馨提示',
+                area: ['350px', '180px'],
+                content: '是否修改金额'
+            });
+        } else {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['确定', '取消'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '温馨提示',
+                area: ['350px', '180px'],
+                content: '最大长度为15位，支持填写小数点后两位、数字'
+            });
+        }
     });
 });

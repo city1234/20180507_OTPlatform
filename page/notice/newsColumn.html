@@ -16,10 +16,13 @@
 
 
 <body class="childrenBody">
-    <blockquote class="layui-elem-quote">
+    <blockquote class="layui-elem-quote newsColumn">
         <div class="searchAgent">
+            <a class="layui-btn layui-btn-sm layui-btn-normal" href="manageNews.html">
+                <i class="layui-icon"></i>返回上页
+            </a>
             <a class="layui-btn layui-btn-sm layui-btn-normal" href="addNews.html">新增讯息</a>
-            <a class="layui-btn layui-btn-sm layui-btn-normal" href="manageNews.html">回讯息列表</a>
+
         </div>
     </blockquote>
     <div class="layui-form">
@@ -37,7 +40,7 @@
                     <td>一般讯息</td>
                     <td>
                         <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">修改</a>
-                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">删除</a>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-danger" href="#">删除</a>
                     </td>
                 </tr>
                 <tr>
@@ -45,7 +48,7 @@
                     <td>一般讯息</td>
                     <td>
                         <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">修改</a>
-                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">删除</a>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-danger" href="#">删除</a>
                     </td>
                 </tr>
                 <tr>
@@ -53,7 +56,7 @@
                     <td>一般讯息</td>
                     <td>
                         <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">修改</a>
-                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">删除</a>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-danger" href="#">删除</a>
                     </td>
                 </tr>
                 <tr>
@@ -61,11 +64,11 @@
                     <td>一般讯息</td>
                     <td>
                         <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">修改</a>
-                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">删除</a>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-danger" href="#">删除</a>
                     </td>
                 </tr>
             </tbody>
-        </table> 
+        </table>
     </div>
     <script src="../../layui/layui.js"></script>
     <script>
@@ -73,7 +76,7 @@
         layui.use('form', function() {
             var form = layui.form;
             var $ = layui.jquery
-             
+
         });
     </script>
 </body>

@@ -4873,6 +4873,10 @@ div.searchMember a {
     margin-top: -3px;
 }
 
+.newsColumn div.searchAgent {
+    margin-bottom: 0;
+}
+
 .line-height2-5 {
     line-height: 2.5;
 }

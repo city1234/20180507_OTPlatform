@@ -155,7 +155,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                             tips: 3
                         });
                     }, 500)
-                }        
+                }
             })
             layui.layer.full(index);
             //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
@@ -164,8 +164,8 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
             })
         }
         $(".memberedit_btn").click(function() {
-                memberedit();
-            })
+            memberedit();
+        })
 
         //上級查看
         table.on('tool(memberList)', function(obj) {
@@ -211,22 +211,22 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     btnAlign: 'c',
                     shadeClose: true,
                     title: '余额详情',
-                    area: ['610px', '240px'],
+                    area: ['610px', '280px'],
                     content: '<table class="layui-table"><thead><tr><th>总金额</th><th>现金金额</th><th>AG</th><th>OG</th><th>BB</th><th>AB</th></tr></thead>' +
-                    '<tbody><tr><td>' + obj.data.BalanceTotal + 
-                    '</td><td>' + obj.data.BalanceCash + 
-                    '</td><td>' + obj.data.BalanceAG + 
-                    '</td><td>' + obj.data.BalanceOG + 
-                    '</td><td>' + obj.data.BalanceBB + 
-                    '</td><td>' + obj.data.BalanceAB +
-                    '</td></tr><tr><td><span class="layui-blue">更新</span></td>' + 
-                    '<td><span class="layui-blue">更新</span></td>' + 
-                    '<td><span class="layui-blue">更新</span></td>' + 
-                    '<td><span class="layui-blue">更新</span></td>' + 
-                    '<td><span class="layui-blue">更新</span></td>' + 
-                    '<td><span class="layui-blue">更新</span></td></tr></tbody></table>'
-            });
-            }else if (layEvent === 'edit') { //编辑
+                        '<tbody><tr><td>' + obj.data.BalanceTotal +
+                        '</td><td>' + obj.data.BalanceCash +
+                        '</td><td>' + obj.data.BalanceAG +
+                        '</td><td>' + obj.data.BalanceOG +
+                        '</td><td>' + obj.data.BalanceBB +
+                        '</td><td>' + obj.data.BalanceAB +
+                        '</td></tr><tr><td><span class="layui-blue">更新</span></td>' +
+                        '<td><span class="layui-blue">更新</span></td>' +
+                        '<td><span class="layui-blue">更新</span></td>' +
+                        '<td><span class="layui-blue">更新</span></td>' +
+                        '<td><span class="layui-blue">更新</span></td>' +
+                        '<td><span class="layui-blue">更新</span></td></tr></tbody></table>'
+                });
+            } else if (layEvent === 'edit') { //编辑
                 editAgent(data);
             } else if (layEvent === 'authority') { //權限
                 layer.confirm('此账户权限为 OOOO', { icon: 3, title: '账户权限' }, function(index) {
