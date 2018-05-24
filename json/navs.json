@@ -277,11 +277,55 @@
             "href": "",
             "spread": false,
             "children": [{
-                "title": "网站咨询系统",
-                "icon": "",
-                "href": "page/img/images.html",
-                "spread": false
-            }]
+                    "title": "网站咨询系统",
+                    "icon": "",
+                    "href": "page/img/images.html",
+                    "spread": false
+                },
+                {
+                    "title": "公告管理",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "thirdChildren": [{
+                            "title": "公告信息",
+                            "icon": "",
+                            "href": "page/notice/noticeNews.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "管理信息",
+                            "icon": "",
+                            "href": "page/notice/manageNews.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "代理弹出公告",
+                            "icon": "",
+                            "href": "page/notice/agentPopNews.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "会员弹出公告",
+                            "icon": "",
+                            "href": "page/notice/memberPopNews.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "会员资讯管理",
+                            "icon": "",
+                            "href": "page/notice/memberInforManage.html",
+                            "spread": false
+                        },
+                        {
+                            "title": "会员留言",
+                            "icon": "",
+                            "href": "page/notice/memberLeaveWord.html",
+                            "spread": false
+                        }
+                    ]
+                }
+            ]
         },
         {
             "title": "报表管理",

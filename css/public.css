@@ -911,10 +911,11 @@ h2.method {
 
 #Images li {
     width: 19%;
-    margin: 0.5% 0.5%;
+    margin: 0.5% 0.5% 1.5%;
     float: left;
     overflow: hidden;
     background: #f4f5f9;
+    color: #666;
 }
 
 #Images li img {
@@ -957,13 +958,14 @@ h2.method {
 
 #Images li .operate {
     display: block;
-    height: 45px;
+    height: 40px;
+    padding-bottom: 1.5%;
     width: 100%;
     background: #f4f5f9;
 }
 
 #Images li .operatetop .check,
-#Images li .operatetop .size {
+#Images li .size {
     float: left;
     margin-left: 11px;
     height: 18px;
@@ -997,7 +999,7 @@ h2.method {
 }
 
 #Images li .operate .img_del:hover {
-    color: #f00;
+    color: #ff5823;
 }
 
 #Images li .operate .file {
@@ -1009,6 +1011,10 @@ h2.method {
 
 #Images li .operate .file:hover {
     color: #1e9fff;
+}
+
+#Images li .operate span {
+    font-family: "Microsoft Yahei"!important;
 }
 
 @media screen and (max-width: 1050px) {
@@ -1131,7 +1137,7 @@ h2.method {
 /* 2018/05/02 Amanda */
 
 .mark {
-    color: red;
+    color: #ff5823;
     height: 38px;
     line-height: 38px;
     font-size: 20px;
@@ -1528,7 +1534,7 @@ span.mark {
 }
 
 @media (max-width: 1440px) {
-    table.rebateChargeoff .layui-btn:nth-child(3) {
+    #storeList table.rebateChargeoff .layui-btn:nth-child(3) {
         margin-top: 8px !important;
     }
 }

@@ -2007,6 +2007,15 @@ hr {
 }
 
 
+/* 20180527 Amanda */
+
+.layui-title {
+    font-size: 18px;
+    padding: 15px 15px 0px;
+    color: #666;
+}
+
+
 /* 2018/05/08 Amanda */
 
 .layui-btn-restore {

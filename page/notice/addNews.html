@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>新增讯息</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+
+<body class="childrenBody">
+    <form class="layui-form">
+        <blockquote class="layui-elem-quote">
+            <div class="searchAgent">
+                <a class="layui-btn layui-btn-sm layui-btn-normal" href="manageNews.html">回讯息列表</a>
+            </div>
+            <br>
+            <p class="layui-red">*若需输入% \"等等特殊符号,请使用全形字体,谢谢!</p>
+            <p>特殊讯息,内容需要取代的地方请使用%s, %符号为半型,s为小写</p>
+        </blockquote>
+        <div class="layui-form">
+            <table class="layui-table">
+                <thead>
+                    <tr>
+                        <th colspan="3">讯息新增</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="3">
+                            主题<input type="text" class="layui-input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            内容<textarea></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="" lay-skin="primary" title="一般讯息">
+                                <input type="checkbox" name="" lay-skin="primary" title="特殊讯息">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <div class="magt10">
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">送出</button>
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">清除</button>
+        </div>
+    </form>
+    <script src="../../layui/layui.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+            var $ = layui.jquery
+             
+        });
+    </script>
+</body>
+
+</html>
