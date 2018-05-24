@@ -1445,11 +1445,27 @@ h2.method {
     overflow-x: scroll;
 }
 
+.agentDeposit .layui-form-checkbox {
+    margin-bottom: 8px;
+}
+
+.agentDeposit #dep4 .layui-form-checkbox {
+    margin-bottom: 0;
+}
+
+.agentDeposit #item2 .layui-form-checkbox {
+    margin-bottom: 0;
+}
+
 .agentDeposit .magt10 {
     display: inline-block;
     width: 35%;
     margin: 10px auto 0 !important;
     text-align: center;
+}
+
+.agentDeposit p {
+    margin-bottom: 8px;
 }
 
 .attention {
@@ -1508,4 +1524,10 @@ span.mark {
 
 .editupload table {
     text-align: center;
+}
+
+@media (max-width: 1440px) {
+    table.rebateChargeoff .layui-btn:nth-child(3) {
+        margin-top: 8px !important;
+    }
 }

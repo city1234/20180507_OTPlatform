@@ -71,8 +71,7 @@
                     <td>A0031</td>
                     <td>洗码层1</td>
                     <td>
-                        2018-01-01 18:58:42<br>
-                        2018-01-22 18:58:53
+                        2018-01-01 18:58:42<br> 2018-01-22 18:58:53
                     </td>
                     <td>1</td>
                     <td>1.0</td>
@@ -84,7 +83,7 @@
                     <td>
                         <a href="editHierarchy.html" class="layui-btn layui-btn-xs layui-btn-border-normal">修改</a>
                         <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="Levels()">分层</a>
-                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="reUndefine()">回归</a>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal " method="offset" onclick="reUndefine()">回归</a>
                     </td>
                     <td><a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="payPlatform()">支付平台</a></td>
                 </tr>
@@ -92,12 +91,11 @@
                     <td>A0033</td>
                     <td>BWT</td>
                     <td>
-                        2014-02-01 16:09:33<br>
-                        2014-06-14 16:09:35
+                        2014-02-01 16:09:33<br> 2014-06-14 16:09:35
                     </td>
                     <td>497</td>
                     <td>10622842.35</td>
-                    <td>10482000.0	</td>
+                    <td>10482000.0 </td>
                     <td>91</td>
                     <td>10650709.12</td>
                     <td class="layui-blue">1</td>
@@ -113,10 +111,10 @@
 
         </table>
         <div class="layui-table-page page-shift">
-                <div id="layui-table-page1">
-                    <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1">
-                        <span class="layui-laypage-count">共 3 条</span>
-                        <span class="layui-laypage-limits">
+            <div id="layui-table-page1">
+                <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1">
+                    <span class="layui-laypage-count">共 3 条</span>
+                    <span class="layui-laypage-limits">
                             <select lay-ignore="">
                                 <option value="10" selected="">10 条/页</option>
                                 <option value="20">20 条/页</option>
@@ -129,88 +127,88 @@
                                 <option value="90">90 条/页</option>
                             </select>
                         </span>
-                        <a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">
-                            <i class="layui-icon"></i>
-                        </a>
-                        <span class="layui-laypage-curr">
+                    <a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">
+                        <i class="layui-icon"></i>
+                    </a>
+                    <span class="layui-laypage-curr">
                             <em class="layui-laypage-em"></em>
                             <em>1</em>
                         </span>
-                        <a href="javascript:;" class="layui-laypage-next" data-page="2">
-                            <i class="layui-icon"></i>
-                        </a>
-                        <span class="layui-laypage-skip">到第
+                    <a href="javascript:;" class="layui-laypage-next" data-page="2">
+                        <i class="layui-icon"></i>
+                    </a>
+                    <span class="layui-laypage-skip">到第
                             <input type="text" min="1" value="1" class="layui-input">页
                             <button type="button" class="layui-laypage-btn">确定</button>
                         </span>
-                    </div>
                 </div>
             </div>
+        </div>
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="../../layui/lay/modules/form.js"></script>
 </body>
 <script>
-        // 查询会员名单
-        function memberSearch() {
-            layer.open({
-                type: 1,
-                closeBtn: 1,
-                btn: ['送出查询', '关闭查询'],
-                btnAlign: 'c',
-                shadeClose: true,
-                title: '查询会员名单',
-                area: ['500px', '350px'],
-                content: '<form  class="layui-form">\
+    // 查询会员名单
+    function memberSearch() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: ['送出查询', '关闭查询'],
+            btnAlign: 'c',
+            shadeClose: true,
+            title: '查询会员名单',
+            area: ['500px', '350px'],
+            content: '<form  class="layui-form">\
                         <div class="layui-form-item">\
                                 <p class="layui-red" style="line-height: 3;">以半角逗号,分隔多个帐号，最大支持300会员查询</p>\
                                     <textarea name="desc" placeholder="请输入内容" class="layui-textarea" style="height: 200px"></textarea>\
                         </div>\
                     </form>'
-            });
-        }
-        // 层级分层
-        function Levels() {
-            layer.open({
-                type:1,
-				closeBtn:1,
-				btn: ['送交', '关闭'],
-				btnAlign: 'c',
-				shadeClose:true,
-                title:'层级分层-人民币（RMB）',
-                area:['420px','78%'],
-				content:'<iframe src="hierarchyTable.html" width="100%" height="96%"></iframe>'
-					
-            });
-        }
-        // 回歸
-        function reUndefine() {
-            layer.open({
-                type: 1,
-                closeBtn: 1,
-                btn: ['确定', '取消'],
-                btnAlign: 'c',
-                shadeClose: true,
-                title: '回归未分层',
-                area: ['350px', '250px'],
-                content: '<p style="padding: 10px 15px; line-height: 1.8;">该层级未锁定的会员将会被回归至未分层！确定执行吗?</p>'
-            });
-        }
-        // 设定币别
-        function payPlatform() {
-            layer.open({
-                type:1,
-				closeBtn:1,
-				btn: ['送交', '关闭'],
-				btnAlign: 'c',
-				shadeClose:true,
-                title:'设定币别',
-                area:['410px','400px'],
-				content:'<iframe src="hPayPlatform.html" width="100%" height="90%"></iframe>'
-					
-            });
-        }
-    </script>
+        });
+    }
+    // 层级分层
+    function Levels() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: ['送交', '关闭'],
+            btnAlign: 'c',
+            shadeClose: true,
+            title: '层级分层-人民币（RMB）',
+            area: ['420px', '78%'],
+            content: '<iframe src="hierarchyTable.html" width="100%" height="96%"></iframe>'
 
-    
+        });
+    }
+    // 回歸
+    function reUndefine() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: ['确定', '取消'],
+            btnAlign: 'c',
+            shadeClose: true,
+            title: '回归未分层',
+            area: ['350px', '250px'],
+            content: '<p style="padding: 10px 15px; line-height: 1.8;">该层级未锁定的会员将会被回归至未分层！确定执行吗?</p>'
+        });
+    }
+    // 设定币别
+    function payPlatform() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: ['送交', '关闭'],
+            btnAlign: 'c',
+            shadeClose: true,
+            title: '设定币别',
+            area: ['410px', '400px'],
+            content: '<iframe src="hPayPlatform.html" width="100%" height="90%"></iframe>'
+
+        });
+    }
+</script>
+
+
 </html>

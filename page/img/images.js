@@ -53,7 +53,7 @@ layui.config({
     });
 
     //弹出层
-    $("body").on("click", "#Images img", function() {
+    $("body").on("click", "#Images .imgBox", function() {
         parent.showImg();
     })
 

@@ -12,7 +12,7 @@
             "shareAccount": "0",
             "shareBet": "0",
             "shareTime": "2018-03-28",
-            "shareLogin": "<a href='#' class='layui-blue'>1</a>"
+            "shareLogin": "<a href='loginShare.html' class='layui-blue'>1</a>"
         },
         {
             "shareId": "2",
@@ -24,7 +24,7 @@
             "shareAccount": "1",
             "shareBet": "1",
             "shareTime": "2018-03-26",
-            "shareLogin": "<a href='#' class='layui-blue'>0</a>"
+            "shareLogin": "<a href='loginShare.html' class='layui-blue'>0</a>"
         }
     ]
 }

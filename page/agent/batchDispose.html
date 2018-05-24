@@ -24,7 +24,7 @@
                         <button type="button" class="layui-btn layui-btn-normal" id="test">选择文件</button>
                         <button type="button" class="layui-btn layui-btn-normal" id="test1">档案上传</button>
                     </div>
-                    <div class="layui-inline" id="select" >
+                    <div class="layui-inline" id="select">
                         <select name="" lay-filter="category" aria-invalid="false">
                             <option value="0">人工存入</option>
                             <option value="1">存款优惠</option>
@@ -55,17 +55,18 @@
     </form>
 
     <div>
-        <img id="batch1" class="batch" src="../../images/batch1.jpg" alt="">
+        <img id="batch1" class="batch" src="../../images/batch1.jpg" alt="" width="100%">
         <img id="batch2" class="batch" src="../../images/batch2.jpg" alt="">
         <img id="batch3" class="batch" src="../../images/batch3.jpg" alt="">
         <img id="batch4" class="batch" src="../../images/batch4.jpg" alt="">
     </div>
     <br>
     <style>
-        img[id*='batch']{
+        img[id*='batch'] {
             display: none;
         }
-        #batch1{
+        
+        #batch1 {
             display: block;
         }
     </style>
@@ -81,18 +82,18 @@
         layui.use('form', function() {
             var form = layui.form;
             var $ = layui.jquery
-            //下拉选项判断
+                //下拉选项判断
             form.on('select(category)', function(data) {
-                category = data.value;  
-                categoryName = data.elem[data.elem.selectedIndex].text;  
+                category = data.value;
+                categoryName = data.elem[data.elem.selectedIndex].text;
                 form.render('select');
-                if (category<1) {
+                if (category < 1) {
                     $('#batch1').show().siblings().hide();
-                } else if (category==1) {
+                } else if (category == 1) {
                     $('#batch2').show().siblings().hide();
-                } else if (category==2 || category>=4) {
+                } else if (category == 2 || category >= 4) {
                     $('#batch3').show().siblings().hide();
-                } else if (category==3) {
+                } else if (category == 3) {
                     $('#batch4').show().siblings().hide();
                 }
                 console.log(data.value)
@@ -106,7 +107,7 @@
         // 选完文件后不自动上传
         layui.use('upload', function() {
             var $ = layui.jquery,
-            upload = layui.upload;
+                upload = layui.upload;
 
             upload.render({
                 elem: '#test',

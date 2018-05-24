@@ -25,7 +25,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     { field: 'shareSupShare', title: '大股东', width: 145, align: "center" },
                     { field: 'shareTopShare', title: '大大股东', width: 145, align: "center" },
                     // { field: 'shareBalance', title: '账户余额', width: 180, align: 'center' },
-                    { field: 'shareSub', title: '<a href="searchAgent.html" class="th-link">下级代理</a>', width: 100, align: "center"},
+                    { field: 'shareSub', title: '总/代/会', width: 100, align: "center"},
                     { field: 'shareAccount', title: '账号', width: 100, align: 'center', templet: "#shareAccount" },
                     { field: 'shareBet', title: '投注', width: 100, align: 'center', templet: "#shareBet" },
                     // { field: 'shareSubMember', title: '直属会员', width: 100, align: "center" },
