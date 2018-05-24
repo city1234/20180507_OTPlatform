@@ -16,30 +16,26 @@
 
 <body class="childrenBody">
     <form class="layui-form uploadList">
-        <blockquote class="layui-elem-quote">
-            <div class="searchAgent">
-                <a class="layui-btn layui-btn-sm layui-btn-normal" href="images.html">
-                    图库</a>
-                <a class="layui-btn layui-btn-sm layui-btn-normal" href="column.html">
-                    栏目</a>
-                <a class="layui-btn layui-btn-sm layui-btn-normal" href="uploadList.html">
-                    待上传</a>
-                <a class="layui-btn layui-btn-sm layui-btn-normal" href="alreadyuploadList.html">
-                    已上传</a>
-            </div>
-        </blockquote>
+
+        <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray" href="images.html">图库</a>
+            <a class="layui-btn layui-btn-gray" href="column.html">栏目</a>
+            <a class="layui-btn layui-btn-gray active" href="uploadList.html">待上传</a>
+            <a class="layui-btn layui-btn-gray" href="alreadyuploadList.html">已上传</a>
+        </div>
+
         <table id="uploadList" lay-filter="uploadList">
         </table>
 
         <!--编辑状态-->
         <script type="text/html" id="uploadListEdit">
             {{# if( d.uploadListEdit == "0"){ }}
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal">编辑</a>{{# } else if( d.uploadListEdit == "4"){ }}
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal">编辑</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal">预览</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editupload.html">编辑</a>{{# } else if( d.uploadListEdit == "4"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editupload.html">编辑</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="preview()">预览</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="upload()">上傳</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="pageDel()">删除</a>{{# } else { }}
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal">编辑</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editupload.html">编辑</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="upload()">上傳</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="pageDel()">删除</a> {{# }}}
         </script>
@@ -65,12 +61,25 @@
                     content: '确定要删除模板吗？'
                 });
             }
+            // 预览弹窗 
+            function preview() {
+                layer.open({
+                    type: 1,
+                    closeBtn: 1,
+                    btn: ['确定'],
+                    btnAlign: 'c',
+                    shadeClose: true,
+                    title: '预览',
+                    area: ['280px', '180px'],
+                    content: '预览地址： <input type = "text" > '
+                });
+            }
             // 上传弹窗 
             function upload() {
                 layer.open({
                     type: 1,
                     closeBtn: 1,
-                    btn: ['确定', '取消'],
+                    btn: ['确定'],
                     btnAlign: 'c',
                     shadeClose: true,
                     title: '上传案件',

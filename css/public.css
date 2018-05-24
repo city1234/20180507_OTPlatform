@@ -914,6 +914,7 @@ h2.method {
     margin: 0.5% 0.5%;
     float: left;
     overflow: hidden;
+    background: #f4f5f9;
 }
 
 #Images li img {
@@ -921,14 +922,48 @@ h2.method {
     cursor: pointer;
 }
 
-#Images li .operate {
+#Images li .imgBox {
+    position: relative;
+}
+
+#Images li .imgPreview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: none;
+}
+
+#Images li .imgBox:hover img {
+    transition: all 0.5s;
+    filter: grayscale(100%);
+}
+
+#Images li .imgBox:hover .imgPreview {
+    display: block;
+    background-color: #1e9fff;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#Images li .operatetop {
     display: block;
     height: 40px;
     width: 100%;
     background: #f4f5f9;
 }
 
-#Images li .operate .check {
+#Images li .operate {
+    display: block;
+    height: 45px;
+    width: 100%;
+    background: #f4f5f9;
+}
+
+#Images li .operatetop .check,
+#Images li .operatetop .size {
     float: left;
     margin-left: 11px;
     height: 18px;
@@ -937,17 +972,17 @@ h2.method {
     position: relative;
 }
 
-#Images li .operate .check .layui-form-checkbox[lay-skin=primary] {
+#Images li .operatetop .check .layui-form-checkbox[lay-skin=primary] {
     width: 100%;
 }
 
-#Images li .operate .check .layui-form-checkbox[lay-skin=primary] span {
+#Images li .operatetop .check .layui-form-checkbox[lay-skin=primary] span {
     padding: 0 5px 0 25px;
     width: 100%;
     box-sizing: border-box;
 }
 
-#Images li .operate .check .layui-form-checkbox[lay-skin=primary] i {
+#Images li .operatetop .check .layui-form-checkbox[lay-skin=primary] i {
     position: absolute;
     left: 0;
     top: 0;
@@ -956,7 +991,7 @@ h2.method {
 #Images li .operate .img_del {
     float: right;
     margin: 9px 11px 0 0;
-    font-size: 22px !important;
+    font-size: 24px;
     cursor: pointer;
 }
 
@@ -967,7 +1002,7 @@ h2.method {
 #Images li .operate .file {
     float: right;
     margin: 9px 11px 0 0;
-    font-size: 20px !important;
+    font-size: 18px !important;
     cursor: pointer;
 }
 
@@ -1156,10 +1191,15 @@ h2.method {
 }
 
 .addagent tbody>tr>td:nth-child(odd),
+.addImage tbody>tr>td:nth-child(odd),
 .addagentone1stmember tbody>tr>td:nth-child(odd) {
     background-color: #f2f2f2;
     text-align: right;
     width: 75px;
+}
+
+.addImage tbody>tr>td {
+    text-align: left !important;
 }
 
 @media (max-width: 768px) {
@@ -1332,7 +1372,7 @@ h2.method {
 .addagentone1stmember span {
     display: inline-block;
     /* line-height: 1.2; */
-    width: 15px;
+    /* width: 15px; */
     color: #ff5823;
 }
 
@@ -1401,10 +1441,6 @@ h2.method {
     width: auto;
 }
 
-.hierarchy.layui-table td {
-    text-align: center;
-}
-
 .hierarchy {
     overflow-x: scroll;
 }
@@ -1451,4 +1487,25 @@ span.mark {
 
 .image .layui-block {
     margin-bottom: 15px;
+}
+
+.image .layui-block:last-child {
+    margin-bottom: 0;
+}
+
+.image .operate span {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.image .operate i.img_del {
+    font-size: 20px !important;
+}
+
+.image .operate i.img_del>span {
+    font-size: 14px !important;
+}
+
+.editupload table {
+    text-align: center;
 }

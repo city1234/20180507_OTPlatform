@@ -19,7 +19,7 @@ layui.config({
                 var maxPage = imgNums * page < data.length ? imgNums * page : data.length;
                 setTimeout(function() {
                     for (var i = imgNums * (page - 1); i < maxPage; i++) {
-                        imgList.push('<li><div class="operate"><div class="check"><input type="checkbox" name="belle" lay-filter="choose" lay-skin="primary" title="' + data[i].alt + '"></div></div><img layer-src="../../' + data[i].src + '" src="../../' + data[i].thumb + '" alt="' + data[i].alt + '"><div class="operate"><i class="layui-icon img_del">&#xe640;</i><i class="layui-icon file">&#xe621;</i></div></li>');
+                        imgList.push('<li><div class="operatetop"><div class="check"><input type="checkbox" name="belle" lay-filter="choose" lay-skin="primary" title="' + data[i].alt + '"></div><div class="size"> ' + data[i].size + '</div><div class="imgBox"><img layer-src="../../' + data[i].src + '" src="../../' + data[i].thumb + '" alt="' + data[i].alt + '"><div class="imgPreview">预览</div></div><div class="operate"><i class="layui-icon img_del">&#xe640;<span>删除</span></i><i class="layui-icon file"  method="offset" onclick="editImage()">&#xe621;<span>编辑</span></i></div></li>');
                     }
                     next(imgList.join(''), page < (data.length / imgNums));
                     form.render();
@@ -60,7 +60,10 @@ layui.config({
     //删除单张图片
     $("body").on("click", ".img_del", function() {
         var _this = $(this);
-        layer.confirm('确定删除图片"' + _this.siblings().find("input").attr("title") + '"吗？', { icon: 3, title: '提示信息' }, function(index) {
+        layer.confirm('确定删除图片"' + _this.siblings().find("input[lay-filter='choose']").attr("title") + '"吗？', {
+            icon: 3,
+            title: '提示信息'
+        }, function(index) {
             _this.parents("li").hide(1000);
             setTimeout(function() { _this.parents("li").remove(); }, 950);
             layer.close(index);
@@ -93,7 +96,7 @@ layui.config({
         var $checkbox = $('#Images li input[type="checkbox"]');
         var $checked = $('#Images li input[type="checkbox"]:checked');
         if ($checkbox.is(":checked")) {
-            layer.confirm('确定删除选中的图片？', { icon: 3, title: '提示信息' }, function(index) {
+            layer.confirm('确定删除选中的图片？', { icon: 3, title: '删除图片' }, function(index) {
                 var index = layer.msg('删除中，请稍候', { icon: 16, time: false, shade: 0.8 });
                 setTimeout(function() {
                     //删除数据

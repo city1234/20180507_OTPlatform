@@ -579,6 +579,7 @@ html #layuicss-layer {
 .layui-layer-page .layui-layer-content {
     position: relative;
     overflow: auto;
+    padding: 20px;
 }
 
 .layui-layer-iframe .layui-layer-btn,

@@ -20,7 +20,7 @@
                 {
                     "title": "股东",
                     "icon": "",
-                    "href": "",
+                    "href": "page/account/shareList.html",
                     "spread": false,
                     "target": ""
                 },
@@ -141,13 +141,13 @@
                         {
                             "title": "人工提出",
                             "icon": "",
-                            "href": "page/agent/agentDeposit.html",
+                            "href": "page/agent/agentWithdrawal.html",
                             "spread": false
                         },
                         {
                             "title": "批次处理",
                             "icon": "",
-                            "href": "",
+                            "href": "page/agent/batchDispose.html",
                             "spread": false
                         }
                     ]

@@ -14,28 +14,24 @@
     <link rel="stylesheet" href="../../css/public.css" media="all" />
 </head>
 
-<body class="childrenBody">
+<body class="childrenBody image">
     <form class="layui-form">
+        <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray" href="images.html">图库</a>
+            <a class="layui-btn layui-btn-gray" href="column.html">栏目</a>
+            <a class="layui-btn layui-btn-gray" href="uploadList.html">待上传</a>
+            <a class="layui-btn layui-btn-gray active" href="alreadyuploadList.html">已上传</a>
+        </div>
         <blockquote class="layui-elem-quote">
-            <div class="searchAgent">
-                <a class="layui-btn layui-btn-sm layui-btn-normal" href="images.html">
-                    图库</a>
-                <a class="layui-btn layui-btn-sm layui-btn-normal" href="column.html">
-                    栏目</a>
-                <a class="layui-btn layui-btn-sm layui-btn-normal" href="uploadList.html">
-                    待上传</a>
-                <a class="layui-btn layui-btn-sm layui-btn-normal" href="alreadyuploadList.html">
-                    已上传</a>
-            </div>
             <div class="layui-inline">
                 <div class="layui-form-item">
                     <label class="layui-form-label">显示状态：</label>
                     <div class="layui-input-block">
                         <select name="arrange3" lay-verify="required">
-                <option value="0">全部</option>
-                <option value="1">显示</option>
-                <option value="2">不显示</option>
-            </select>
+                            <option value="0">全部</option>
+                            <option value="1">显示</option>
+                            <option value="2">不显示</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -44,24 +40,24 @@
                     <label class="layui-form-label">标题选择：</label>
                     <div class="layui-inline">
                         <select name="arrange3" lay-verify="required">
-                <option value="0">全部</option>
-                <option value="1">在线客服</option>
-                <option value="2">优惠活动</option>
-                <option value="3">左侧</option>
-                <option value="4">右侧</option>
-                <option value="5">手机端顶部LOGO</option>
-                <option value="6">手机端登录界面LOGO</option>
-                <option value="7">手机版优惠活动</option>
-                <option value="8">手机版弹出广告</option>
-                <option value="9">手机版轮播图</option>
-                <option value="10">手机首页引导图</option>
-                <option value="11">弹出广告</option>
-                <option value="12">轮播图</option>
-                <option value="13">关于我们</option>
-                <option value="14">联系我们</option>
-                <option value="15">代理加盟</option>
-                <option value="16">存款帮助</option>
-            </select>
+                            <option value="0">全部</option>
+                            <option value="1">在线客服</option>
+                            <option value="2">优惠活动</option>
+                            <option value="3">左侧</option>
+                            <option value="4">右侧</option>
+                            <option value="5">手机端顶部LOGO</option>
+                            <option value="6">手机端登录界面LOGO</option>
+                            <option value="7">手机版优惠活动</option>
+                            <option value="8">手机版弹出广告</option>
+                            <option value="9">手机版轮播图</option>
+                            <option value="10">手机首页引导图</option>
+                            <option value="11">弹出广告</option>
+                            <option value="12">轮播图</option>
+                            <option value="13">关于我们</option>
+                            <option value="14">联系我们</option>
+                            <option value="15">代理加盟</option>
+                            <option value="16">存款帮助</option>
+                        </select>
 
                     </div>
                 </div>
@@ -88,8 +84,8 @@
                     btnAlign: 'c',
                     shadeClose: true,
                     title: '创建新案件',
-                    area: ['260px', '160px'],
-                    content: '创建成功！'
+                    area: ['280px', '180px'],
+                    content: '<div class="layui-layer-padding">创建成功！</div>'
                 });
             }
             // 删除弹窗
@@ -110,7 +106,7 @@
                 layer.open({
                     type: 1,
                     closeBtn: 1,
-                    btn: ['确定', '取消'],
+                    btn: ['确定'],
                     btnAlign: 'c',
                     shadeClose: true,
                     title: '不显示模板',

@@ -36,7 +36,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 {
                     field: 'uploadListTime',
                     title: '建立日期',
-                    minWidth: 600,
+                    minWidth: 400,
                     align: 'center',
                 },
                 {
