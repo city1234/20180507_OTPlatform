@@ -27,7 +27,7 @@
                 {
                     "title": "总代",
                     "icon": "",
-                    "href": "page/account/addmainagent.html",
+                    "href": "page/account/mainAgentList.html",
                     "spread": false,
                     "target": ""
                 },

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>添加一级代理</title>
+    <title>添加股东</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -15,15 +15,53 @@
 </head>
 
 <body class="childrenBody">
-    <div class="addagent">
-        <div class="searchAgent"><a class="layui-btn layui-btn-xs layui-btn-normal" href="mainAgentList.html"><i class="layui-icon">&#xe603;</i>  返回上頁</a></div>
+    <div class="addagent"><!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
+        <div class="searchAgent">
+            <a class="layui-btn layui-btn-xs layui-btn-normal" href="../account/mainAgentList.html">
+                <i class="layui-icon"></i> 返回上頁</a>
+        </div>
         <div class="layui-form">
             <table class="layui-table">
+                <colgroup>
+                    <col width="80">
+                    <col width="250">
+                    <col width="80">
+                    <col width="250">
+                </colgroup>
+                <!-- <thead>
+                    <tr>
+                        <th colspan="4">账户管理>会员修改</th>
+                    </tr>
+                </thead> -->
                 <tbody>
                     <tr>
+                        <td>选择上级：</td>
+                        <td colspan="3">
+                            <div class="addlstUser">
+                                <span class="title">大股东：</span>
+                                <div class="layui-inline">
+                                    <select name="">
+                                    <option value="0">请选择</option>
+                                    <option value="1">ttttttttttt</option>
+                                    <option value="2">yuyuyuyu</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="addlstUser">
+                                <span class="title">股东：</span>
+                                <div class="layui-inline">
+                                    <select name="">
+                                        <option value="0">请选择</option>
+                                        <option value="1">mala3er</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>上级用户：</td>
-                        <td colspan="4">
-                            <p>zddfjt888 (总代)</p>
+                        <td colspan="3">
+                           <p>mala3er (股东)</p>
                         </td>
                     </tr>
                     <tr>
@@ -32,14 +70,14 @@
                         <td>
                             <div class="layui-inline"><input type="text" class="layui-input">
                             </div>
-                            <span>*</span>
+                            <span>*</span><span>账号不能为空!</span>
                         </td>
                         <td>昵称：</td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input">
                             </div>
-                            <span>*</span>
+                            <span>*</span><span>昵称不能为空!</span>
                         </td>
                     </tr>
                     <tr>
@@ -48,7 +86,7 @@
                             <div class="layui-inline">
                                 <input type="text" class="layui-input">
                             </div>
-                            <span>*</span>
+                            <span>*</span><span>密码不能为空!</span>
                         </td>
                         <td>昵称状态：</td>
                         <td>
@@ -84,30 +122,26 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="attention">
-                若替换的模板，最低值比原模版小（等于），最高值比原模版大（等于）；则可以替换原模版的值；<br>
-                并且下级代理值均按照原有设置的值不改变；对应下级的可设置范围再一级级的人工下放；<br>
-                模板替换时，不受有效投注/返点上限的影响
-            </div>
         </div>
-        
         <div class="magt10 layui-center">
-            <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="systemParameter">保存</button>
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">保存</button>
+            <!-- <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">返回</button> -->
         </div>
-        <script type="text/javascript" src="../../layui/layui.js"></script>
-        <script type="text/javascript" src="../../js/index.js"></script>
-        <script>
-            //Demo
-            layui.use('form', function() {
-                var form = layui.form;
+    </div>
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
 
-                //监听提交
-                form.on('submit(formDemo)', function(data) {
-                    layer.msg(JSON.stringify(data.field));
-                    return false;
-                });
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
             });
-        </script>
+        });
+    </script>
 </body>
 
 </html>

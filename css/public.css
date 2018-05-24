@@ -970,6 +970,7 @@ h2.method {
     padding: 11px 0;
     width: 74%;
     position: relative;
+    z-index: 2;
 }
 
 #Images li .operatetop .check .layui-form-checkbox[lay-skin=primary] {
