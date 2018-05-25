@@ -36,6 +36,13 @@
 }
 
 
+/* 20180525 Color setting: gray -- Sharlene*/
+
+.layui-gray {
+    color: #666666 !important;
+}
+
+
 /** layui-v2.2.5 MIT License By https://www.layui.com */
 
 .layui-inline,
@@ -4851,6 +4858,13 @@ body .layui-util-face .layui-layer-content {
 }
 
 
+/* 20180525 StoreList Setting: notice--Sharlene */
+
+p.notice {
+    margin-top: -20px;
+}
+
+
 /* 20180504 StoreList,Agent Setting: blockquote, search result--Sharlene */
 
 .storeList blockquote,
@@ -5122,4 +5136,13 @@ a.th-link {
 
 .authorityShare .third-layer .layui-form-checkbox[lay-skin=primary] span {
     font-size: 13px;
+}
+
+
+/* 20180525 Sharlene */
+
+p.tag-content {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 10px 0px 0px;
 }

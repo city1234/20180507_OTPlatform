@@ -16,24 +16,33 @@
 
 
 <body class="childrenBody">
-    <form class="layui-form">
+    <form class="layui-form storeList">
         <blockquote class="layui-elem-quote">
-            <div class="searchAgent">
-                <a class="layui-btn layui-btn-sm layui-btn-normal" href="addNews.html">新增讯息</a>
-                <a class="layui-btn layui-btn-sm layui-btn-normal" href="newsColumn.html">讯息范例列表</a>
-            </div>
-            <div class="layui-block">
-                <span class="title">全选：</span>
-                <input type="checkbox" name="selectAll" id="selectAll" lay-filter="selectAll" lay-skin="primary" title="">
+            <form class="layui-form">
                 <div class="layui-inline">
-                    <a class="layui-btn layui-btn layui-btn-sm layui-btn-danger batchDel">
-                        <i class="layui-icon">&#xe640;</i>批量删除</a>
+                    <a class="layui-btn layui-btn-normal" href="addNews.html">新增讯息</a>
                 </div>
-            </div>
+                <div class="layui-inline">
+                    <a class="layui-btn layui-btn-normal" href="newsColumn.html">讯息范例列表</a>
+                </div>
+                <div class="layui-inline">
+                    <span>全选：</span>
+                    <input type="checkbox" name="selectAll" id="selectAll" lay-filter="selectAll" lay-skin="primary" title="">
+                    <div class="layui-inline">
+                        <a class="layui-btn layui-btn layui-btn-danger batchDel">
+                            <i class="layui-icon">&#xe640;</i>批量删除</a>
+                    </div>
+                </div>
+            </form>
         </blockquote>
-        <p>若厅主将特殊讯息已发送给会员,则该笔特殊讯息主题及内容不能再修改</p>
+        <p class="notice">若厅主将特殊讯息已发送给会员,则该笔特殊讯息主题及内容不能再修改</p>
         <div class="layui-form">
             <table class="layui-table">
+                <colgroup>
+                    <col width="80">
+                    <col>
+                    <col width="200">
+                </colgroup>
                 <thead>
                     <tr>
                         <th colspan="3">会员历史公告</th>

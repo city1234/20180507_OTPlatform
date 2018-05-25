@@ -1014,7 +1014,7 @@ h2.method {
 }
 
 #Images li .operate span {
-    font-family: "Microsoft Yahei"!important;
+    font-family: "Microsoft Yahei" !important;
 }
 
 @media screen and (max-width: 1050px) {
@@ -1400,6 +1400,13 @@ h2.method {
 }
 
 
+/* 20180525 Sharlene */
+
+.addagent .tab {
+    margin-top: 10px;
+}
+
+
 /* 2018/05/08 */
 
 .backwater .title {
@@ -1537,4 +1544,9 @@ span.mark {
     #storeList table.rebateChargeoff .layui-btn:nth-child(3) {
         margin-top: 8px !important;
     }
+}
+
+.contactUs .layui-form-label {
+    padding: 9px 0;
+    width: 70px;
 }

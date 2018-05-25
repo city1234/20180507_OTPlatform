@@ -16,16 +16,18 @@
 
 
 <body class="childrenBody">
+    <form class="layui-form storeList">
     <blockquote class="layui-elem-quote">
-        <div class="layui-inline layui-btn-group">
-            <a class="layui-btn layui-btn-normal">启用区</a>
-            <a class="layui-btn layui-btn-primary">停用区</a>
-        </div>
-        <div class="layui-inline">
-            <a class="layui-btn layui-btn-sm layui-btn-normal" href="addMemberPopNotice.html">新增会员弹出公告</a>
-        </div>
+        <form class="layui-form">
+            <div class="layui-inline layui-btn-group">
+                <a class="layui-btn layui-btn-normal">启用区</a>
+                <a class="layui-btn layui-btn-primary">停用区</a>
+            </div>
+            <div class="layui-inline">
+                <a class="layui-btn layui-btn-normal" href="addMemberPopNotice.html">新增会员弹出公告</a>
+            </div>
+        </form>
     </blockquote>
-    <form class="layui-form">
         <div class="layui-form">
             <table class="layui-table rebateChargeoff">
                 <colgroup>
@@ -51,9 +53,9 @@
                         <td>【支付宝APP】无需扫码，自动跳转支付页面，方便快捷. 【支付宝转账】-支付宝转账公司入款银行账号，单笔无限额，可享高达5%的入款优惠</td>
                         <td>是</td>
                         <td>
-                            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">编辑</a>
-                            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">停用</a>
-                            <a class="layui-btn layui-btn-xs layui-btn-border-danger" href="#">删除</a>
+                            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editMemberPopNotice.html">编辑</a>
+                            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="Ban()">停用</a>
+                            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="Delete()">删除</a>
                         </td>
                     </tr>
                 </tbody>
@@ -68,6 +70,34 @@
             var $ = layui.jquery
 
         });
+
+        // 停用
+        function Ban() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: '确认',
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '会员弹出公告',
+                area: ['300px', '200px'],
+                content: '确定停用会员弹出公告?'
+            });
+        }
+
+        // 停用
+        function Delete() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: '确认',
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '会员弹出公告',
+                area: ['300px', '200px'],
+                content: '确定删除会员弹出公告?'
+            });
+        }
     </script>
 </body>
 

@@ -8,14 +8,14 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
     //新闻列表
     var tableIns = table.render({
-        elem: '#memberLeaveWordList',
-        url: '../../json/leaveWordList.json',
+        elem: '#contactUsList',
+        url: '../../json/contactUs.json',
         cellMinWidth: 95,
         page: true,
         height: "full-125",
         limit: 20,
         limits: [10, 15, 20, 25],
-        id: "leaveWordListTable",
+        id: "contactUsListTable",
         cols: [
             [{
                     type: "checkbox",
@@ -24,33 +24,49 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 },
                 {
                     field: 'memberName',
-                    title: '会员账号',
+                    title: '名字',
                     width: 150,
                     align: "center"
                 },
                 {
-                    field: 'memberText',
-                    title: '留言内容',
-                    minWidth: 700,
+                    field: 'memberPhone',
+                    title: '联络电话',
+                    width: 100,
                     align: 'center'
                 },
                 {
-                    field: 'textTime',
+                    field: 'QQskype',
                     title: '留言时间',
                     width: 200,
                     align: 'center'
                 },
                 {
-                    field: 'memberLeaveWordState',
+                    field: 'email',
+                    title: '电邮信箱',
+                    width: 200,
+                    align: 'center'
+                },
+                {
+                    field: 'time',
+                    title: '创建时间',
+                    width: 200,
+                    align: 'center'
+                }, {
+                    field: 'contactEvent',
+                    title: '联络事项',
+                    minWidth: 200,
+                    align: 'center'
+                }, {
+                    field: 'contactState',
                     title: '状态',
                     width: 80,
-                    templet: '#memberLeaveWordState',
+                    templet: '#contactState',
                     align: "center"
                 },
                 {
                     title: '操作',
                     width: 250,
-                    templet: '#memberLeaveWordListBar',
+                    templet: '#contactUsListBar',
                     fixed: "right",
                     align: "center"
                 }
@@ -60,7 +76,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
     //搜索【此功能需要后台配合，所以暂时没有动态效果演示】
     $(".search_btn").on("click", function() {
         if ($(".searchVal").val() != '') {
-            table.reload("leaveWordListTable", {
+            table.reload("contactUsListTable", {
                 page: {
                     curr: 1 //重新从第 1 页开始
                 },
@@ -74,7 +90,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
     });
 
     //列表操作
-    table.on('tool(memberLeaveWordList)', function(obj) {
+    table.on('tool(contactUsList)', function(obj) {
         var layEvent = obj.event,
             data = obj.data;
 

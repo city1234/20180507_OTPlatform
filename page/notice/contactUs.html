@@ -15,19 +15,84 @@
 </head>
 
 
-<body class="childrenBody">
+<body class="childrenBody contactUs">
     <div class="nav-4th">
         <a class="layui-btn layui-btn-gray" href="memberLeaveWord.html">会员留言</a>
         <a class="layui-btn layui-btn-gray active" href="contactUs.html">联系我们</a>
     </div>
-     
+    <form class="layui-form">
+        <blockquote class="layui-elem-quote">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">创建时间：</label>
+                </div>
+                <div class="layui-inline">
+                    <input type="text" class="layui-input" id="dateStart" placeholder="开始时间">
+                </div>
+                <div class="layui-inline">
+                    <input type="text" class="layui-input" id="dateEnd" placeholder="结束时间">
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">状态：</label>
+                </div>
+                <div class="layui-inline">
+                    <select name="">
+                        <option value="0">全部</option>
+                        <option value="1">已读</option>
+                        <option value="2">未读</option>
+                    </select>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+                </div>
+
+            </div>
+        </blockquote>
+    </form>
+    <table id="contactUsList" lay-filter="contactUsList"></table>
+    <!--操作-->
+    <script type="text/html" id="contactUsListBar">
+        <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="look">查看</a>
+        <a class="layui-btn layui-btn-xs layui-btn-border-danger" lay-event="del">删除</a>
+    </script>
+    <!--编辑状态-->
+    <script type="text/html" id="contactState">
+        {{# if( d.contactState == "0"){ }}
+        <span class="layui-blue">已读</span> {{# } else if( d.contactState == "1"){ }}
+        <span class="layui-red">未读</span> {{# }}}
+    </script>
+
     <script src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="contactUs.js"></script>
     <script>
-        //Demo
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+        //Demo 
         layui.use('form', function() {
             var form = layui.form;
-            var $ = layui.jquery
-             
+            //监听提交 
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
         });
     </script>
 </body>
