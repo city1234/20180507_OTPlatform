@@ -6870,7 +6870,7 @@ layui.define("jquery", function(e) {
     var l = layui.$,
         o = function(e) {},
         t = '<i class="layui-anim layui-anim-rotate layui-anim-loop layui-icon ">&#xe63e;</i>';
-    o.prototype.load = function(e) {
+    o.prototype.load = function (e) {
         var o, i, n, r, a = this,
             c = 0;
         e = e || {};
@@ -6879,35 +6879,35 @@ layui.define("jquery", function(e) {
             var m = l(e.scrollElem || document),
                 u = e.mb || 50,
                 s = !("isAuto" in e) || e.isAuto,
-                v = e.end || "没有更多了",
-                y = e.scrollElem && e.scrollElem !== document,
-                d = "<cite>加载更多</cite>",
+                v = e.end || "",
+                // y = e.scrollElem && e.scrollElem !== document,
+                d = "<div class='layui-block'><cite>加载更多</cite></div>",
                 h = l('<div class="layui-flow-more"><a href="javascript:;">' + d + "</a></div>");
             f.find(".layui-flow-more")[0] || f.append(h);
-            var p = function(e, t) {
+            var p = function (e, t) {
                     e = l(e), h.before(e), t = 0 == t || null, t ? h.html(v) : h.find("a").html(d), i = t, o = null, n && n()
                 },
-                g = function() {
+                g = function () {
                     o = !0, h.find("a").html(t), "function" == typeof e.done && e.done(++c, p)
                 };
-            if (g(), h.find("a").on("click", function() {
+            if (g(), h.find("a").on("click", function () {
                     l(this);
                     i || o || g()
                 }), e.isLazyimg) var n = a.lazyimg({
                 elem: e.elem + " img",
-                scrollElem: e.scrollElem
+                // scrollElem: e.scrollElem
             });
-            return s ? (m.on("scroll", function() {
-                var e = l(this),
-                    t = e.scrollTop();
-                r && clearTimeout(r), i || (r = setTimeout(function() {
-                    var i = y ? e.height() : l(window).height(),
-                        n = y ? e.prop("scrollHeight") : document.documentElement.scrollHeight;
-                    n - t - i <= u && (o || g())
-                }, 100))
-            }), a) : a
+            // return s ? (m.on("scroll", function () {
+            //     var e = l(this),
+            //         t = e.scrollTop();
+            //     r && clearTimeout(r), i || (r = setTimeout(function () {
+            //         var i = y ? e.height() : l(window).height(),
+            //             n = y ? e.prop("scrollHeight") : document.documentElement.scrollHeight;
+            //         n - t - i <= u && (o || g())
+            //     }, 100))
+            // }), a) : a
         }
-    }, o.prototype.lazyimg = function(e) {
+    },  o.prototype.lazyimg = function(e) {
         var o, t = this,
             i = 0;
         e = e || {};

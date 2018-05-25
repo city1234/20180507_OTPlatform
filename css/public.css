@@ -910,7 +910,8 @@ h2.method {
 /*图片管理*/
 
 #Images li {
-    width: 10%;
+    width: 150px;
+    height: auto;
     margin: 0.5% 0.5% 1.5%;
     float: left;
     overflow: hidden;
@@ -1020,7 +1021,8 @@ h2.method {
     font-family: "Microsoft Yahei" !important;
 }
 
-@media screen and (max-width: 1050px) {
+
+/* @media screen and (max-width: 1050px) {
     #Images li {
         width: 24%;
     }
@@ -1036,7 +1038,7 @@ h2.method {
     #Images li {
         width: 99%;
     }
-}
+} */
 
 
 /*系统日志*/
