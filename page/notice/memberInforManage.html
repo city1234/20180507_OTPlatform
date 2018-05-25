@@ -47,7 +47,7 @@
                         <td>
                             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">编辑</a>
                             <a class="layui-btn layui-btn-xs layui-btn-border-danger" href="#">停用</a>
-                            <a class="layui-btn layui-btn-xs layui-btn-border-danger">删除</a>
+                            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="pageDel()">删除</a>
                             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="#">取消历史显示</a>
                         </td>
                     </tr>
@@ -63,6 +63,19 @@
             var $ = layui.jquery
 
         });
+        // 删除弹窗 
+        function pageDel() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['确定', '取消'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '删除模板',
+                area: ['260px', '160px'],
+                content: '确定要删除模板吗？'
+            });
+        }
     </script>
 </body>
 
