@@ -17,31 +17,35 @@
 
 <body class="childrenBody contactUs">
     <form class="layui-form storeList">
-        <div class="nav-4th">
-            <a class="layui-btn layui-btn-gray" href="memberLeaveWord.html">会员留言</a>
-            <a class="layui-btn layui-btn-gray active" href="contactUs.html">联系我们</a>
-        </div>
+        <!-- <div class="nav-4th">
+            <a class="layui-btn layui-btn-gray active" href="loginHistoryIP.html">账号/IP查询</a>
+            <a class="layui-btn layui-btn-gray" href="loginHistoryAuto.html">自动稽核</a>
+            <a class="layui-btn layui-btn-gray" href="loginHistoryAgent.html">代理层级查询</a>
+        </div> -->
         <blockquote class="layui-elem-quote">
             <form class="layui-form">
                 <div class="layui-form-item">
                     <div class="layui-inline">
-                        <label class="layui-form-label">创建时间：</label>
+                        <select name="">
+                            <option value="0">会员</option>
+                            <option value="1">代理</option>
+                            <option value="2">总代</option>
+                            <option value="3">股东</option>
+                            <option value="4">大股东</option>
+                            <option value="5">大大股东</option>
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        <input type="text" class="layui-input" placeholder="请输入账号">
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">时间区间：</label>
                     </div>
                     <div class="layui-inline">
                         <input type="text" class="layui-input" id="dateStart" placeholder="开始时间">
                     </div>
                     <div class="layui-inline">
                         <input type="text" class="layui-input" id="dateEnd" placeholder="结束时间">
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">状态：</label>
-                    </div>
-                    <div class="layui-inline">
-                        <select name="">
-                            <option value="0">全部</option>
-                            <option value="1">已读</option>
-                            <option value="2">未读</option>
-                        </select>
                     </div>
                     <div class="layui-inline">
                         <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
@@ -51,22 +55,29 @@
             </form>
         </blockquote>
     </form>
-    <table id="contactUsList" lay-filter="contactUsList"></table>
-    <!--操作-->
-    <script type="text/html" id="contactUsListBar">
-        <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="look">查看</a>
-        <a class="layui-btn layui-btn-xs layui-btn-border-danger" lay-event="del">删除</a>
-    </script>
+        <table id="autoCheck" lay-filter="autoCheck"></table>
     <!--编辑状态-->
-    <script type="text/html" id="contactState">
-        {{# if( d.contactState == "0"){ }}
-        <span class="layui-blue">已读</span> {{# } else if( d.contactState == "1"){ }}
-        <span class="layui-red">未读</span> {{# }}}
+    <script type="text/html" id="autoCheckLevel">
+        {{# if( d.autoCheckLevel == "0"){ }}
+        <span>会员</span> 
+        {{# } else if( d.autoCheckLevel == "1"){ }}
+        <span>代理</span> 
+        {{# } else if( d.autoCheckLevel == "2"){ }}
+        <span>总代</span> 
+        {{# } else if( d.autoCheckLevel == "3"){ }}
+        <span>股东</span> 
+        {{# } else if( d.autoCheckLevel == "4"){ }}
+        <span>大股东</span> 
+        {{# } else if( d.autoCheckLevel == "5"){ }}
+        <span>大大股东</span> 
+        {{# } else if( d.autoCheckLevel == "6"){ }}
+        <span>大大股东(子)</span> 
+        {{# }}}
     </script>
 
     <script src="../../layui/layui.js"></script>
-    <script type="text/javascript" src="contactUs.js"></script>
-    <script>
+    <script type="text/javascript" src="autoCheck.js"></script>
+    <script> 
         //日期彈窗
         layui.use('laydate', function() {
             var laydate = layui.laydate;

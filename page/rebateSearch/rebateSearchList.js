@@ -55,7 +55,14 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 // {field: 'rebateSearchListPaymentSystem', title: '支付类型',  align:'center',templet:"#rebateSearchListPaymentSystem"},
                 { field: 'rebateSearchListSum', title: '总人数/总金额', width: 150, align: 'center' },
                 { field: 'rebateSearchListWait', title: '待返水人数/金额', width: 150, align: "center" },
-                { field: 'rebateSearchListDetail', title: '查询明细', width: 280, align: "center", templet: "#rebateSearchListDetail" }
+                {
+                    field: 'rebateSearchListDetail',
+                    title: '查询明细',
+                    width: 280,
+                    align: "center",
+                    templet: "#rebateSearchListDetail",
+                    fixed: "right"
+                }
             ]
         ],
 

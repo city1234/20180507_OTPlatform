@@ -2544,8 +2544,8 @@ input.layui-login::placeholder {
 }
 
 .layui-form-onswitch {
-    border-color: #5FB878;
-    background-color: #5FB878;
+    border-color: #1e9fff;
+    background-color: #1e9fff;
 }
 
 .layui-form-onswitch i {
@@ -4818,12 +4818,19 @@ body .layui-util-face .layui-layer-content {
 .storeList .layui-inline,
 .agentList .layui-inline {
     display: inline-block;
-    margin-right: 20px !important;
+    margin-right: 10px !important;
+    /*20px to 10px*/
 }
 
 .storeList .layui-inline:last-child,
 .agentList .layui-inline:last-child {
     margin-right: 0px !important;
+}
+
+.storeTimesStatistics .layui-btn+.layui-btn,
+.payList .layui-btn+.layui-btn,
+.uploadList table td[data-field="uploadListEdit"] .layui-btn+.layui-btn {
+    margin-left: 10px;
 }
 
 
@@ -5145,4 +5152,31 @@ p.tag-content {
     display: inline-block;
     vertical-align: middle;
     padding: 5px 10px 0px 0px;
+}
+
+
+/* 20180526 subList Authority list Setting --Sharlene */
+
+ul.subSelect {
+    margin-left: 28px;
+}
+
+
+/* 2018 loginHistory pages sorts setting when table switches --Sharlene */
+
+div[id*="dynamicTable"] .layui-table-box {
+    height: 92%;
+    /* fallback if needed */
+    height: calc(100% - 39px);
+}
+
+
+/* 20180526 blockquote select-form-item margin top setting --Sharlene */
+
+blockquote>.layui-form-item .layui-form-checkbox[lay-skin=primary] {
+    margin-top: 0;
+}
+
+blockquote>.layui-form-item .layui-form-checkbox[lay-skin=primary] span {
+    padding-right: 5px;
 }

@@ -1496,16 +1496,18 @@ h2.method {
     line-height: 25px;
 }
 
-.rebateSearchList tr[data-index="5"] td {
+.rebateSearchList tr[data-index="5"] td,
+.storeOrdersSearch tr[data-index="2"] td {
     border-right: none !important;
-    /* display: none !important; */
 }
 
 .rebateSearchList tr[data-index="5"] td[data-field="rebateSearchListName"] input.layui-input.layui-table-edit {
     display: none !important;
 }
 
-.rebateSearchList tr[data-index="5"] td[data-field="rebateSearchListWait"] {
+.rebateSearchList tr[data-index="5"] td[data-field="rebateSearchListWait"],
+.storeOrdersSearch tr[data-index="2"] td[data-field="storeTime"],
+.storeOrdersSearch tr[data-index="2"] td[data-field="storeCash"] {
     border-left: 1px solid #e6e6e6 !important;
     border-right: 1px solid #e6e6e6 !important;
     display: block !important;
@@ -1554,4 +1556,39 @@ span.mark {
 .contactUs .layui-form-label {
     padding: 9px 0;
     width: 70px;
+}
+
+.storeOrdersSearch .layui-checkbox,
+.storeStopAmount .layui-checkbox {
+    float: left;
+    margin-right: 10px;
+}
+
+.storeOrdersSearch .layui-inline {
+    margin: 8px 0;
+}
+
+.storeOrderPopList th {
+    background-color: #eaeaea;
+    text-align: center;
+}
+
+.storeOrderPopList .layui-input-block,
+.storeStopAmount .layui-input-block {
+    margin-left: 0;
+    margin-bottom: 8px;
+}
+
+.storeOrderPopList .layui-form-label,
+.storeStopAmount .layui-form-label {
+    width: auto;
+}
+
+.storeOrderPopList td {
+    text-align: left;
+}
+
+.laytable-cell-1-storeStopAmount {
+    margin: 8px 0;
+    height: 38px;
 }

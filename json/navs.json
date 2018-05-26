@@ -44,6 +44,39 @@
                     "href": "page/account/memberList.html",
                     "spread": false,
                     "target": ""
+                }, {
+                    "title": "子账号",
+                    "icon": "",
+                    "href": "page/account/subList.html",
+                    "spread": false,
+                    "target": ""
+                }, {
+                    "title": "登录日志",
+                    "icon": "",
+                    "href": "",
+                    "spread": false,
+                    "target": "",
+                    "thirdChildren": [{
+                            "title": "账号/IP查询",
+                            "icon": "",
+                            "href": "page/account/loginHistoryIP.html",
+                            "target": ""
+                        },
+                        {
+                            "title": "自动稽核",
+                            "icon": "",
+                            "href": "page/account/autoCheck.html",
+                            "spread": false,
+                            "target": ""
+                        },
+                        {
+                            "title": "代理层级查询",
+                            "icon": "",
+                            "href": "",
+                            "spread": false,
+                            "target": ""
+                        }
+                    ]
                 },
                 {
                     "title": "返点设置",

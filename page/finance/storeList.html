@@ -17,14 +17,14 @@
 <body class="childrenBody">
     <form class="layui-form storeList">
         <div class="nav-4th">
-            <a class="layui-btn layui-btn-gray active">商号信息查询</a>
+            <a class="layui-btn layui-btn-gray active" href="storeList.html">商号信息查询</a>
             <a class="layui-btn layui-btn-gray">银行商家对应表</a>
-            <a class="layui-btn layui-btn-gray">设定商号顺序</a>
-            <a class="layui-btn layui-btn-gray">设定商号停用金额</a>
-            <a class="layui-btn layui-btn-gray">金额次数统计</a>
-            <a class="layui-btn layui-btn-gray">商家信息查询</a>
-            <a class="layui-btn layui-btn-gray">支付白名单</a>
-            <a class="layui-btn layui-btn-gray">订单号查询</a>
+            <a class="layui-btn layui-btn-gray" href="storeOrder.html">设定商号顺序</a>
+            <a class="layui-btn layui-btn-gray" href="storeStopAmount.html">设定商号停用金额</a>
+            <a class="layui-btn layui-btn-gray" href="storeTimesStatistics.html">金额次数统计</a>
+            <a class="layui-btn layui-btn-gray" href="storeSearch.html">商家信息查询</a>
+            <a class="layui-btn layui-btn-gray" href="payList.html">支付白名单</a>
+            <a class="layui-btn layui-btn-gray" href="storeOrdersSearch.html">订单号查询</a>
         </div>
         <blockquote class="layui-elem-quote quoteBox">
             <form class="layui-form">
@@ -44,10 +44,10 @@
                         <label class="layui-form-label">层级：</label>
                         <div class="layui-input-block">
                             <select name="city" lay-verify="required">
-							<option value="0">全部</option>
-							<option value="1">未分层</option>
-							<option value="2">A层</option>
-						  </select>
+                                <option value="0">全部</option>
+                                <option value="1">未分层</option>
+                                <option value="2">A层</option>
+                            </select>
                         </div>
                     </div>
                     <!-- <a class="layui-btn layui-btn-danger layui-btn-normal delAll_btn">批量删除</a> -->
@@ -57,16 +57,16 @@
                         <label class="layui-form-label">支付类型：</label>
                         <div class="layui-input-block">
                             <select name="city" lay-verify="required">
-							<option value="">内接支付</option>
-							<option value="0">外接支付</option>
-						  </select>
+                                <option value="">内接支付</option>
+                                <option value="0">外接支付</option>
+                            </select>
                         </div>
                         <div class="layui-input-block">
                             <select name="city" lay-verify="required">
-							<option value="">银行列表</option>
-							<option value="0">点卡列表</option>
-							<option value="1">微信扫描支付</option>
-						  </select>
+                                <option value="">银行列表</option>
+                                <option value="0">点卡列表</option>
+                                <option value="1">微信扫描支付</option>
+                            </select>
                         </div>
                     </div>
                     <!-- <a class="layui-btn layui-btn-danger layui-btn-normal delAll_btn">批量删除</a> -->
