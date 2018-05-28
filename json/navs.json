@@ -382,7 +382,13 @@
             "title": "日志管理",
             "icon": "&#xe677;",
             "href": "",
-            "spread": false
+            "spread": false,
+            "children": [{
+                "title": "操作记錄",
+                "icon": "",
+                "href": "page/record/operationRecord.html",
+                "spread": false
+            }]
         }
     ],
     "memberCenter": [{
