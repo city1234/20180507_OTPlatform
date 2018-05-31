@@ -17,55 +17,15 @@
 <body class="childrenBody storeOrdersSearch">
     <form class="layui-form storeList">
         <div class="nav-4th">
-            <a class="layui-btn layui-btn-gray" href="storeList.html">商号信息查询</a>
-            <a class="layui-btn layui-btn-gray">银行商家对应表</a>
+            <a class="layui-btn layui-btn-gray active" href="storeOrdersSearch.html">订单号查询</a>
+            <a class="layui-btn layui-btn-gray" href="storeList.html">商家号列表</a>
+            <a class="layui-btn layui-btn-gray" href="storeStoreList.html">银行商家对应表</a>
             <a class="layui-btn layui-btn-gray" href="storeOrder.html">设定商号顺序</a>
             <a class="layui-btn layui-btn-gray" href="storeStopAmount.html">设定商号停用金额</a>
             <a class="layui-btn layui-btn-gray" href="storeTimesStatistics.html">金额次数统计</a>
             <a class="layui-btn layui-btn-gray" href="storeSearch.html">商家信息查询</a>
             <a class="layui-btn layui-btn-gray" href="payList.html">支付白名单</a>
-            <a class="layui-btn layui-btn-gray active" href="storeOrdersSearch.html">订单号查询</a>
         </div>
-        <!-- <blockquote class="layui-elem-quote quoteBox">
-            <form class="layui-form">
-                <div class="layui-inline">
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">层级：</label>
-                        <div class="layui-input-block">
-                            <select name="city" lay-verify="required">
-                                <option value="0">全部</option>
-                                <option value="1">未分层</option>
-                                <option value="2">A层</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="layui-inline">
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">支付类型：</label>
-                        <div class="layui-input-block">
-                            <select name="city" lay-verify="required">
-                                <option value="">内接支付</option>
-                                <option value="0">外接支付</option>
-                            </select>
-                        </div>
-                        <div class="layui-input-block">
-                            <select name="city" lay-verify="required">
-                                <option value="">银行列表</option>
-                                <option value="0">点卡列表</option>
-                                <option value="1">微信扫描支付</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="layui-inline">
-                    <a class="layui-btn layui-btn-normal">添加</a>
-                </div>
-                <div class="layui-inline">
-                    <a class="layui-btn layui-btn-normal">添加外链商号</a>
-                </div>
-            </form>
-        </blockquote> -->
         <table class="layui-table storeOrdersSearch">
             <!-- <thead>
                 <tr>
@@ -92,24 +52,11 @@
             <tbody>
                 <tr>
                     <td rowspan="2">
-                        <div class="layui-form-item">
-                            <div class="layui-inline">
-                                <input type="checkbox" name="" title="全选/反选" lay-skin="primary">
-                                <div class="layui-unselect layui-form-checkbox" lay-skin="primary">
-                                    <span>全选/反选</span>
-                                    <i class="layui-icon"></i>
-                                </div>
-                            </div>
-                        </div>
                     </td>
                     <td>
                         <div class="layui-inline">
                             <div class="layui-form-item">
-                                <div class="layui-checkbox">
-                                    <input type="checkbox" name="" title="" lay-skin="primary">
-                                </div>
                                 <label class="layui-form-label">日期（美东）时间区间：</label>
-
                                 <div class="layui-input-inline">
                                     <input type="text" class="layui-input" id="dateStart">
                                 </div>
@@ -125,9 +72,6 @@
                         </div>
                         <div class="layui-inline">
                             <div class="layui-form-item">
-                                <div class="layui-checkbox">
-                                    <input type="checkbox" name="" title="" lay-skin="primary">
-                                </div>
                                 <label class="layui-form-label">会员账号：</label>
                                 <div class="layui-input-inline">
                                     <input type="text" class="layui-input searchVal" placeholder="请输入会员账号" disabled>
@@ -140,9 +84,6 @@
                     <td>
                         <div class="layui-inline">
                             <div class="layui-form-item">
-                                <div class="layui-checkbox">
-                                    <input type="checkbox" name="" title="" lay-skin="primary">
-                                </div>
                                 <label class="layui-form-label">订单号：</label>
                                 <div class="layui-input-inline">
                                     <input type="text" class="layui-input searchVal" placeholder="请输入订单号" disabled>
@@ -151,9 +92,6 @@
                         </div>
                         <div class="layui-inline">
                             <div class="layui-form-item">
-                                <div class="layui-checkbox">
-                                    <input type="checkbox" name="" title="" lay-skin="primary">
-                                </div>
                                 <label class="layui-form-label">状态：</label>
                                 <div class="layui-input-block">
                                     <select name="" lay-verify="required">
@@ -167,9 +105,6 @@
                         </div>
                         <div class="layui-inline">
                             <div class="layui-form-item">
-                                <div class="layui-checkbox">
-                                    <input type="checkbox" name="" title="" lay-skin="primary">
-                                </div>
                                 <label class="layui-form-label">支付方式状态：</label>
                                 <div class="layui-input-block">
                                     <select name="" lay-verify="required">
@@ -182,9 +117,6 @@
                         </div>
                         <div class="layui-inline">
                             <div class="layui-form-item">
-                                <div class="layui-checkbox">
-                                    <input type="checkbox" name="" title="" lay-skin="primary">
-                                </div>
                                 <label class="layui-form-label">支付平台：</label>
                                 <div class="layui-input-block">
                                     <select name="" lay-verify="required">
@@ -198,9 +130,6 @@
                         </div>
                         <div class="layui-inline">
                             <div class="layui-form-item">
-                                <div class="layui-checkbox">
-                                    <input type="checkbox" name="" title="" lay-skin="primary">
-                                </div>
                                 <label class="layui-form-label">会员支付层级：</label>
                                 <div class="layui-input-block">
                                     <select name="" lay-verify="required">
@@ -214,9 +143,6 @@
                         </div>
                         <div class="layui-inline">
                             <div class="layui-form-item">
-                                <div class="layui-checkbox">
-                                    <input type="checkbox" name="" title="" lay-skin="primary">
-                                </div>
                                 <label class="layui-form-label">更新秒数：</label>
                                 <div class="layui-input-block">
                                     <select name="" lay-verify="required">

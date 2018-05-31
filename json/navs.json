@@ -45,12 +45,6 @@
                     "spread": false,
                     "target": ""
                 }, {
-                    "title": "子账号",
-                    "icon": "",
-                    "href": "page/account/subList.html",
-                    "spread": false,
-                    "target": ""
-                }, {
                     "title": "登录日志",
                     "icon": "",
                     "href": "",
@@ -77,17 +71,16 @@
                             "target": ""
                         }
                     ]
-                },
-                {
-                    "title": "返点设置",
-                    "icon": "",
-                    "href": "page/rebate/rebateList.html",
-                    "spread": false,
-                    "target": ""
                 }
             ]
         },
         {
+            "title": "返点设置",
+            "icon": "&#xe671;",
+            "href": "page/rebate/rebateList.html",
+            "spread": false,
+            "target": ""
+        }, {
             "title": "现金系统",
             "icon": "&#xe672;",
             "href": "",
@@ -113,7 +106,7 @@
                     "thirdChildren": [{
                             "title": "线上入款",
                             "icon": "",
-                            "href": "page/finance/storeList.html",
+                            "href": "page/finance/storeOrdersSearch.html",
                             "target": ""
                         },
                         {
@@ -147,9 +140,8 @@
                         {
                             "title": "出款记录",
                             "icon": "",
-                            "href": "",
-                            "spread": false,
-                            "target": "_blank"
+                            "href": "page/finance/paymentRecords.html",
+                            "spread": false
                         }
                     ]
                 },
@@ -364,7 +356,30 @@
             "title": "报表管理",
             "icon": "&#xe676;",
             "href": "",
-            "spread": false
+            "spread": false,
+            "children": [{
+                "title": "报表",
+                "icon": "",
+                "href": "",
+                "spread": false
+            }, {
+                "title": "月结对账系统",
+                "icon": "",
+                "href": "",
+                "spread": false
+            }]
+        }, {
+            "title": "員工管理",
+            "icon": "&#xe670;",
+            "href": "",
+            "spread": false,
+            "target": "",
+            "children": [{
+                "title": "子账号",
+                "icon": "",
+                "href": "page/account/subList.html",
+                "spread": false
+            }]
         },
         {
             "title": "注单管理",
@@ -384,6 +399,24 @@
             "href": "",
             "spread": false,
             "children": [{
+                "title": "登入记錄",
+                "icon": "",
+                "href": "",
+                "spread": false,
+                "thirdChildren": [{
+                        "title": "账号IP查询",
+                        "icon": "",
+                        "href": "",
+                        "spread": false
+                    },
+                    {
+                        "title": "IP设置",
+                        "icon": "",
+                        "href": "",
+                        "spread": false
+                    }
+                ]
+            }, {
                 "title": "操作记錄",
                 "icon": "",
                 "href": "page/record/operationRecord.html",

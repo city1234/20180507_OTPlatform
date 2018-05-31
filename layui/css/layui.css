@@ -1995,6 +1995,17 @@ hr {
     color: #fff;
 }
 
+.layui-btn-white {
+    background-color: #fff;
+    color: #666666;
+}
+
+.layui-btn-white:hover,
+.layui-btn-white.active {
+    background-color: #1e9fff;
+    color: #fff;
+}
+
 .layui-btn-danger {
     background-color: #ff5823;
 }
@@ -5179,4 +5190,17 @@ blockquote>.layui-form-item .layui-form-checkbox[lay-skin=primary] {
 
 blockquote>.layui-form-item .layui-form-checkbox[lay-skin=primary] span {
     padding-right: 5px;
+}
+
+
+/* 20180530 width 100% Setting: Sharlene */
+
+table.width100 {
+    width: 100%;
+}
+
+table.layui-table .layui-input-block,
+table.layui-table .layui-inline {
+    margin-left: 0px;
+    margin-bottom: 10px;
 }

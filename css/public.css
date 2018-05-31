@@ -1558,7 +1558,6 @@ span.mark {
     width: 70px;
 }
 
-.storeOrdersSearch .layui-checkbox,
 .storeStopAmount .layui-checkbox {
     float: left;
     margin-right: 10px;
@@ -1591,4 +1590,125 @@ span.mark {
 .laytable-cell-1-storeStopAmount {
     margin: 8px 0;
     height: 38px;
+}
+
+
+/* 20180530 Amanda */
+
+.storeStoreList tr[data-index="0"] {
+    background-color: #f2f2f2;
+    color: #343434;
+    font-weight: bold;
+}
+
+
+/*20180530 第三方查询*/
+
+.reportSearch .component {
+    width: 180px;
+    height: 30px;
+    margin: 0 auto 5px;
+    position: relative;
+}
+
+.reportSearch .component .layui-input {
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    border: none;
+    transition: all 0.3s;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+}
+
+.reportSearch .component .layui-input::placeholder {
+    color: #666;
+}
+
+.reportSearch .component .layui-input .layui-icon {
+    color: rgba(233, 233, 233, 0.5);
+}
+
+.reportSearch .component .layui-input:focus {
+    background: #fff;
+    color: #000;
+}
+
+.reportSearch .component .layui-form-select dl {
+    top: 42px;
+    background: #fff;
+}
+
+.reportSearch .component .layui-icon {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    color: #ccc;
+}
+
+.reportSearch .component dl dd {
+    color: #000 !important;
+}
+
+.reportSearch .component dl dd.layui-this {
+    color: #fff !important;
+}
+
+.reportSearch .component dl dd.layui-select-tips {
+    color: #999 !important;
+}
+
+
+/* 2018/05/29 yolanda */
+
+.paymentRecordsBody .layui-form-label {
+    width: auto;
+}
+
+.paymentRecordsBody .layui-table-cell {
+    height: auto;
+}
+
+.yo-info i.layui-icon {
+    margin-top: 0;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+
+/* 2018/05/30 yolanda  出款记录（稽核）*/
+
+.yoAuditTable table .layui-table-cell {
+    height: auto;
+    padding: 0 4px;
+}
+
+.yoAuditText {
+    padding: 15px;
+}
+
+.yoAuditText p {
+    padding: 6px 0;
+}
+
+.yoAuditText span {
+    line-height: 24px;
+}
+
+.yoAuditText .yoAuditTitle {
+    display: block;
+    font-weight: bold;
+    color: blue;
+}
+
+.yoAuditText .yoAuditCon {
+    display: block;
+    font-weight: bold;
+    color: green;
+    line-height: 38px;
+}
+
+.yoAuditText input {
+    width: 180px;
+    font-weight: normal;
 }
