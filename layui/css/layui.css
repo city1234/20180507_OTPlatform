@@ -2221,7 +2221,8 @@ hr {
     float: left;
     display: block;
     padding: 9px 15px;
-    width: 80px;
+    /* width: 80px; */
+    width: auto;
     font-weight: 400;
     line-height: 20px;
     text-align: right;
@@ -5203,4 +5204,9 @@ table.layui-table .layui-input-block,
 table.layui-table .layui-inline {
     margin-left: 0px;
     margin-bottom: 10px;
+}
+
+table.layui-table .layui-input-block:last-child,
+table.layui-table .layui-inline:last-child {
+    margin-bottom: 0px;
 }

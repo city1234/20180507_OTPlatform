@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>出款记录（稽核）</title>
+    <title>即时稽核查询</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,21 +16,23 @@
 
 <body class="childrenBody yoAuditTable">
     <form class="layui-form">
-        <div class="searchAgent">
-            <a class="layui-btn layui-btn-xs layui-btn-normal" href="paymentRecords.html">
-                <i class="layui-icon">&#xe603;</i> 返回上頁</a>
-        </div>
         <blockquote class="layui-elem-quote quoteBox">
             <form class="layui-form">
                 <div class="layui-inline">
-                    <span> 会员账号：plm888</span>
+                    <div class="layui-form-item">
+                        <span>账号：</span>
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input searchVal" placeholder=" ">
+                        </div>
+                    </div>
                 </div>
-                <a class="layui-btn layui-btn-normal">获取稽核</a>
-                <a class="layui-btn layui-btn-normal">开启</a>
-                <a class="layui-btn layui-btn-normal">关闭</a>
-
+                <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+                <div class="layui-inline">
+                    <a class="layui-btn layui-btn-normal">获取稽核</a>
+                </div>
             </form>
         </blockquote>
+
         <div class="yoAuditText">
             <div class="layui-block">
                 <p>
@@ -42,10 +44,10 @@
             </div>
         </div>
         <div class="nav-4th storeList">
-            <a class="layui-btn layui-btn-gray active" href="paymentAudit.html">显示实际有效投注额</a>
+            <a class="layui-btn layui-btn-gray active" href="payCheckSearch.html">显示实际有效投注额</a>
             <a class="layui-btn layui-btn-gray">显示优惠稽核</a>
         </div>
-        <table class="layui-table" lay-data="{url:'/json/paymentAudit.json', cellMinWidth: 80, page: false, limit: 20, limits: [10, 15, 20, 25]}">
+        <table class="layui-table" lay-data="{url:'/json/payCheckSearch.json', cellMinWidth: 80, page: false, limit: 20, limits: [10, 15, 20, 25]}">
             <thead>
                 <tr>
                     <th lay-data="{field:'paymentAuditId', align:'center', fixed:'left'}" rowspan="2">No.</th>
@@ -173,9 +175,8 @@
             </thead>
         </table>
         <div class="yoAuditText">
-            <p>提出额度：100.0</p>
             <div class="layui-row">
-                <div class="layui-col-md6">
+                <div class="layui-col-md12">
                     <p>
                         <span class="yoAuditTitle">优惠稽核：</span>
                         <span class="yoAuditCon">需要扣除存款优惠费用：200.45</span>
@@ -189,37 +190,6 @@
                         <span>优惠稽核 + 常态性稽核共需扣除1373.12</span>
                     </p>
                 </div>
-                <div class="layui-col-md6">
-                    <p>
-                        <span class="yoAuditTitle">优惠稽核：</span>
-                        <span class="yoAuditCon">需要扣除存款优惠费用：200.45
-                            <input class="layui-input layui-input-inline" type="text" value="200.40">
-                            <!-- <em>正确</em> -->
-                        </span>
-                    </p>
-                    <p>
-                        <span class="yoAuditTitle">常态性稽核：</span>
-                        <span class="yoAuditCon">需要扣除20%的行政费用：672.72
-                            <input class="layui-input layui-input-inline" type="text" value="200.40">
-                            <!-- <em>正确</em> -->
-                        </span>
-                        <span class="yoAuditCon">需要扣除手续费：500.0
-                            <input class="layui-input layui-input-inline" type="text" value="500.0">
-                            <!-- <em>正确</em> -->
-                        </span>
-                    </p>
-                    <p class="yoEmphasis">
-                        <span>优惠稽核 + 常态性稽核共需扣除1373.12</span>
-                        <input class="layui-input layui-input-inline" type="text" value="1373.12">
-                    </p>
-                </div>
-            </div>
-            <p>实际出款
-                <span class="layui-red">-1273.12</span>
-            </p>
-            <div class="layui-block">
-                <a class="layui-btn layui-btn-normal">手动出款</a>
-                <a class="layui-btn layui-btn-normal">自动出款</a>
             </div>
         </div>
         <!--备注状态-->
@@ -232,7 +202,6 @@
         </script>
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
-    <!-- <script type="text/javascript" src="paymentAudit.js"></script> -->
     <script>
         //Demo 
         layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
@@ -242,9 +211,6 @@
                 laydate = layui.laydate,
                 laytpl = layui.laytpl,
                 table = layui.table;
-            //     var createTable = function () {
-            // table.init('hierarchyTable', tableOptions);
-            // };
         });
     </script>
 </body>

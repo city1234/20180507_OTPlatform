@@ -42,7 +42,7 @@
                         <label class="layui-form-label">选择代理：</label>
                     </div>
                     <div class="layui-inline">
-                        <input type="checkbox"  lay-skin="primary" title="未分层">
+                        <input type="checkbox" lay-skin="primary" title="未分层">
                         <input type="checkbox" lay-skin="primary" title="洗码层1">
                         <input type="checkbox" lay-skin="primary" title="Kelly测试层001">
                         <input type="checkbox" lay-skin="primary" title="科伦vip层">
@@ -66,29 +66,22 @@
             </form>
         </blockquote>
     </form>
-        <table id="agentLevelSearch" lay-filter="agentLevelSearch"></table>
+    <table id="agentLevelSearch" lay-filter="agentLevelSearch"></table>
     <!--编辑状态-->
     <script type="text/html" id="agentLevelSearchLevel">
         {{# if( d.agentLevelSearchLevel == "0"){ }}
-        <span>会员</span> 
-        {{# } else if( d.agentLevelSearchLevel == "1"){ }}
-        <span>代理</span> 
-        {{# } else if( d.agentLevelSearchLevel == "2"){ }}
-        <span>总代</span> 
-        {{# } else if( d.agentLevelSearchLevel == "3"){ }}
-        <span>股东</span> 
-        {{# } else if( d.agentLevelSearchLevel == "4"){ }}
-        <span>大股东</span> 
-        {{# } else if( d.agentLevelSearchLevel == "5"){ }}
-        <span>大大股东</span> 
-        {{# } else if( d.agentLevelSearchLevel == "6"){ }}
-        <span>大大股东(子)</span> 
-        {{# }}}
+        <span>会员</span> {{# } else if( d.agentLevelSearchLevel == "1"){ }}
+        <span>代理</span> {{# } else if( d.agentLevelSearchLevel == "2"){ }}
+        <span>总代</span> {{# } else if( d.agentLevelSearchLevel == "3"){ }}
+        <span>股东</span> {{# } else if( d.agentLevelSearchLevel == "4"){ }}
+        <span>大股东</span> {{# } else if( d.agentLevelSearchLevel == "5"){ }}
+        <span>大大股东</span> {{# } else if( d.agentLevelSearchLevel == "6"){ }}
+        <span>大大股东(子)</span> {{# }}}
     </script>
 
     <script src="../../layui/layui.js"></script>
     <script type="text/javascript" src="agentLevelSearch.js"></script>
-    <script> 
+    <script>
         //日期彈窗
         layui.use('laydate', function() {
             var laydate = layui.laydate;

@@ -15,8 +15,7 @@
 </head>
 
 <body class="childrenBody paymentRecordsBody">
-    <form class="layui-form ">
-
+    <form class="layui-form">
         <blockquote class="layui-elem-quote quoteBox">
             <form class="layui-form">
                 <div class="layui-inline">
@@ -72,15 +71,9 @@
                     <input type="checkbox" name="" lay-skin="primary" title="取消">
                     <input type="checkbox" name="" lay-skin="primary" title="拒绝">
                 </div>
-                <div class="layui-inline">
-                    <a class="layui-btn layui-btn-normal search_btn">查询</a>
-                </div>
-                <div class="layui-inline">
-                    <a class="layui-btn layui-btn-normal" onclick="advanced()">进阶搜寻</a>
-                </div>
-                <div class="layui-inline">
-                    <a class="layui-btn layui-btn-normal">数据导出</a>
-                </div>
+                <a class="layui-btn layui-btn-normal search_btn">查询</a>
+                <a class="layui-btn layui-btn-normal" onclick="advanced()">进阶搜寻</a>
+                <a class="layui-btn layui-btn-normal">数据导出</a>
             </form>
         </blockquote>
         <table id="paymentRecords" lay-filter="paymentRecords"></table>
@@ -88,13 +81,18 @@
         <!--操作-->
         <script type="text/html" id="paymentAlready">
             {{# if(d.paymentAlready == "0"){ }}
-            <span class="layui-red yo-info">已取消<i class="layui-icon info-icon"> &#xe60b;</i></span> {{# } else if(d.paymentAlready == "1") { }}
-            <span class="layui-blue yo-info">已出款<i class="layui-icon info-icon"> &#xe60b;</i></span> {{# } else if(d.paymentAlready == "2") { }}
+            <span class="layui-red yo-info">已取消
+                <i class="layui-icon info-icon"> &#xe60b;</i>
+            </span> {{# } else if(d.paymentAlready == "1") { }}
+            <span class="layui-blue yo-info">已出款
+                <i class="layui-icon info-icon"> &#xe60b;</i>
+            </span> {{# } else if(d.paymentAlready == "2") { }}
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="paymentAudit.html">稽核</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal">预备出款</a> {{# } else { }}
             <a class="layui-btn layui-btn-xs layui-btn-border-normal">自动出款</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="fast">快速出款</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="paymentAudit.html">稽核</a><br>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="paymentAudit.html">稽核</a>
+            <br>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal">取消</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal">拒绝</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal">取消预备</a> {{# }}}
@@ -131,6 +129,16 @@
             });
 
         });
+        //Demo 
+        layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
+            var form = layui.form,
+                layer = parent.layer ===
+                undefined ? layui.layer : top.layer,
+                $ = layui.jquery,
+                laydate = layui.laydate,
+                laytpl = layui.laytpl,
+                table = layui.table;
+        });
 
         // 帐号动态口令
         function advanced() {
@@ -142,16 +150,13 @@
                 shadeClose: true,
                 title: '进阶搜寻',
                 area: ['650px', '450px'],
-                content: '<form class="layui-form"><table class="layui-table"><tbody>' +
-                    '<tr><th>币别：</th><td><div class="layui-form-item"><div class="layui-input-block">' +
-                    '<select name=""><option value="0">人民币</option></select>' +
-                    '</div></div></td></tr>' +
-                    '<tr><th>备注：</th><td><div class="layui-input-inline">' +
+                content: '<form class="layui-form"><table class="layui-table storeOrderPopList"><tbody><tr><th>币别:</th><td><div class="layui-form-item"><div class="layui-input-block"><select name=""><option value="0">人民币</option></select></div></div></td></tr>' +
+                    '<tr><th>备注:</th><td><div class="layui-input-inline">' +
                     '<input type="text" class="layui-input">' +
                     '</div></td></tr>' +
-                    '<tr><th>提出额度：</th><td><div class="layui-input-inline">' +
-                    '<input type="text" class="layui-input"> ~ <input type="text" class="layui-input">' +
-                    '</div><p>提出额度为1元至999,999,999,9元</p></td></tr>' +
+                    '<tr><th>提出额度:</th><td><div><div class="layui-input-inline">' +
+                    '<input type="text" class="layui-input"></div> ~ <div class="layui-input-inline"><div class="layui-form-item"><input type="text" class="layui-input"><div>' +
+                    '</div></div></div><p>提出额度为1元至999,999,999,9元</p></td></tr>' +
                     '<tr><th><div class="layui-inline">' +
                     '<input type="checkbox" name="" lay-skin="primary" title="层级">' +
                     '</div></th><td><div class="layui-inline">' +
@@ -172,18 +177,9 @@
                     '<input type="checkbox" name="" lay-skin="primary" title="426测试新增层级">' +
                     '<input type="checkbox" name="" lay-skin="primary" title="alice使用">' +
                     '<input type="checkbox" name="" lay-skin="primary" title="15346353">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="test">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="qwewr12">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="aaaaaaaa">' +
-                    '</div></td></tr>' +
-                    '</tbody></table></form>'
+                    '<input type="checkbox" name="" lay-skin="primary" title="test"><input type="checkbox" name="" lay-skin="primary" title="qwewr12"><input type="checkbox" name="" lay-skin="primary" title="aaaaaaaa"></div></td></tr></tbody></table></form>'
             });
         }
-        //Demo 
-        layui.use('form', function() {
-            var form = layui.form;
-            var $ = layui.jquery
-        });
     </script>
 </body>
 

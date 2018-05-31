@@ -37,6 +37,12 @@
                     "href": "page/account/agentList.html",
                     "spread": false,
                     "target": ""
+                }, {
+                    "title": "修改一级代理",
+                    "icon": "",
+                    "href": "page/account/edit1stagent.html",
+                    "spread": false,
+                    "target": ""
                 },
                 {
                     "title": "会员",
@@ -66,7 +72,7 @@
                         {
                             "title": "代理层级查询",
                             "icon": "",
-                            "href": "",
+                            "href": "page/account/agentLevelSearch.html",
                             "spread": false,
                             "target": ""
                         }
@@ -76,7 +82,7 @@
         },
         {
             "title": "返点设置",
-            "icon": "&#xe671;",
+            "icon": "&#xe901;",
             "href": "page/rebate/rebateList.html",
             "spread": false,
             "target": ""
@@ -233,9 +239,9 @@
                         {
                             "title": "即时稽核查询",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/payCheckSearch.html",
                             "spread": false,
-                            "target": "_blank"
+                            "target": ""
                         }
                     ]
                 },
@@ -370,7 +376,7 @@
             }]
         }, {
             "title": "員工管理",
-            "icon": "&#xe670;",
+            "icon": "&#xe900;",
             "href": "",
             "spread": false,
             "target": "",

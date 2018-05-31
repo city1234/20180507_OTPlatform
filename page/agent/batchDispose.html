@@ -42,8 +42,10 @@
                         </div>
                     </div>
                     <div class="layui-inline">
-                        <div class="layui-input-block ">
-                            <input type="checkbox" name="" lay-skin="primary" title="稽核">
+                        <input type="checkbox" name="" lay-skin="primary" title="稽核">
+                        <div class="layui-unselect layui-form-checkbox layui-form-checked" lay-skin="primary">
+                            <span>稽核</span>
+                            <i class="layui-icon"></i>
                         </div>
                     </div>
                     <div class="layui-inline">
@@ -70,11 +72,11 @@
             display: block;
         }
     </style>
-    <div>
-        <h3 class="layui-red">注意事项</h3>
-        <p><span class="layui-red">*</span>建议数量10000以下批次上传</p>
-        <p><span class="layui-red">*</span>上传档案限制2M以下</p>
-        <p><span class="layui-red">*</span>若会员账号资料不正确，则无无法上传</p>
+    <div class="attention">
+        注意事项
+        <br> *建议数量10000以下批次上传
+        <br> *上传档案限制2M以下
+        <br> *若会员账号资料不正确，则无无法上传
     </div>
     <script src="../../layui/layui.js"></script>
     <script>
