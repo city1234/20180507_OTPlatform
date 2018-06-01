@@ -118,7 +118,7 @@
                         {
                             "title": "线上出款",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/remitOrdersSearch.html",
                             "spread": false,
                             "target": ""
                         },
@@ -269,9 +269,9 @@
                 {
                     "title": "出入款总账",
                     "icon": "",
-                    "href": " ",
+                    "href": "page/finance/paymentAmount.html",
                     "spread": false,
-                    "target": "_blank"
+                    "target": ""
                 }
             ]
         },

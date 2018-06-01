@@ -3,8 +3,8 @@
     "msg": "",
     "count": 17,
     "data": [{
-            "storeOrederNumber": "227380513413574656",
-            "storeOrederMember": "nihao1",
+            "storeOrderNumber": "227380513413574656",
+            "storeOrderMember": "nihao1",
             "storeWechat": "<a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='wehatName()'>感觉自己</a>",
             "storePayLevel": "未分层",
             "storeTime": "2018-05-26 01:15:38",
@@ -15,8 +15,8 @@
             "storeOperate": "0",
             "storePayDaily": "<a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='look()'>查看</a>"
         }, {
-            "storeOrederNumber": "227380513413574656",
-            "storeOrederMember": "nihao1",
+            "storeOrderNumber": "227380513413574656",
+            "storeOrderMember": "nihao1",
             "storeWechat": "<a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='wehatName()'>感觉自己</a>",
             "storePayLevel": "未分层",
             "storeTime": "2018-05-26 01:15:38",
@@ -28,8 +28,8 @@
             "storePayDaily": "<a class='layui-btn layui-btn-xs layui-btn-border-normal' method='offset' onclick='look()'>查看</a>"
         },
         {
-            "storeOrederNumber": "",
-            "storeOrederMember": "",
+            "storeOrderNumber": "",
+            "storeOrderMember": "",
             "storeWechat": "",
             "storePayLevel": "",
             "storeTime": "小计",

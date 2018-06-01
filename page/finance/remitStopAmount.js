@@ -8,61 +8,61 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
     //新闻列表
     var tableIns = table.render({
-        elem: '#storeStopAmount',
-        url: '../../json/storeStopAmount.json',
+        elem: '#remitStopAmount',
+        url: '../../json/remitStopAmount.json',
         cellMinWidth: 95,
         page: true,
         height: "full-125",
         limit: 20,
         limits: [10, 15, 20, 25],
-        id: "storeStopAmountTable",
+        id: "remitStopAmountTable",
         cols: [
             [
                 // {type: "checkbox", fixed:"left", width:50},
                 {
-                    field: 'storeId',
+                    field: 'remitId',
                     title: '商家代称',
                     width: 150,
                     align: "center"
                 },
                 {
-                    field: 'storeSystem',
+                    field: 'remitSystem',
                     title: '支付系统',
                     width: 250,
                     align: "center"
                 },
                 {
-                    field: 'storeNumber',
+                    field: 'remitNumber',
                     title: '商号',
                     width: 150,
                     align: 'center',
                 },
                 {
-                    field: 'storeLevel',
+                    field: 'remitLevel',
                     title: '层级',
-                    width: 350,
+                    width: 250,
                     align: 'center',
                 },
                 {
-                    field: 'storeStopAmount',
+                    field: 'remitStopAmount',
                     title: '停用金额',
                     align: 'center',
                     minWidth: 260,
                 },
                 {
-                    field: 'storeTimes',
-                    title: '入款次数',
+                    field: 'remitTimes',
+                    title: '出款次数',
                     width: 100,
                     align: "center"
                 },
                 {
-                    field: 'storeaccumulateAmount',
+                    field: 'remitaccumulateAmount',
                     title: '已累计金额',
                     width: 120,
                     align: "center"
                 },
                 {
-                    field: 'storeFinalTime',
+                    field: 'remitFinalTime',
                     title: '最后异动时间',
                     width: 200,
                     align: "center"
@@ -72,7 +72,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
     });
 
     //是否置顶
-    form.on('switch(storeTop)', function(data) {
+    form.on('switch(remitTop)', function(data) {
         var index = layer.msg('修改中，请稍候', {
             icon: 16,
             time: false,
@@ -91,7 +91,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
     //搜索【此功能需要后台配合，所以暂时没有动态效果演示】
     $(".search_btn").on("click", function() {
         if ($(".searchVal").val() != '') {
-            table.reload("storeStopAmountTable", {
+            table.reload("remitStopAmountTable", {
                 page: {
                     curr: 1 //重新从第 1 页开始
                 },
@@ -109,18 +109,18 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         var index = layui.layer.open({
             title: "添加文章",
             type: 2,
-            content: "storeAdd.html",
+            content: "remitAdd.html",
             success: function(layero, index) {
                 var body = layui.layer.getChildFrame('body', index);
                 if (edit) {
-                    body.find(".storeName").val(edit.storeName);
+                    body.find(".remitName").val(edit.remitName);
                     body.find(".abstract").val(edit.abstract);
-                    body.find(".thumbImg").attr("src", edit.storeImg);
-                    body.find("#store_content").val(edit.content);
-                    // body.find(".storeStatus select").val(edit.storeStatus);
-                    body.find(".storePaymentSystem select").val(edit.storePaymentSystem);
-                    body.find(".openness input[name='openness'][title='" + edit.storeLook + "']").prop("checked", "checked");
-                    body.find(".storeTop input[name='storeTop']").prop("checked", edit.storeTop);
+                    body.find(".thumbImg").attr("src", edit.remitImg);
+                    body.find("#remit_content").val(edit.content);
+                    // body.find(".remitStatus select").val(edit.remitStatus);
+                    body.find(".remitPaymentSystem select").val(edit.remitPaymentSystem);
+                    body.find(".openness input[name='openness'][title='" + edit.remitLook + "']").prop("checked", "checked");
+                    body.find(".remitTop input[name='remitTop']").prop("checked", edit.remitTop);
                     form.render();
                 }
                 setTimeout(function() {
@@ -142,16 +142,16 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
     //批量删除
     // $(".delAll_btn").click(function(){
-    //     var checkStatus = table.checkStatus('storeListTable'),
+    //     var checkStatus = table.checkStatus('remitListTable'),
     //         data = checkStatus.data,
-    //         storeId = [];
+    //         remitId = [];
     //     if(data.length > 0) {
     //         for (var i in data) {
-    //             storeId.push(data[i].storeId);
+    //             remitId.push(data[i].remitId);
     //         }
     //         layer.confirm('确定删除选中的文章？', {icon: 3, title: '提示信息'}, function (index) {
     //             // $.get("删除文章接口",{
-    //             //     storeId : storeId  //将需要删除的storeId作为参数传入
+    //             //     remitId : remitId  //将需要删除的remitId作为参数传入
     //             // },function(data){
     //             tableIns.reload();
     //             layer.close(index);
@@ -163,7 +163,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
     // })
 
     //列表操作
-    table.on('tool(storeList)', function(obj) {
+    table.on('tool(remitList)', function(obj) {
         var layEvent = obj.event,
             data = obj.data;
 
@@ -175,7 +175,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 title: '提示信息'
             }, function(index) {
                 // $.get("删除文章接口",{
-                //     storeId : data.storeId  //将需要删除的storeId作为参数传入
+                //     remitId : data.remitId  //将需要删除的remitId作为参数传入
                 // },function(data){
                 tableIns.reload();
                 layer.close(index);

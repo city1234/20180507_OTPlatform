@@ -8,76 +8,36 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
     //新闻列表
     var tableIns = table.render({
-        elem: '#storeStopAmount',
-        url: '../../json/storeStopAmount.json',
+        elem: '#remitBankList',
+        url: '../../json/remitBankList.json',
         cellMinWidth: 95,
         page: true,
         height: "full-125",
         limit: 20,
         limits: [10, 15, 20, 25],
-        id: "storeStopAmountTable",
+        id: "remitBankListTable",
         cols: [
             [
                 // {type: "checkbox", fixed:"left", width:50},
-                {
-                    field: 'storeId',
-                    title: '商家代称',
-                    width: 150,
-                    align: "center"
-                },
-                {
-                    field: 'storeSystem',
-                    title: '支付系统',
-                    width: 250,
-                    align: "center"
-                },
-                {
-                    field: 'storeNumber',
-                    title: '商号',
-                    width: 150,
-                    align: 'center',
-                },
-                {
-                    field: 'storeLevel',
-                    title: '层级',
-                    width: 350,
-                    align: 'center',
-                },
-                {
-                    field: 'storeStopAmount',
-                    title: '停用金额',
-                    align: 'center',
-                    minWidth: 260,
-                },
-                {
-                    field: 'storeTimes',
-                    title: '入款次数',
-                    width: 100,
-                    align: "center"
-                },
-                {
-                    field: 'storeaccumulateAmount',
-                    title: '已累计金额',
-                    width: 120,
-                    align: "center"
-                },
-                {
-                    field: 'storeFinalTime',
-                    title: '最后异动时间',
-                    width: 200,
-                    align: "center"
-                }
+                { field: 'remitBankId', title: '商家编号', width: 150, align: "center" },
+                { field: 'remitBankUse', title: '目前正在使用', width: 150, align: "center" },
+                { field: 'remitBankNumber01', title: '1702', width: 150, align: 'center', templet: "#remitBankNumber" },
+                { field: 'remitBankNumber02', title: '2016', width: 150, align: 'center', templet: "#remitBankNumber" },
+                { field: 'remitBankNumber03', title: '3015', width: 150, align: 'center', templet: "#remitBankNumber" },
+                { field: 'remitBankNumber04', title: '3032', width: 150, align: 'center', templet: "#remitBankNumber" },
+                { field: 'remitBankNumber05', title: '3126', width: 150, align: 'center', templet: "#remitBankNumber" },
+                { field: 'remitBankNumber06', title: '3270', width: 150, align: 'center', templet: "#remitBankNumber" },
+                { field: 'remitBankNumber07', title: '3271', width: 150, align: 'center', templet: "#remitBankNumber" },
+                { field: 'remitBankNumber08', title: '3379', width: 150, align: 'center', templet: "#remitBankNumber" },
+                { field: 'remitBankNumber09', title: '3408', width: 150, align: 'center', templet: "#remitBankNumber" },
+                { field: 'remitBankNumber10', title: '3572', width: 150, align: 'center', templet: "#remitBankNumber" }
             ]
         ]
     });
 
     //是否置顶
     form.on('switch(storeTop)', function(data) {
-        var index = layer.msg('修改中，请稍候', {
-            icon: 16,
-            time: false,
-            shade: 0.8
-        });
+        var index = layer.msg('修改中，请稍候', { icon: 16, time: false, shade: 0.8 });
         setTimeout(function() {
             layer.close(index);
             if (data.elem.checked) {
@@ -91,7 +51,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
     //搜索【此功能需要后台配合，所以暂时没有动态效果演示】
     $(".search_btn").on("click", function() {
         if ($(".searchVal").val() != '') {
-            table.reload("storeStopAmountTable", {
+            table.reload("storeListTable", {
                 page: {
                     curr: 1 //重新从第 1 页开始
                 },
@@ -170,10 +130,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         if (layEvent === 'edit') { //编辑
             addStore(data);
         } else if (layEvent === 'del') { //删除
-            layer.confirm('确定停用此商户？', {
-                icon: 3,
-                title: '提示信息'
-            }, function(index) {
+            layer.confirm('确定停用此商户？', { icon: 3, title: '提示信息' }, function(index) {
                 // $.get("删除文章接口",{
                 //     storeId : data.storeId  //将需要删除的storeId作为参数传入
                 // },function(data){

@@ -8,83 +8,71 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
     //新闻列表
     var tableIns = table.render({
-        elem: '#storeOrdersSearch',
-        url: '../../json/storeOrdersSearch.json',
+        elem: '#paymentAmount',
+        url: '../../json/paymentAmount.json',
         cellMinWidth: 95,
         page: true,
         height: "full-125",
         limit: 20,
         limits: [10, 15, 20, 25],
-        id: "storeOrdersSearchTable",
+        id: "paymentAmountTable",
         cols: [
-            [
-                // {type: "checkbox", fixed:"left", width:50},
-                {
-                    field: 'storeOrederNumber',
-                    title: '订单号',
-                    width: 180,
+            [{
+                    field: 'paymentAmountDate',
+                    title: '日期',
+                    minWidth: 150,
                     align: "center"
                 },
                 {
-                    field: 'storeOrederMember',
-                    title: '会员账号',
-                    width: 150,
-                    align: 'center',
-                    templet: "#storePaymentSystem"
-                },
-                {
-                    field: 'storeWechat',
-                    title: '微信昵称',
-                    width: 150,
-                    align: 'center'
-                },
-                {
-                    field: 'storePayLevel',
-                    title: '会员支付层级',
+                    field: 'paymentAmountCompany',
+                    title: '公司入款',
                     width: 180,
                     align: 'center'
                 },
                 {
-                    field: 'storeTime',
-                    title: '时间',
+                    field: 'paymentAmountOnline',
+                    title: '线上支付',
+                    width: 180,
+                    align: 'center'
+                },
+                {
+                    field: 'paymentAmountDeposit',
+                    title: '人工存入',
+                    width: 180,
+                    align: 'center'
+                },
+                {
+                    field: 'paymentAmountChargeback',
+                    title: '会员出款被扣款金额',
                     width: 180,
                     align: 'center',
                 },
                 {
-                    field: 'storeAmount',
-                    title: '存入金额',
+                    field: 'paymentAmountMember',
+                    title: '会员出款',
                     align: 'center',
-                    minWidth: 110,
+                    width: 180,
                 },
                 {
-                    field: 'storeOrdersSearchStatus',
-                    title: '状态',
-                    width: 200,
-                    align: "center",
-                    templet: '#storeOrdersSearchStatus'
-
+                    field: 'paymentAmountDiscount',
+                    title: '给予优惠',
+                    width: 180,
+                    align: "center"
                 },
                 {
-                    field: 'storeCash',
-                    title: '金流',
-                    width: 300,
+                    field: 'paymentAmountWithdrawal',
+                    title: '人工提出',
+                    width: 180,
                     align: "center"
                 }, {
-                    field: 'storeNote',
-                    title: '备注',
-                    minWidth: 450,
+                    field: 'paymentAmountRebate',
+                    title: '给予返水',
+                    width: 180,
                     align: "center"
                 }, {
-                    field: 'storeOperate',
-                    title: '操作',
-                    width: 120,
-                    fixed: "right",
-                    align: "center"
-                }, {
-                    field: 'storePayDaily',
-                    title: '查看支付日志',
-                    width: 120,
-                    fixed: "right",
+                    field: 'paymentItemAmount',
+                    title: '项目总计',
+                    width: 180,
                     align: "center"
                 }
             ]

@@ -3052,6 +3052,7 @@ input.layui-login::placeholder {
 
 .layui-table th {
     color: #343434;
+    background-color: #f2f2f2;
 }
 
 .layui-table thead tr,
@@ -5209,4 +5210,11 @@ table.layui-table .layui-inline {
 table.layui-table .layui-input-block:last-child,
 table.layui-table .layui-inline:last-child {
     margin-bottom: 0px;
+}
+
+
+/* 20180601 Table Cell Height Auto */
+
+.tCellHeightAuto td[data-field="remitStopAmount"] div.layui-table-cell {
+    height: auto;
 }

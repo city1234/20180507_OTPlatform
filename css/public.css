@@ -1745,3 +1745,13 @@ span.mark {
     width: 180px;
     font-weight: normal;
 }
+
+.paymemtRebateTable {
+    text-align: center;
+}
+
+.paymemtRebateTable tr td:nth-child(3n+1) {
+    background-color: #f2f2f2;
+    color: #343434;
+    font-weight: bold;
+}

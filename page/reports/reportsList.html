@@ -103,6 +103,29 @@
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="reportsList.js"></script>
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+    </script>
 </body>
 
 </html>
