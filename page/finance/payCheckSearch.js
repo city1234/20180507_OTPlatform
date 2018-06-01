@@ -8,14 +8,14 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
     //新闻列表
     var tableIns = table.render({
-        elem: '#paymentAudit',
-        url: '../../json/paymentAudit.json',
+        elem: '#payCheckSearch',
+        url: '../../json/payCheckSearch.json',
         cellMinWidth: 95,
         page: true,
         height: "full-125",
         limit: 20,
         limits: [10, 15, 20, 25],
-        id: "paymentAuditTable",
+        id: "payCheckSearchTable",
         rows: [
             [{
                     field: 'paymentAuditId',
