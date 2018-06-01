@@ -70,7 +70,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
             data = obj.data;
 
         if (layEvent === 'note') { //备注
-            layer.confirm('<table class="layui-table storeOrderPopList"><colgroup><col width="180"><col width="300"></colgroup>' +
+            layer.confirm('<table class="layui-table"><colgroup><col width="180"><col width="300"></colgroup>' +
                 '<tbody><tr><th>会员账号</th><td>' +
                 obj.data.paymentMember +
                 '</td></tr><tr><th>出款日期</th><td>' +

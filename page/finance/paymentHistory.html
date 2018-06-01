@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>出款记录</title>
+    <title>入款历史记录</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../css/public.css" media="all" />
 </head>
 
-<body class="childrenBody paymentRecordsBody">
+<body class="childrenBody paymentHistoryBody">
     <form class="layui-form ">
         <blockquote class="layui-elem-quote quoteBox">
             <form class="layui-form" id="">
@@ -35,7 +35,7 @@
                                 <input type="text" class="layui-input searchVal" placeholder=" " />
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <div class="layui-inline">
                         <div class="layui-form-item">
                             <label class="layui-form-label">金额：</label>
@@ -79,7 +79,7 @@
                     <div class="layui-inline">
                         <div class="layui-form-item">
                             <label class="layui-form-label">银行：</label>
-                            <div class="layui-input-block">
+                            <div class="layui-input-block bank-block">
                                 <select id="bankId" name="bankId">
                                     <option value="0" selected>全部</option>
                                     <option value="1">中国农业银行</option>
@@ -264,7 +264,7 @@
                                 </select>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <div class="layui-inline">
                         <div class="layui-form-item">
                             <label class="layui-form-label">自动刷新：</label>
@@ -280,12 +280,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="layui-inline"> 
-                        <a class="layui-btn layui-btn-normal">进阶搜寻</a>
-                    </div>
-                    <div class="layui-inline"> 
-                        <a class="layui-btn layui-btn-normal">查询</a>
-                    </div>
+                    <a class="layui-btn layui-btn-normal">进阶搜寻</a>
+                    <a class="layui-btn layui-btn-normal">查询</a>
                 </div>
                 <div class="layui-block">
                     <div class="layui-inline">
@@ -319,7 +315,7 @@
                         <input type="checkbox" name="" lay-skin="primary" title="层级">
                         <input type="checkbox" name="" lay-skin="primary" title="未分层">
                         <input type="checkbox" name="" lay-skin="primary" title="洗码层1">
-                        <input type="checkbox" name="" lay-skin="primary" title="BWT" >
+                        <input type="checkbox" name="" lay-skin="primary" title="BWT">
                         <input type="checkbox" name="" lay-skin="primary" title="000">
                         <input type="checkbox" name="" lay-skin="primary" title="11111">
                         <input type="checkbox" name="" lay-skin="primary" title="Kelly测试层001">
@@ -327,7 +323,7 @@
                         <input type="checkbox" name="" lay-skin="primary" title="科伦vip层">
                         <input type="checkbox" name="" lay-skin="primary" title="kelly001">
                         <input type="checkbox" name="" lay-skin="primary" title="kelly002">
-                        <input type="checkbox" name="" lay-skin="primary" title="nina001哈哈"> 
+                        <input type="checkbox" name="" lay-skin="primary" title="nina001哈哈">
                         <input type="checkbox" name="" lay-skin="primary" title="VIP级别(Jimmy)">
                         <input type="checkbox" name="" lay-skin="primary" title="super">
                         <input type="checkbox" name="" lay-skin="primary" title="测试">
@@ -338,28 +334,27 @@
                         <input type="checkbox" name="" lay-skin="primary" title="qwewr12">
                         <input type="checkbox" name="" lay-skin="primary" title="aaaaaaaa">
                     </div>
-                </div> 
+                </div>
             </form>
         </blockquote>
-        <table id="paymentHistory" lay-filter="paymentHistory"></table> 
+        <table id="paymentHistory" lay-filter="paymentHistory"></table>
     </form>
-    
+
     <script>
-       
     </script>
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="paymentHistory.js"></script>
     <!-- <script type="text/javascript" src="../../js/cache.js"></script> -->
     <!-- ▼ 日期弹窗 ▼ -->
     <script>
-         // 帐号动态口令
-         layui.use(['form', 'layer'], function() {
-            var form = layui.form
-            var $ = layui.jquery
+        // 帐号动态口令
+        layui.use(['form', 'layer'], function() {
+                var form = layui.form
+                var $ = layui.jquery
 
-            
-        }) 
-        //日期彈窗
+
+            })
+            //日期彈窗
         layui.use('laydate', function() {
             var laydate = layui.laydate;
 
@@ -378,10 +373,9 @@
                 value: '2018-01-01 00:00:00'
             });
 
-        }); 
-        
+        });
     </script>
-    
+
 </body>
 
 </html>

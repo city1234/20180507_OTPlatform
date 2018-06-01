@@ -61,7 +61,7 @@
                     <a class="layui-btn layui-btn-normal">查询</a>
                 </div>
                 <div class="layui-inline data-output">
-                    <a class="layui-btn layui-btn-primary">数据导出</a>
+                    <a method="offser" onclick="dataOutput()"  class="layui-btn layui-btn-primary">数据导出</a>
                     <div class="layui-inline">
                         <i class="layui-icon info-icon"> &#xe60b;</i>
                     </div>
@@ -85,42 +85,58 @@
             <span>API取出异常</span> {{# } else { }}
             <span>资料异常</span> {{# }}}
         </script>
+    </form>
 
-        <script type="text/javascript" src="../../layui/layui.js"></script>
-        <script type="text/javascript" src="agentFinance.js"></script>
-        <script>
-            //日期彈窗
-            layui.use('laydate', function() {
-                var laydate = layui.laydate;
+    <script type="text/javascript" src="../../layui/layui.js"></script>
+    <script type="text/javascript" src="agentFinance.js"></script>
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
 
-                //自定义格式
-                laydate.render({
-                    elem: '#dateStart',
-                    format: 'yyyy-MM-dd'
-                        // ,value: '2018-01-01'
-                });
-
-                laydate.render({
-                    elem: '#dateEnd',
-                    format: 'yyyy-MM-dd'
-                        // ,value: '2018-01-01'
-                });
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd'
+                    // ,value: '2018-01-01'
             });
-            // 查询类别
-            function pageFunc1() {
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd'
+                    // ,value: '2018-01-01'
+            });
+        });
+        // 查询类别
+        function pageFunc1() {
+            layer.open({
+                type: 1,
+                // skin: 'layui-layer-nobg',
+                closeBtn: 1,
+                btn: '确认',
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '查询类别',
+                area: ['795px', '255px'],
+                content: '<iframe src="agentTable.html" width="100%" height="95"></iframe>'
+            });
+        }
+        // 数据导出
+        function dataOutput() {
                 layer.open({
-                    type: 1,
+                    type:1,
                     // skin: 'layui-layer-nobg',
-                    closeBtn: 1,
+                    closeBtn:1,
                     btn: '确认',
                     btnAlign: 'c',
-                    shadeClose: true,
-                    title: '查询类别',
-                    area: ['755px', '250px'],
-                    content: '<iframe src="agentTable.html" width="100%" height="130"></iframe>'
+                    shadeClose:true,
+                    title:'数据导出',
+                    area:['280px','180px'],
+                    content:'确定导出数据？'
+                        
                 });
             }
-        </script>
+    </script>
 </body>
 
 </html>

@@ -1661,16 +1661,42 @@ span.mark {
 
 /* 2018/05/29 yolanda */
 
+.paymentHistoryBody .layui-layer-page .layui-layer-content p,
 .paymentRecordsBody .layui-layer-page .layui-layer-content p {
     line-height: 35px;
 }
 
+.paymentHistoryBody .layui-form-label,
 .paymentRecordsBody .layui-form-label {
     width: auto;
 }
 
+.paymentHistoryBody .layui-block:last-child,
+.paymentRecordsBody .layui-block:last-child {
+    margin: 0 15px;
+}
+
+.paymentRecordsBody .layui-event {
+    margin: 3px 15px;
+}
+
+.paymentHistoryBody .layui-form-checkbox,
+.paymentRecordsBody .layui-form-checkbox {
+    margin: 6px 0;
+}
+
+.paymentHistoryBody .layui-table-cell,
 .paymentRecordsBody .layui-table-cell {
     height: auto;
+}
+
+.paymentHistoryBody .layui-input-block {
+    margin-left: 100px;
+    min-height: 36px;
+}
+
+.paymentHistoryBody .bank-block {
+    margin-left: 75px;
 }
 
 .yo-info i.layui-icon {
