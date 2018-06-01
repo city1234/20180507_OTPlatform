@@ -140,7 +140,7 @@
                     "thirdChildren": [{
                             "title": "入款历史记录",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/paymentHistory.html",
                             "spread": false
                         },
                         {

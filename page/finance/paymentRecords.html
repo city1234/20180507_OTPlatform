@@ -72,7 +72,7 @@
                     <input type="checkbox" name="" lay-skin="primary" title="拒绝">
                 </div>
                 <a class="layui-btn layui-btn-normal search_btn">查询</a>
-                <a class="layui-btn layui-btn-normal" onclick="advanced()">进阶搜寻</a>
+                <a class="layui-btn layui-btn-normal">进阶搜寻</a>
                 <a class="layui-btn layui-btn-normal">数据导出</a>
             </form>
         </blockquote>
@@ -139,47 +139,6 @@
                 laytpl = layui.laytpl,
                 table = layui.table;
         });
-
-        // 帐号动态口令
-        function advanced() {
-            layer.open({
-                type: 1,
-                closeBtn: 1,
-                btn: ['提交', '关闭'],
-                btnAlign: 'c',
-                shadeClose: true,
-                title: '进阶搜寻',
-                area: ['650px', '450px'],
-                content: '<form class="layui-form"><table class="layui-table storeOrderPopList"><tbody><tr><th>币别:</th><td><div class="layui-form-item"><div class="layui-input-block"><select name=""><option value="0">人民币</option></select></div></div></td></tr>' +
-                    '<tr><th>备注:</th><td><div class="layui-input-inline">' +
-                    '<input type="text" class="layui-input">' +
-                    '</div></td></tr>' +
-                    '<tr><th>提出额度:</th><td><div><div class="layui-input-inline">' +
-                    '<input type="text" class="layui-input"></div> ~ <div class="layui-input-inline"><div class="layui-form-item"><input type="text" class="layui-input"><div>' +
-                    '</div></div></div><p>提出额度为1元至999,999,999,9元</p></td></tr>' +
-                    '<tr><th><div class="layui-inline">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="层级">' +
-                    '</div></th><td><div class="layui-inline">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="未分层">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="洗码层1">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="BWT" >' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="000">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="11111">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="Kelly测试层001">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="KellyVIP层002">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="科伦vip层">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="kelly001">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="kelly002">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="nina001哈哈">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="VIP级别(Jimmy)">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="super">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="测试">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="426测试新增层级">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="alice使用">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="15346353">' +
-                    '<input type="checkbox" name="" lay-skin="primary" title="test"><input type="checkbox" name="" lay-skin="primary" title="qwewr12"><input type="checkbox" name="" lay-skin="primary" title="aaaaaaaa"></div></td></tr></tbody></table></form>'
-            });
-        }
     </script>
 </body>
 
