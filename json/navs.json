@@ -366,7 +366,7 @@
             "children": [{
                 "title": "报表",
                 "icon": "",
-                "href": "",
+                "href": "page/reports/reportsList.html",
                 "spread": false
             }, {
                 "title": "月结对账系统",
