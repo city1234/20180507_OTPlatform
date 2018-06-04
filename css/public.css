@@ -1496,6 +1496,14 @@ h2.method {
     line-height: 25px;
 }
 
+
+/* 20180604 Amanda */
+
+.reportSearchAttention {
+    color: #ff5823;
+    line-height: 25px;
+}
+
 .rebateSearchList tr[data-index="5"] td,
 .storeOrdersSearch tr[data-index="2"] td {
     border-right: none !important;
@@ -1754,4 +1762,17 @@ span.mark {
     background-color: #f2f2f2;
     color: #343434;
     font-weight: bold;
+}
+
+.reportSearch .layui-block:first-child {
+    min-height: 45px;
+}
+
+.reportSearch .layui-block:first-child .layui-inline {
+    min-height: 65px;
+}
+
+.reportSearch .layui-block:first-child .layui-inline p {
+    line-height: 35px;
+    font-size: 12px;
 }

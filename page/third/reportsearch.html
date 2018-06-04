@@ -22,63 +22,34 @@
         <form class="layui-form reportSearch">
             <blockquote class="layui-elem-quote quoteBox">
                 <form class="layui-form">
-                    <div class="layui-inline">
+                    <div class="layui-block">
                         <div class="layui-form-item">
                             <label class="layui-form-label">选择平台：</label>
-                            <div class="layui-input-block">
-                                <div class="layui-form component">
-                                    <select name="search" id="search" lay-search lay-filter="searchPage">
-                                        <option value="">搜索页面或功能</option>
-                                        <option value="1">layer</option>
-                                        <option value="2">form</option>
-                                    </select>
-                                    <i class="layui-icon">&#xe615;</i>
-                                </div>
-                            </div>
+                            <a class="layui-btn search_btn layui-btn-normal">更多平台</a>
                         </div>
-                    </div>
-                    <div class="layui-inline">
-                        <button class="layui-btn layui-btn-normal">
-                            <i class="layui-icon">&#xe603;</i>
-                        </button>
-                        <a class="layui-btn search_btn layui-btn-white active">传统彩</a>
-                        <a class="layui-btn search_btn layui-btn-white">皇冠体育</a>
-                        <a class="layui-btn search_btn layui-btn-white">AG捕鱼</a>
-                        <a class="layui-btn search_btn layui-btn-white">AG视讯</a>
-                        <a class="layui-btn search_btn layui-btn-white">ALLBET视讯</a>
-                        <a class="layui-btn search_btn layui-btn-white">BB彩票</a>
-                        <a class="layui-btn search_btn layui-btn-white">BB视讯</a>
-                        <a class="layui-btn search_btn layui-btn-white">BB体育</a>
-                        <a class="layui-btn search_btn layui-btn-white">BG电子</a>
-                        <a class="layui-btn search_btn layui-btn-white">BG捕鱼</a>
-                        <!-- <a class="layui-btn search_btn layui-btn-white">BG视讯</a>
-                        <a class="layui-btn search_btn layui-btn-white">CMD体育</a>
-                        <a class="layui-btn search_btn layui-btn-white">DS视讯</a>
-                        <a class="layui-btn search_btn layui-btn-white">LEBO视讯</a>
-                        <a class="layui-btn search_btn layui-btn-white">MG电子</a> -->
-                        <button class="layui-btn layui-btn-normal">
-                            <i class="layui-icon">&#xe602;</i>
-                        </button>
                     </div>
                     <div class="layui-inline">
                         <div class="layui-form-item">
-                            <label class="layui-form-label">游戏类型：</label>
-                            <div class="layui-input-block">
-                                <select name="" lay-verify="required">
-                                    <option value="0">全部</option>
-                                    <option value="1">游戏</option>
-                                </select>
-                            </div>
+                            <select name="" lay-verify="required">
+                                <option value="0">正式线数据</option>
+                                <option value="1">正式线数据</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">会员账号：</label>
-                        <div class="layui-input-inline">
-                            <input type="text" class="layui-input" placeholder="">
-                        </div>
+                    <div class="layui-inline" id="dataOutput">
+                        <i class="layui-icon info-icon"> &#xe60b;</i>
                     </div>
                     <div class="layui-inline">
-                        <label class="layui-form-label">注单号：</label>
+                        <div class="layui-form-item">
+                            <select name="" lay-verify="required">
+                                <option value="0">大大股东</option>
+                                <option value="1">大大大股东</option>
+                                <option value="2">大大大大股东</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
                         <div class="layui-input-inline">
                             <input type="text" class="layui-input" placeholder="">
                         </div>
@@ -91,6 +62,11 @@
                             <input type="text" class="layui-input" id="dateEnd" placeholder="结束时间">
                         </div>
                     </div>
+                    <div class="layui-inline" id="dataOutput2">
+                        <i class="layui-icon info-icon"> &#xe60b;</i>
+                    </div>
+
+
                     <div class="layui-inline">
                         <div class="layui-form-item">
                             <select name="" lay-verify="required">
@@ -102,16 +78,20 @@
                     <div class="layui-inline">
                         <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
                     </div>
-
                 </form>
             </blockquote>
-            <div class="attention">
-                页面解读：
-                <br> 注单管理仅支持单平台查询，支持模糊查询；
-                <br> 每次进入时，需先选择查询的平台；
-                <br> 可根据单平台进行全部会员/单一会员及各平台的查询条件进行查询；
-            </div>
+            <table id="realTime" lay-filter="realTime">
+                <div class="attention">
+                    页面解读：
+                    <br> 注单管理仅支持单平台查询，支持模糊查询；
+                    <br> 每次进入时，需先选择查询的平台；
+                    <br> 可根据单平台进行全部会员/单一会员及各平台的查询条件进行查询；
+                </div>
+            </table>
+
             <script src="../../layui/layui.js"></script>
+            <script src="../../js/jquery-1.12.3.min.js"></script>
+            <script src="../../js/myjs.js"></script>
             <!-- ▼ 日期弹窗 ▼ -->
             <script>
                 //日期彈窗
@@ -134,16 +114,24 @@
 
 
                 });
-                //Demo
-                layui.use('form', function() {
-                    var form = layui.form;
-
-                    //监听提交
-                    form.on('submit(formDemo)', function(data) {
-                        layer.msg(JSON.stringify(data.field));
-                        return false;
+                layui.use(['form', 'layer'], function() {
+                    var form = layui.form
+                    var $ = layui.jquery
+                    $("#dataOutput i").click(function() {
+                        layer.tips('测试线仅支持查询传统彩及皇冠体育平台', '#dataOutput', {
+                            //tips: [1, '#3595CC'], 
+                            tips: [3, '#26bd7b'],
+                            time: 5000
+                        });
                     });
-                });
+                    $("#dataOutput2 i").click(function() {
+                        layer.tips('本平台的查询时间已与第三方同步', '#dataOutput2', {
+                            //tips: [1, '#3595CC'], 
+                            tips: [3, '#26bd7b'],
+                            time: 5000
+                        });
+                    });
+                })
             </script>
     </body>
 
