@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>人工额度转换</title>
+    <title>代理查询</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -30,11 +30,11 @@
                     <label class="layui-form-label">代理层级：</label>
                     <div class="layui-input-block">
                         <select name="arrange3" lay-verify="required">
-                        <option value="0">全部层级</option>
-                        <option value="1">一级代理</option>
-                        <option value="2">二级代理</option>
-                        <option value="3">三级代理</option>
-                        <option value="4">四级代理</option>
+                            <option value="0">全部层级</option>
+                            <option value="1">一级代理</option>
+                            <option value="2">二级代理</option>
+                            <option value="3">三级代理</option>
+                            <option value="4">四级代理</option>
                         </select>
                     </div>
                 </div>
@@ -44,11 +44,11 @@
                     <label class="layui-form-label">状态：</label>
                     <div class="layui-input-block">
                         <select name="arrange3" lay-verify="required">
-                        <option value="0">全部</option>
-                        <option value="1">正常</option>
-                        <option value="2">停用</option>
-                        <option value="3">链锁</option>
-                        <option value="4">冻结</option>
+                            <option value="0">全部</option>
+                            <option value="1">正常</option>
+                            <option value="2">停用</option>
+                            <option value="3">链锁</option>
+                            <option value="4">冻结</option>
                         </select>
                     </div>
                 </div>
@@ -81,30 +81,47 @@
             <div class="layui-inline">
                 <a class="layui-btn layui-btn-primary">数据导出</a>
                 <div class="layui-inline" id="dataOutput">
-                    <i class="layui-icon info-icon" > &#xe60b;</i>
+                    <i class="layui-icon info-icon"> &#xe60b;</i>
                 </div>
             </div>
         </blockquote>
-        <table id="agentInquiry" lay-filter="agentInquiry"></table> 
+        <table id="agentInquiry" lay-filter="agentInquiry"></table>
     </form>
     <!--编辑状态-->
     <script type="text/html" id="agentInquiryBar">
-            {{# if( d.agentStatus == "0"){ }}
-            <span class="layui-blue">正常</span> 
-            {{# } else if( d.agentStatus == "1"){ }}
-            <span class="layui-red">停用</span>
-            {{# } else if( d.agentStatus == "2"){ }}
-            <span class="layui-blue">链锁</span>
-            {{# } else { }}
-            <span class="layui-red">冷冻</span>
-            {{# }}}
-        </script>
+        {{# if( d.agentStatus == "0"){ }}
+        <span class="layui-blue">正常</span> {{# } else if( d.agentStatus == "1"){ }}
+        <span class="layui-red">停用</span> {{# } else if( d.agentStatus == "2"){ }}
+        <span class="layui-blue">链锁</span> {{# } else { }}
+        <span class="layui-red">冷冻</span> {{# }}}
+    </script>
     <script type="text/javascript" src="../../layui/layui.js"></script>
-    <script type="text/javascript" src="agentInquiry.js"></script> 
-    <script> 
-         layui.use(['form', 'layer'], function() {
+    <script type="text/javascript" src="agentInquiry.js"></script>
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+        layui.use(['form', 'layer'], function() {
             var form = layui.form
-            var $ = layui.jquery 
+            var $ = layui.jquery
 
             $("#dataOutput i").click(function() {
                 layer.tips('请先选择日期后在导出，导出功能只在美东时间为20-24点（即北京时间8-12点）可用', '#dataOutput', {
@@ -113,8 +130,7 @@
                     time: 5000
                 });
             });
-        }) 
-        
+        })
     </script>
 </body>
 

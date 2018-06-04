@@ -67,32 +67,48 @@
             <div class="layui-inline">
                 <a class="layui-btn layui-btn-primary">数据导出</a>
                 <div class="layui-inline" id="dataOutput">
-                    <i class="layui-icon info-icon" > &#xe60b;</i>
+                    <i class="layui-icon info-icon"> &#xe60b;</i>
                 </div>
             </div>
         </blockquote>
-        <table id="memberInquiry" lay-filter="memberInquiry"></table> 
+        <table id="memberInquiry" lay-filter="memberInquiry"></table>
     </form>
     <!--编辑状态-->
     <script type="text/html" id="memberStatusBar">
-            {{# if( d.memberStatus == "0"){ }}
-            <span class="layui-blue">正常</span> 
-            {{# } else if( d.memberStatus == "1"){ }}
-            <span class="layui-red">停用</span>
-            {{# } else if( d.memberStatus == "2"){ }}
-            <span class="layui-blue">链锁</span>
-            {{# } else if( d.memberStatus == "3"){ }}
-            <a class="layui-blue">激活</a>
-            {{# } else { }}
-            <span class="layui-red">冷冻</span>
-            {{# }}}
-        </script>
+        {{# if( d.memberStatus == "0"){ }}
+        <span class="layui-blue">正常</span> {{# } else if( d.memberStatus == "1"){ }}
+        <span class="layui-red">停用</span> {{# } else if( d.memberStatus == "2"){ }}
+        <span class="layui-blue">链锁</span> {{# } else if( d.memberStatus == "3"){ }}
+        <a class="layui-blue">激活</a> {{# } else { }}
+        <span class="layui-red">冷冻</span> {{# }}}
+    </script>
     <script type="text/javascript" src="../../layui/layui.js"></script>
-    <script type="text/javascript" src="memberInquiry.js"></script> 
-    <script> 
-         layui.use(['form', 'layer'], function() {
+    <script type="text/javascript" src="memberInquiry.js"></script>
+    <!-- ▼ 日期弹窗 ▼ -->
+    <script>
+        //日期彈窗
+        layui.use('laydate', function() {
+            var laydate = layui.laydate;
+
+            //自定义格式
+            laydate.render({
+                elem: '#dateStart',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+            laydate.render({
+                elem: '#dateEnd',
+                format: 'yyyy-MM-dd HH:mm:ss',
+                type: 'datetime',
+                value: '2018-01-01 00:00:00'
+            });
+
+        });
+        layui.use(['form', 'layer'], function() {
             var form = layui.form
-            var $ = layui.jquery 
+            var $ = layui.jquery
 
             $("#dataOutput i").click(function() {
                 layer.tips('请先选择日期后在导出，导出功能只在美东时间为20-24点（即北京时间8-12点）可用', '#dataOutput', {
@@ -101,8 +117,7 @@
                     time: 5000
                 });
             });
-        }) 
-        
+        })
     </script>
 </body>
 

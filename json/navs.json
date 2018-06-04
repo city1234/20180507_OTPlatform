@@ -262,7 +262,7 @@
                             "icon": "",
                             "href": "page/finance/agentInquiry.html",
                             "spread": false,
-                            "target": "_blank"
+                            "target": ""
                         }
                     ]
                 },
