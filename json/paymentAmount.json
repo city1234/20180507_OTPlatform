@@ -4,38 +4,38 @@
     "count": 17,
     "data": [{
             "paymentAmountDate": "总账",
-            "paymentAmountCompany": "27507.22( 16 )人",
-            "paymentAmountOnline": "14120.77( 10 )人",
-            "paymentAmountDeposit": "8479.00( 13 )人",
-            "paymentAmountChargeback": "544.02( 6 )人",
-            "paymentAmountMember": "5431.98( 12 )人",
-            "paymentAmountDiscount": "3440.86( 19 )人",
-            "paymentAmountWithdrawal": "190.00( 3 )人",
+            "paymentAmountCompany": "<div class='layui-blue'>27507.22( 16 )人</div>",
+            "paymentAmountOnline": "<div class='layui-blue'>14120.77( 10 )人</div>",
+            "paymentAmountDeposit": "<div class='layui-blue'>8479.00( 13 )人</div>",
+            "paymentAmountChargeback": "<div class='layui-blue'>544.02( 6 )人</div>",
+            "paymentAmountMember": "<div class='layui-blue'>5431.98( 12 )人</div>",
+            "paymentAmountDiscount": "<div class='layui-blue'>3440.86( 19 )人</div>",
+            "paymentAmountWithdrawal": "<div class='layui-blue'>190.00( 3 )人</div>",
             "paymentAmountRebate": "<a href='paymentRebate.html' class='layui-blue'>-1.00( 22 )人</a>",
-            "paymentItemAmount": "41589.17"
+            "paymentItemAmount": "<div class='layui-blue'>41589.17</div>"
         }, {
             "paymentAmountDate": "2018-05-02",
-            "paymentAmountCompany": "27507.22( 16 )人",
-            "paymentAmountOnline": "14120.77( 10 )人",
-            "paymentAmountDeposit": "8479.00( 13 )人",
-            "paymentAmountChargeback": "544.02( 6 )人",
-            "paymentAmountMember": "5431.98( 12 )人",
-            "paymentAmountDiscount": "3440.86( 19 )人",
-            "paymentAmountWithdrawal": "190.00( 3 )人",
-            "paymentAmountRebate": "-1.00( 22 )人",
-            "paymentItemAmount": "41589.17"
+            "paymentAmountCompany": "<div class='layui-blue'>27507.22( 16 )人</div>",
+            "paymentAmountOnline": "<div class='layui-blue'>14120.77( 10 )人</div>",
+            "paymentAmountDeposit": "<div class='layui-blue'>8479.00( 13 )人</div>",
+            "paymentAmountChargeback": "<div class='layui-blue'>544.02( 6 )人</div>",
+            "paymentAmountMember": "<div class='layui-blue'>5431.98( 12 )人</div>",
+            "paymentAmountDiscount": "<div class='layui-blue'>3440.86( 19 )人</div>",
+            "paymentAmountWithdrawal": "<div class='layui-blue'>190.00( 3 )人</div>",
+            "paymentAmountRebate": "<a href='paymentRebate.html' class='layui-blue'>-1.00( 22 )人</a>",
+            "paymentItemAmount": "<div class='layui-blue'>41589.17</div>"
         },
         {
             "paymentAmountDate": "2018-05-02",
-            "paymentAmountCompany": "27507.22( 16 )人",
-            "paymentAmountOnline": "14120.77( 10 )人",
-            "paymentAmountDeposit": "8479.00( 13 )人",
-            "paymentAmountChargeback": "544.02( 6 )人",
-            "paymentAmountMember": "5431.98( 12 )人",
-            "paymentAmountDiscount": "3440.86( 19 )人",
-            "paymentAmountWithdrawal": "190.00( 3 )人",
-            "paymentAmountRebate": "-1.00( 22 )人",
-            "paymentItemAmount": "41589.17"
+            "paymentAmountCompany": "<div class='layui-blue'>27507.22( 16 )人</div>",
+            "paymentAmountOnline": "<div class='layui-blue'>14120.77( 10 )人</div>",
+            "paymentAmountDeposit": "<div class='layui-blue'>8479.00( 13 )人</div>",
+            "paymentAmountChargeback": "<div class='layui-blue'>544.02( 6 )人</div>",
+            "paymentAmountMember": "<div class='layui-blue'>5431.98( 12 )人</div>",
+            "paymentAmountDiscount": "<div class='layui-blue'>3440.86( 19 )人</div>",
+            "paymentAmountWithdrawal": "<div class='layui-blue'>190.00( 3 )人</div>",
+            "paymentAmountRebate": "<a href='paymentRebate.html' class='layui-blue'>-1.00( 22 )人</a>",
+            "paymentItemAmount": "<div class='layui-blue'>41589.17</div>"
         }
     ]
 }

@@ -29,8 +29,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     field: 'storeOrederMember',
                     title: '会员账号',
                     width: 150,
-                    align: 'center',
-                    templet: "#storePaymentSystem"
+                    align: 'center'
                 },
                 {
                     field: 'storeWechat',
