@@ -25,23 +25,26 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 {
                     field: 'reportsBet',
                     title: '注单量',
-                    align: "center"
+                    align: "center",
+                    sort: true
                 },
                 {
                     field: 'reportsAmount',
                     title: '下注金额',
-                    align: "center"
+                    align: "center",
+                    sort: true
                 },
                 {
                     field: 'reportsEffectiveAmount',
                     title: '有效投注额',
-
-                    align: "center"
+                    align: "center",
+                    sort: true
                 },
                 {
                     field: 'reportsProfit',
                     title: '盈亏',
-                    align: 'center'
+                    align: 'center',
+                    sort: true
                 },
             ]
         ]
