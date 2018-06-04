@@ -4933,6 +4933,10 @@ table.rebateChargeoff td {
     text-align: center;
 }
 
+table.rebateChargeoff .layui-form-selected dl {
+    text-align: left;
+}
+
 table.rebateChargeoff .layui-input-block {
     margin-left: 0;
     min-height: auto;
@@ -5217,4 +5221,12 @@ table.layui-table .layui-inline:last-child {
 
 .tCellHeightAuto td[data-field="remitStopAmount"] div.layui-table-cell {
     height: auto;
+}
+
+
+/* 20180604 取款稽核 內容td Setting */
+
+td[data-field="withdrawCheckContent"] {
+    text-align: left;
+    padding: 5px !important;
 }

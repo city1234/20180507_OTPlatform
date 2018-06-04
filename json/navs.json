@@ -192,15 +192,15 @@
                     "thirdChildren": [{
                             "title": "人工额度转换",
                             "icon": "",
-                            "href": "",
+                            "href": "page/quotaConvert/quotaConvert.html",
                             "spread": false
                         },
                         {
                             "title": "额度转换记录",
                             "icon": "",
-                            "href": "",
+                            "href": "page/quotaConvert/quotaConvertRecord.html",
                             "spread": false,
-                            "target": "_blank"
+                            "target": ""
                         }
                     ]
                 },
@@ -233,7 +233,7 @@
                     "thirdChildren": [{
                             "title": "取款稽核查询",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/withdrawCheckSearch.html",
                             "spread": false
                         },
                         {
@@ -254,13 +254,13 @@
                     "thirdChildren": [{
                             "title": "会员查询",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/memberInquiry.html",
                             "spread": false
                         },
                         {
                             "title": "代理查询",
                             "icon": "",
-                            "href": "",
+                            "href": "page/finance/agentInquiry.html",
                             "spread": false,
                             "target": "_blank"
                         }
