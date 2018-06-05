@@ -15,7 +15,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         height: "full-125",
         limit: 20,
         limits: [10, 15, 20, 25],
-        id: "rebateListTable",
+        id: "realTimeTable",
         cols: [
             [
                 { field: 'realTimeId', title: '序号', width: 100, align: "center" },

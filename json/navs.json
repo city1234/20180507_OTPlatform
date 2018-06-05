@@ -77,15 +77,14 @@
                             "target": ""
                         }
                     ]
+                }, {
+                    "title": "返点设置",
+                    "icon": "",
+                    "href": "page/rebate/rebateList.html",
+                    "spread": false,
+                    "target": ""
                 }
             ]
-        },
-        {
-            "title": "返点设置",
-            "icon": "&#xe901;",
-            "href": "page/rebate/rebateList.html",
-            "spread": false,
-            "target": ""
         }, {
             "title": "现金系统",
             "icon": "&#xe672;",
@@ -270,6 +269,22 @@
                     "title": "出入款总账",
                     "icon": "",
                     "href": "page/finance/paymentAmount.html",
+                    "spread": false,
+                    "target": ""
+                }, {
+                    "title": "第三方查询realTime",
+                    "icon": "",
+                    "href": "page/mainSysReport/realTime.html",
+                    "spread": false
+                }, {
+                    "title": "第三方查询realTimeList",
+                    "icon": "",
+                    "href": "page/mainSysReport/realTimeList.html",
+                    "spread": false
+                }, {
+                    "title": "第三方查询02",
+                    "icon": "",
+                    "href": "page/mainSysReport/reportSearch.html",
                     "spread": false,
                     "target": ""
                 }

@@ -1455,7 +1455,8 @@ h2.method {
 
 /* 2018/05/09 Amanda */
 
-.hierarchy.layui-table,
+.paymentWithdraw .layui-table,
+.hierarchy .layui-table,
 .agentDeposit .layui-table {
     width: auto;
 }
@@ -1476,6 +1477,7 @@ h2.method {
     margin-bottom: 0;
 }
 
+.paymentWithdraw .magt10,
 .agentDeposit .magt10 {
     display: inline-block;
     width: 35%;
@@ -1493,6 +1495,11 @@ h2.method {
     color: #ff5823;
     bottom: 65px;
     left: 20px;
+    line-height: 25px;
+}
+
+.attention02 {
+    color: #ff5823;
     line-height: 25px;
 }
 
