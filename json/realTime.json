@@ -94,6 +94,26 @@
             "realTimeFishPrice": "100.00",
             "realTimeProfit": "1",
             "realTimeJackpot": "35555.00"
+        }, {
+            "realTimeId": "小计",
+            "realTimeName": "",
+            "realTimeBet": "",
+            "realTimeBetTime": "",
+            "realTimeBullet": "16.00",
+            "realTimeBulletPrice": "400.00",
+            "realTimeFishPrice": "800.00",
+            "realTimeProfit": "1",
+            "realTimeJackpot": "284440.00"
+        }, {
+            "realTimeId": "总计",
+            "realTimeName": "",
+            "realTimeBet": "",
+            "realTimeBetTime": "",
+            "realTimeBullet": "16.00",
+            "realTimeBulletPrice": "400.00",
+            "realTimeFishPrice": "800.00",
+            "realTimeProfit": "1",
+            "realTimeJackpot": "284440.00"
         }
     ]
 }
