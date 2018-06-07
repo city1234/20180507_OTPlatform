@@ -9,7 +9,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
     //新闻列表
     var tableIns = table.render({
         elem: '#memberOnlineList',
-        url: '../../json/memberOnline.json',
+        url: 'json/memberOnline.json',
         cellMinWidth: 95,
         page: true,
         height: "full-125",
