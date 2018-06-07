@@ -8,7 +8,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
     //新闻列表
     var tableIns = table.render({
-        elem: '#agentOnline',
+        elem: '#agentOnlineList',
         url: 'json/agentOnline.json',
         cellMinWidth: 95,
         page: true,
@@ -18,7 +18,6 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         id: "agentOnlineTable",
         cols: [
             [
-                [
                     { field: 'agentOnlineType', width: 120, title: '类型', align: "center" },
                     { field: 'agentOnlineName', width: 120, title: '名称', align: "center" },
                     { field: 'agentOnlineAccount', width: 120, title: '账号', align: 'center' },
@@ -26,7 +25,6 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     { field: 'agentOnlineIp', width: 150, title: 'IP地址', align: 'center' },
                     { field: 'agentOnlineSup', width: 120, title: '所属上级', align: 'center' },
                     // { title: '操作', minWidth: 120, templet: '#agentOnlineListBar', align: "center" }
-                ]
             ]
         ]
     });
