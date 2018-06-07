@@ -25,7 +25,7 @@
                     <div class="layui-block">
                         <div class="layui-form-item">
                             <label class="layui-form-label">选择平台：</label>
-                            <a class="layui-btn search_btn layui-btn-normal" id="search">更多平台</a>
+                            <a class="layui-btn search_btn layui-btn-normal">更多平台</a>
                         </div>
                     </div>
                     <div class="layui-inline">
@@ -80,7 +80,7 @@
                     </div>
                 </form>
             </blockquote>
-            <table id="realTime" lay-filter="realTime">
+            <table id="reportSearchList" lay-filter="reportSearchList">
                 <div class="attention">
                     页面解读：
                     <br> 注单管理仅支持单平台查询，支持模糊查询；
@@ -89,8 +89,18 @@
                 </div>
             </table>
 
+            <!--审核状态-->
+            <script type="text/html" id="reportSearchListProfit">
+                {{# if( d.reportSearchListProfit == "0"){ }}
+                <div class="layui-green">
+                    <span>-100.00</span>
+                </div> {{# } else if( d.reportSearchListProfit == "1") { }}
+                <div class="layui-red">
+                    <span>50.00</span>
+                </div> {{# }}}
+            </script>
             <script src="../../layui/layui.js"></script>
-            <script src="reportSearch.js"></script>
+            <script src="reportSearchList.js"></script>
             <!-- ▼ 日期弹窗 ▼ -->
             <script>
                 //日期彈窗
@@ -132,6 +142,7 @@
                     });
                 })
             </script>
+        </form>
     </body>
 
 </html>

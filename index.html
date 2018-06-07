@@ -82,13 +82,13 @@
                         <a href="javascript:;"><i class="seraph icon-lock"></i><cite>锁屏</cite></a>
 					</li> -->
                     <li class="layui-nav-item" pc>
-                        <a href="javascript:;">
+                        <a href="javascript:;" method="offset" onclick="memberOnline()">
                             <i class="layui-icon">&#x1002;</i>
                             <cite>在线人数：会员(214675)</cite>
                         </a>
                     </li>
                     <li class="layui-nav-item" pc>
-                        <a href="javascript:;">
+                        <a href="javascript:;" method="offset" onclick="agentOnline()">
                             <cite>代理(365)</cite>
                         </a>
                     </li>
@@ -198,6 +198,30 @@
     <script type="text/javascript" src="layui/layui.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/cache.js"></script>
+    <script>
+        // 会员在线人数
+        function memberOnline() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                shadeClose: true,
+                title: '会员在线人数',
+                area: ['60%', '100%'],
+                content: '<iframe src="memberOnline.html" width ="100%" height="70%"></iframe>'
+            });
+        }
+        // 代理在线人数 
+        function agentOnline() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                shadeClose: true,
+                title: '代理在线人数',
+                area: ['60%', '100%'],
+                content: '<iframe src="agentOnline.html" width="100%" height="70%"></iframe>'
+            });
+        }
+    </script>
 </body>
 
 </html>

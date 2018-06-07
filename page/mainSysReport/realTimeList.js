@@ -8,7 +8,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
     //新闻列表
     var tableIns = table.render({
-        elem: '#realTime',
+        elem: '#realTimeListProfit',
         url: '../../json/realTimeList.json',
         cellMinWidth: 95,
         page: true,
@@ -26,7 +26,8 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 { field: 'realTimeListBetType', title: '下注类型', width: 250, align: 'center' },
                 { field: 'realTimeListBetAmount', title: '下注金额', width: 150, align: "center" },
                 { field: 'realTimeListBet', title: '有效投注额', width: 250, align: "center" },
-                { field: 'realTimeListProfit', title: '损益', width: 250, align: "center", templet: '#realTimeListProfit' }
+                { field: 'realTimeListProfit', title: '损益', width: 250, align: "center", templet: '#realTimeListProfit' },
+                { field: 'realTimeListJackpot', title: 'jackpot交收', width: 250, align: "center" }
             ]
         ]
     });

@@ -1,0 +1,30 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 15,
+    "data": [{
+            "agentOnlineType": "会员",
+            "agentOnlineName": "tmac",
+            "agentOnlineAccount": "tt1100",
+            "agentOnlineTime": "23:15:55",
+            "agentOnlineIp": "180.232.84.51",
+            "agentOnlineSup": "dkitty02"
+        },
+        {
+            "agentOnlineType": "会员",
+            "agentOnlineName": "tmac",
+            "agentOnlineAccount": "tt1100",
+            "agentOnlineTime": "23:15:55",
+            "agentOnlineIp": "180.232.84.51",
+            "agentOnlineSup": "dkitty02"
+        },
+        {
+            "agentOnlineType": "会员",
+            "agentOnlineName": "tmac",
+            "agentOnlineAccount": "tt1100",
+            "agentOnlineTime": "23:15:55",
+            "agentOnlineIp": "180.232.84.51",
+            "agentOnlineSup": "dkitty02"
+        }
+    ]
+}

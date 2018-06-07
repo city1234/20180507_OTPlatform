@@ -6,6 +6,30 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         laytpl = layui.laytpl,
         table = layui.table;
 
+    //新闻列表
+    var tableIns = table.render({
+        elem: '#reportSearchList',
+        url: '../../json/reportSearchList.json',
+        cellMinWidth: 95,
+        page: true,
+        height: "full-125",
+        limit: 20,
+        limits: [10, 15, 20, 25],
+        id: "reportSearchList",
+        cols: [
+            [
+                { field: 'reportSearchListId', title: '序号', width: 100, align: "center" },
+                { field: 'reportSearchListGame', title: '游戏平台', align: "center" },
+                { field: 'reportSearchListQuantity', title: '注单量', align: 'center' },
+                { field: 'reportSearchListAmount', title: '下注金额', align: "center" },
+                { field: 'reportSearchListBet', title: '有效投注额', align: "center" },
+                { field: 'reportSearchListProfit', title: '盈亏', align: "center", templet: '#reportSearchListProfit' },
+                { field: 'reportSearchListPool', title: '累计奖池', align: 'center' },
+                { field: 'reportSearchListLottery', title: '累计彩金', align: "center" },
+            ]
+        ]
+    });
+
     //查询【此功能需要后台配合，所以暂时没有动态效果演示】
     $(".search_btn").on("click", function() {
         if ($(".searchVal").val() != '') {
@@ -108,15 +132,39 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 })
 
 
-layui.use(['table', 'form', 'layer'], function() {
+layui.use('table', function() {
     var table = layui.table;
-    var $ = layui.jquery
 
-    $("#search").click(function() {
-        layer.tips('<a href="reportSearch.html">123456</a>', '#search', {
-            //tips: [1, '#3595CC'], 
-            tips: [3, '#26bd7b'],
-            time: 5000
-        });
+    //监听单元格编辑
+    table.on('edit(rebateList)', function(obj) {
+        var value = obj.value //得到修改后的值
+            ,
+            data = obj.data //得到所在行所有键值
+            ,
+            field = obj.field; //得到字段
+        // layer.confirm(data.rebateModuleName + '  数据更改为：' + value + '<br>是否修改金额');
+        if (value.length < 16) {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['确定', '取消'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '温馨提示',
+                area: ['350px', '180px'],
+                content: '是否修改金额'
+            });
+        } else {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: ['确定', '取消'],
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '温馨提示',
+                area: ['350px', '180px'],
+                content: '最大长度为15位，支持填写小数点后两位、数字'
+            });
+        }
     });
 });

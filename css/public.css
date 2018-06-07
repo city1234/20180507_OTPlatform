@@ -1378,13 +1378,14 @@ h2.method {
 }
 
 
-/* 20180522 */
+/* 20180607 span margin setting —Sharlene */
 
 .addtemplate .layui-form-item .layui-form-label span,
 .addagentone1stmember span {
     display: inline-block;
     /* line-height: 1.2; */
     /* width: 15px; */
+    margin: auto 3px;
     color: #ff5823;
 }
 
@@ -1422,7 +1423,11 @@ h2.method {
     text-align: left;
 }
 
-.backwater button {
+
+/* 20180607 button extanded Setting */
+
+.backwater button,
+.backwater a.layui-btn {
     margin-left: 120px;
     width: 150px;
 }
@@ -1782,4 +1787,8 @@ span.mark {
 .reportSearch .layui-block:first-child .layui-inline p {
     line-height: 35px;
     font-size: 12px;
+}
+
+.memberOnline blockquote a.active {
+    font-weight: bold;
 }

@@ -284,7 +284,7 @@
                 }, {
                     "title": "第三方查询02",
                     "icon": "",
-                    "href": "page/mainSysReport/reportSearch.html",
+                    "href": "page/mainSysReport/reportSearchList.html",
                     "spread": false,
                     "target": ""
                 }
@@ -386,7 +386,7 @@
             }, {
                 "title": "月结对账系统",
                 "icon": "",
-                "href": "",
+                "href": "page/reports/monthlyReportLogin.html",
                 "spread": false
             }]
         }, {

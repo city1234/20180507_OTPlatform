@@ -4893,6 +4893,7 @@ p.notice {
 .rebateList blockquote,
 .reportList blockquote,
 .reportSearch blockquote,
+.memberOnline blockquote,
 .paymentHistoryBody blockquote,
 .paymentRecordsBody blockquote {
     margin-bottom: 30px;
@@ -5107,6 +5108,7 @@ Sharlene Liao,
 
 /* 20180509 Data Output button --Sharlene */
 
+.updateTime,
 .layui-inline.data-output {
     float: right !important;
 }

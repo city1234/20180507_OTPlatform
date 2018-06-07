@@ -29,7 +29,7 @@
                                 <div class="layui-input-block">
                                     <div class="layui-form component">
                                         <select name="search" id="search" lay-search lay-filter="searchPage">
-                                            <option value="">搜索页面或功能</option>
+                                            <option value="">请选择平台</option>
                                             <option value="1">layer</option>
                                             <option value="2">form</option>
                                         </select>
@@ -112,26 +112,26 @@
                     </div>
                 </form>
             </blockquote>
-            <table id="realTime" lay-filter="realTime">
+            <table id="realTimeList" lay-filter="realTimeList">
             </table>
-            <div class="reportSearchAttention">
+            <div class="attention">
                 页面解读：
                 <br> 注单管理仅支持单平台查询，支持模糊查询；
                 <br> 每次进入时，需先选择查询的平台；
                 <br> 可根据单平台进行全部会员/单一会员及各平台的查询条件进行查询；
             </div>
             <!--审核状态-->
-            <script type="text/html" id="realTimeProfit">
-                {{# if( d.realTimeProfit == "0"){ }}
+            <script type="text/html" id="realTimeListProfit">
+                {{# if( d.realTimeListProfit == "0"){ }}
                 <div class="layui-green">
                     <span>-100.00</span>
-                </div> {{# } else if( d.realTimeProfit == "1") { }}
+                </div> {{# } else if( d.realTimeListProfit == "1") { }}
                 <div class="layui-red">
                     <span>50.00</span>
                 </div> {{# }}}
             </script>
             <script src="../../layui/layui.js"></script>
-            <script src="realTime.js"></script>
+            <script src="realTimeList.js"></script>
             <!-- ▼ 日期弹窗 ▼ -->
             <script>
                 //日期彈窗
