@@ -25,7 +25,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     { field: 'agentOnlineTime', width: 120, title: '登入时间', align: 'center' },
                     { field: 'agentOnlineIp', width: 150, title: 'IP地址', align: 'center' },
                     { field: 'agentOnlineSup', width: 120, title: '所属上级', align: 'center' },
-                    { title: '操作', minWidth: 120, templet: '#agentOnlineListBar', align: "center" }
+                    // { title: '操作', minWidth: 120, templet: '#agentOnlineListBar', align: "center" }
                 ]
             ]
         ]

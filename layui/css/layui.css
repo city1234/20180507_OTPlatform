@@ -2332,6 +2332,7 @@ input.layui-login::placeholder {
 }
 
 .layui-form-select dl dd {
+    text-align: left;
     cursor: pointer;
 }
 
