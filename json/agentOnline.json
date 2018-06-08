@@ -3,28 +3,30 @@
     "msg": "",
     "count": 15,
     "data": [{
-            "agentOnlineType": "会员",
-            "agentOnlineName": "tmac",
-            "agentOnlineAccount": "tt1100",
-            "agentOnlineTime": "23:15:55",
-            "agentOnlineIp": "180.232.84.51",
-            "agentOnlineSup": "dkitty02"
+            "agentOnlineType": "大大股东",
+            "agentOnlineName": "海天盛筵",
+            "agentOnlineAccount": "haitian",
+            "agentOnlineTime": "21:19:27",
+            "agentOnlineIp": "211.21.81.44",
+            "agentOnlineSup": "庄家",
+            "agentOnlineState": "1"
         },
         {
-            "agentOnlineType": "会员",
-            "agentOnlineName": "tmac",
-            "agentOnlineAccount": "tt1100",
-            "agentOnlineTime": "23:15:55",
-            "agentOnlineIp": "180.232.84.51",
-            "agentOnlineSup": "dkitty02"
-        },
-        {
-            "agentOnlineType": "会员",
-            "agentOnlineName": "tmac",
-            "agentOnlineAccount": "tt1100",
-            "agentOnlineTime": "23:15:55",
-            "agentOnlineIp": "180.232.84.51",
-            "agentOnlineSup": "dkitty02"
+            "agentOnlineType": "大大股东",
+            "agentOnlineName": "海天盛筵",
+            "agentOnlineAccount": "haitian",
+            "agentOnlineTime": "21:19:27",
+            "agentOnlineIp": "211.21.81.44",
+            "agentOnlineSup": "庄家",
+            "agentOnlineState": "0"
+        }, {
+            "agentOnlineType": "大大股东",
+            "agentOnlineName": "海天盛筵",
+            "agentOnlineAccount": "haitian",
+            "agentOnlineTime": "21:19:27",
+            "agentOnlineIp": "211.21.81.44",
+            "agentOnlineSup": "庄家",
+            "agentOnlineState": "2"
         }
     ]
 }

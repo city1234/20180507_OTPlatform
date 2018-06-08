@@ -64,10 +64,10 @@
                 </div>
 
                 <div class="layui-inline">
-                    <a class="layui-btn layui-btn-normal">添加</a>
+                    <a href="addStoreList.html" class="layui-btn layui-btn-normal">添加</a>
                 </div>
                 <div class="layui-inline">
-                    <a class="layui-btn layui-btn-normal">添加外链商号</a>
+                    <a href="addOuterStore.html" class="layui-btn layui-btn-normal">添加外链商号</a>
                 </div>
             </form>
         </blockquote>
@@ -81,13 +81,50 @@
 
         <!--操作-->
         <script type="text/html" id="storeListBar">
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal">修改商家资讯</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal">恢复</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-danger" lay-event="del">停用</a>
+            {{# if(d.storeListBar == "0"){ }} 
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editStoreList.html">修改商家资讯</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="recover()">恢复</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>
+            {{# } else { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editStoreList.html">修改商家资讯</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="suspend()">暂停</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>{{# }}}
         </script>
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="storeList.js"></script>
+    <script>
+        // 停用商家弹窗
+        function disabled() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: '确定',
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '停用',
+                area: ['450px', '180px'],
+                content: '动态口令(操作人)\
+                            <div class="layui-inline">\
+                                <input type="text" class="layui-input">\
+                            </div>\
+                            <span class="layui-red">（未绑定请留空）</span>'
+            });
+        }
+        // 恢复商家弹窗
+        function recover() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                btn: '确定',
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '恢复',
+                area: ['260px', '160px'],
+                content: '是否确认修改？'
+            });
+        }
+    </script>
 </body>
 
 </html>

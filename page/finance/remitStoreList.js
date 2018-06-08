@@ -8,14 +8,14 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
     //新闻列表
     var tableIns = table.render({
-        elem: '#storeList',
+        elem: '#remitStoreList',
         url: '../../json/remitStoreList.json',
         cellMinWidth: 95,
         page: true,
         height: "full-125",
         limit: 20,
         limits: [10, 15, 20, 25],
-        id: "storeListTable",
+        id: "remitStoreListTable",
         cols: [
             [
                 { field: 'storeId', title: '编号', width: 60, align: "center" },
@@ -23,7 +23,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 { field: 'storePaymentType', title: '支付系统', width: 200, align: 'center' },
                 { field: 'storeNumber', title: '商号', align: 'center' },
                 { field: 'storeLevel', title: '层级名称', width: 450, align: "center" },
-                { title: '操作', width: 280, templet: '#storeListBar', fixed: "right", align: "center" }
+                { title: '操作', width: 280, templet: '#remitStoreListBar', fixed: "right", align: "center" }
             ]
         ]
     });

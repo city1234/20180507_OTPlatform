@@ -24,7 +24,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 { field: 'memberOnlineTime', width: 120, title: '登入时间', align: 'center' },
                 { field: 'memberOnlineIp', width: 150, title: 'IP地址', align: 'center' },
                 { field: 'memberOnlineSup', width: 120, title: '所属上级', align: 'center' },
-                { title: '操作', minWidth: 120, templet: '#memberOnlineListBar', align: "center" }
+                { title: '操作', minWidth: 180, templet: '#memberOnlineListBar', align: "center" }
             ]
         ]
     });

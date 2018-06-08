@@ -18,13 +18,19 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         id: "agentOnlineTable",
         cols: [
             [
-                    { field: 'agentOnlineType', width: 120, title: '类型', align: "center" },
-                    { field: 'agentOnlineName', width: 120, title: '名称', align: "center" },
-                    { field: 'agentOnlineAccount', width: 120, title: '账号', align: 'center' },
-                    { field: 'agentOnlineTime', width: 120, title: '登入时间', align: 'center' },
-                    { field: 'agentOnlineIp', width: 150, title: 'IP地址', align: 'center' },
-                    { field: 'agentOnlineSup', width: 120, title: '所属上级', align: 'center' },
-                    // { title: '操作', minWidth: 120, templet: '#agentOnlineListBar', align: "center" }
+                { field: 'agentOnlineType', width: 120, title: '类型', align: "center" },
+                { field: 'agentOnlineName', width: 120, title: '名称', align: "center" },
+                { field: 'agentOnlineAccount', width: 120, title: '账号', align: 'center' },
+                { field: 'agentOnlineTime', width: 120, title: '登入时间', align: 'center' },
+                { field: 'agentOnlineIp', width: 150, title: 'IP地址', align: 'center' },
+                { field: 'agentOnlineSup', width: 120, title: '所属上级', align: 'center' },
+                {
+                    field: 'agentOnlineState',
+                    minWidth: 180,
+                    title: '操作',
+                    align: 'center',
+                    templet: '#agentOnlineState'
+                },
             ]
         ]
     });
