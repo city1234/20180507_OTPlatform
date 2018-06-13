@@ -1986,12 +1986,12 @@ hr {
 }
 
 .layui-btn-gray {
-    background-color: #eaeaea;
-    color: #666666;
+    background-color: #666;
+    color: #fff;
 }
 
 .layui-btn-gray:hover {
-    color: #666666;
+    color: #fff;
 }
 
 .layui-btn-gray.active {
