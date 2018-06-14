@@ -137,7 +137,7 @@
                     "spread": false,
                     "target": "",
                     "thirdChildren": [{
-                            "title": "入款历史记录",
+                            "title": "入款记录",
                             "icon": "",
                             "href": "page/finance/paymentHistory.html",
                             "spread": false

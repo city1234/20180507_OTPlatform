@@ -39,7 +39,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 },
                 {
                     field: 'alreadyCaseDisplay',
-                    title: '是否显示',
+                    title: '状态',
                     width: 150,
                     align: "center"
                 },

@@ -41,7 +41,7 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 },
                 {
                     field: 'uploadListEdit',
-                    title: '功能',
+                    title: '操作',
                     width: 350,
                     align: "center",
                     templet: "#uploadListEdit"
