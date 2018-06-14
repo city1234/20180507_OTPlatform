@@ -46,7 +46,50 @@
             </form>
 
         </blockquote>
-        <table class="layui-table rebateChargeoff">
+        <table class="layui-table" lay-data="{url:'/json/rebateChargeoff.json', cellMinWidth: 80, page: true}">
+            <thead>
+                <tr>
+                    <th lay-data="{checkbox:true, align:'center'}">
+                    </th>
+                    <th lay-data="{field:'rebateChargeoffMember', align:'center'}">会员账号</th>
+                    <th lay-data="{field:'rebateChargeoffName', align:'center'}"></th>
+                    <th lay-data="{field:'rebateChargeoffAmount', align:'center'}">小計</th>
+                    <th lay-data="{field:'rebateChargeoffBB', align:'center'}">BB视讯</th>
+                    <th lay-data="{field:'rebateChargeoffAG', align:'center'}">AG视讯</th>
+                    <th lay-data="{field:'rebateChargeoffOG', align:'center'}">OG视讯 </th>
+                    <th lay-data="{field:'rebateChargeoffAB', align:'center'}">AB视讯</th>
+                    <th lay-data="{field:'rebateChargeoffBackground', align:'center'}" rowspan="2">背景状况</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td lay-data="{field:'rebateChargeoffMember', align:'center'}">123</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <!-- 实际有效投注额 -->
+                    <th lay-data="{field:'rebateChargeoffPage',align:'center'}" rowspan="2"></th>
+                    <th lay-data="{field:'rebateChargeoffPeople',align:'center'}" rowspan="2">总人数（冲销人数）</th>
+                    <th lay-data="{field:'rebateChargeoffName02',align:'center'}"></th>
+                    <th lay-data="{field:'rebateChargeoffAmount02',align:'center'}">总计</th>
+                    <th lay-data="{field:'rebateChargeoffBB02',align:'center'}">BB视讯 </th>
+                    <th lay-data="{field:'rebateChargeoffAG02',align:'center'}">AG视讯</th>
+                    <th lay-data="{field:'rebateChargeoffOG02',align:'center'}">OG视讯 </th>
+                    <th lay-data="{field:'rebateChargeoffAB02',align:'center'}">AB视讯</th>
+                    <th lay-data="{field:'rebateChargeoffBackground02',align:'center'}" rowspan="4"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td lay-data="{field:'rebateChargeoffMember', align:'center'}">456</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <table class="layui-table" lay-data="{url:'/json/rebateChargeoff02.json', cellMinWidth: 80, page: true}">
+
+        </table> -->
+        <!-- <table class="layui-table rebateChargeoff">
             <colgroup>
                 <col width="60">
                 <col>
@@ -308,7 +351,7 @@
 					</span>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </form>
     <!-- <script>
@@ -345,6 +388,9 @@
     <script type="text/javascript" src="../../layui/lay/modules/form.js"></script>
     <!-- <script type="text/javascript" src="rebateSearchList.js"></script> -->
     <script>
+        layui.use('table', function() {
+            var table = layui.table;
+        });
         // 冲销弹窗
         function pageDel() {
             layer.open({

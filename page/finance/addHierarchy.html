@@ -18,36 +18,36 @@
     <div class="addhierarchy addtemplate">
         <div class="searchAgent"><a class="layui-btn layui-btn-xs layui-btn-normal" href="hierarchy.html"><i class="layui-icon">&#xe603;</i>  返回上頁</a></div>
         <form class="layui-form">
-                <div class="addtemplateBasic">
-                    <div class="layui-form-item">
-                        <label class="layui-form-label"><span>*</span>名称</label>
-                        <div class="layui-input-block">
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input linkName" lay-verify="required" placeholder="A055" disabled>
-                            </div>
-                            <span>此名称不能修改</span>
+            <div class="addtemplateBasic">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span>*</span>名称</label>
+                    <div class="layui-input-block">
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input linkName" lay-verify="required" placeholder="A055" disabled>
+                        </div>
+                        <span>此名称不能修改</span>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span>*</span>描述</label>
+                    <div class="layui-input-block">
+                        <div class="layui-inline">
+                            <input type="text" class="layui-input linkName" lay-verify="required" placeholder="">
                         </div>
                     </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label"><span>*</span>描述</label>
-                        <div class="layui-input-block">
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input linkName" lay-verify="required" placeholder="">
-                            </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">区间</label>
+                    <div class="layui-input-block">
+                        <div class="layui-input-inline">
+                            <input type="text" name="price_min" placeholder="" autocomplete="off" class="layui-input" id="dateStart">
+                        </div>
+                        <div class="layui-form-mid">&minus;</div>
+                        <div class="layui-input-inline">
+                            <input type="text" name="price_max" placeholder="" autocomplete="off" class="layui-input" id="dateEnd">
                         </div>
                     </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label"><span>*</span>区间</label>
-                        <div class="layui-input-block">
-                            <div class="layui-input-inline" >
-                                <input type="text" name="price_min" placeholder="" autocomplete="off" class="layui-input" id="dateStart">
-                            </div>
-                            <div class="layui-form-mid">&minus;</div>
-                            <div class="layui-input-inline" >
-                                <input type="text" name="price_max" placeholder="" autocomplete="off" class="layui-input" id="dateEnd">
-                            </div>
-                        </div>
-                    </div>
+                </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label"><span>*</span>存款次数</label>
                     <div class="layui-input-block">
@@ -89,17 +89,17 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label"><span>*</span>备注</label>
+                    <label class="layui-form-label">备注</label>
                     <div class="layui-input-block">
                         <div class="layui-inline">
                             <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
                         </div>
                     </div>
                 </div>
-            </form>
-            <div class="addtemplateButton">
-                <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">确定</button>
-            </div>
+        </form>
+        <div class="addtemplateButton">
+            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">确定</button>
+        </div>
         </div>
 
         <script type="text/javascript" src="../../layui/layui.js"></script>
@@ -117,12 +117,12 @@
             });
         </script>
 
-    <!-- ▼ 日期弹窗 ▼ -->
-    <script>
+        <!-- ▼ 日期弹窗 ▼ -->
+        <script>
             //日期彈窗
             layui.use('laydate', function() {
                 var laydate = layui.laydate;
-    
+
                 //自定义格式
                 laydate.render({
                     elem: '#dateStart',
@@ -130,14 +130,14 @@
                     type: 'datetime',
                     value: '2018-01-01 00:00:00'
                 });
-    
+
                 laydate.render({
                     elem: '#dateEnd',
                     format: 'yyyy-MM-dd HH:mm:ss',
                     type: 'datetime',
                     value: '2018-01-01 00:00:00'
                 });
-    
+
             });
         </script>
 </body>
