@@ -57,10 +57,10 @@
     </form>
 
     <div>
-        <img id="batch1" class="batch" src="../../images/batch1.jpg" alt="" width="100%">
-        <img id="batch2" class="batch" src="../../images/batch2.jpg" alt="">
-        <img id="batch3" class="batch" src="../../images/batch3.jpg" alt="">
-        <img id="batch4" class="batch" src="../../images/batch4.jpg" alt="">
+        <img id="batch1" class="batch" src="../../images/batch1.png" alt="" width="100%">
+        <img id="batch2" class="batch" src="../../images/batch2.png" alt="">
+        <img id="batch3" class="batch" src="../../images/batch3.png" alt="">
+        <img id="batch4" class="batch" src="../../images/batch4.png" alt="">
     </div>
     <br>
     <style>
@@ -93,7 +93,7 @@
                     $('#batch1').show().siblings().hide();
                 } else if (category == 1) {
                     $('#batch2').show().siblings().hide();
-                } else if (category == 2 || category >= 4) {
+                } else if (category == 2 || category == 4) {
                     $('#batch3').show().siblings().hide();
                 } else if (category == 3) {
                     $('#batch4').show().siblings().hide();

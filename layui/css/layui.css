@@ -1985,6 +1985,9 @@ hr {
     color: #fff;
 }
 
+
+/* 20180613 Amanda */
+
 .layui-btn-gray {
     background-color: #666;
     color: #fff;
@@ -1993,6 +1996,9 @@ hr {
 .layui-btn-gray:hover {
     color: #fff;
 }
+
+
+/* 20180613 Amanda */
 
 .layui-btn-gray.active {
     background-color: #003ea4;
