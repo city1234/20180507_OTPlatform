@@ -1792,3 +1792,25 @@ span.mark {
 .memberOnline blockquote a.active {
     font-weight: bold;
 }
+
+
+/* 20180615 Amanda */
+
+.alreadyupload .layui-form-switch {
+    width: 55px;
+}
+
+.alreadyupload .layui-form-switch em {
+    right: 16px;
+}
+
+.alreadyupload .layui-form-onswitch i {
+    left: 44px;
+}
+
+.alreadyupload .layui-form-onswitch em {
+    left: 12px;
+}
+
+
+/* 20180615 Amanda */

@@ -18,26 +18,28 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
             id: "memberListTable",
             cols: [
                 [
-                    { field: 'memberId', title: '序号', width: 70, align: "center" },
-                    { field: 'memberName', title: '用户名', width: 150, align: "center" },
-                    { field: 'memberNickName', title: '昵称', width: 150, align: "center" },
-                    { field: 'memberSup', title: '上级', width: 120, align: "center" },
-                    { field: 'memberBalance', title: '账户余额', width: 200, align: 'center' },
-                    { field: 'memberRebate', title: '返点', width: 130, align: 'center' },
-                    { field: 'memberAccount', title: '账号', width: 130, align: 'center', templet: "#memberAccount" },
-                    { field: 'memberBet', title: '投注', width: 130, align: 'center', templet: "#memberBet" },
+                    //uifix_106
+                    { field: 'memberId', title: '序号', width: 145, align: "center" },
+                    { field: 'memberName', title: '用户名', width: 145, align: "center" },
+                    { field: 'memberNickName', title: '昵称', width: 145, align: "center" },
+                    { field: 'memberSup', title: '上级', width: 145, align: "center" },
+                    { field: 'memberBalance', title: '账户余额', width: 145, align: 'center' },
+                    { field: 'memberRebate', title: '返点', width: 145, align: 'center' },
+                    { field: 'memberAccount', title: '账号', width: 145, align: 'center', templet: "#memberAccount" },
+                    { field: 'memberBet', title: '投注', width: 145, align: 'center', templet: "#memberBet" },
                     {
                         field: 'memberTime',
                         title: '注册时间',
                         align: 'center',
                         sort: "true",
-                        width: 250,
+                        width: 145,
                         templet: function(d) {
                             return d.memberTime.substring(0, 10);
                         }
                     },
-                    { field: 'memberLogin', title: '登录', width: 100, align: "center" },
-                    { title: '操作', width: 260, templet: '#memberListBar', fixed: "right", align: "center" },
+                    { field: 'memberLogin', title: '登录', width: 145, align: "center" },
+                     //uifix_106 End
+                    { title: '操作', width: 280, templet: '#memberListBar', fixed: "right", align: "center" },
                 ]
             ]
         });

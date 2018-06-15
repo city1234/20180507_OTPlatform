@@ -18,33 +18,30 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
             id: "agentListTable",
             cols: [
                 [
-                    // {type: "checkbox", fixed:"left", width:50},
-                    { field: 'agentId', title: '序号', width: 70, align: "center" },
+                    //uifix_104 修正為固定寬度及直屬代理更名
+                    { field: 'agentId', title: '序号', width: 145, align: "center" },
                     { field: 'agentName', title: '用户名', width: 145, align: "center" },
                     { field: 'agentNickName', title: '昵称', width: 145, align: "center" },
-                    { field: 'agentSup', title: '上级', width: 80, align: "center" },
-                    // {field: 'agentPaymentSystem', title: '支付类型',  align:'center',templet:"#agentPaymentSystem"},
-                    { field: 'agentBalance', title: '账户余额', width: 180, align: 'center' },
-                    { field: 'agentSubAgent', title: '<a href="searchAgent.html" class="th-link">下级代理</a>', width: 100, align: "center"},
-                    { field: 'agentSubMember', title: '直属会员', width: 100, align: "center" },
-                    { field: 'agentLevel', title: '层级', width: 70, align: "center" },
-                    { field: 'agentRebate', title: '返点', width: 100, align: 'center' },
-                    { field: 'agentAccount', title: '账号', width: 100, align: 'center', templet: "#agentAccount" },
-                    { field: 'agentBet', title: '投注', width: 100, align: 'center', templet: "#agentBet" },
-                    // {field: 'agentTop', title: '是否置顶', align:'center', templet:function(d){
-                    //     return '<input type="checkbox" name="agentTop" lay-filter="agentTop" lay-skin="switch" lay-text="是|否" '+d.agentTop+'>'
-                    // }},
+                    { field: 'agentSup', title: '上级', width: 145, align: "center" },
+                    { field: 'agentBalance', title: '账户余额', width: 145, align: 'center' },
+                    { field: 'agentSubAgent', title: '<a href="searchAgent.html" class="th-link">直属代理</a>', width: 100, align: "center"}, 
+                    { field: 'agentSubMember', title: '直属会员', width: 145, align: "center" },
+                    { field: 'agentLevel', title: '层级', width: 145, align: "center" },
+                    { field: 'agentRebate', title: '返点', width: 145, align: 'center' },
+                    { field: 'agentAccount', title: '账号', width: 145, align: 'center', templet: "#agentAccount" },
+                    { field: 'agentBet', title: '投注', width: 145, align: 'center', templet: "#agentBet" },
                     {
                         field: 'agentTime',
                         title: '注册时间',
                         align: 'center',
                         sort: "true",
-                        minwidth: 160,
+                        width: 145,
                         templet: function(d) {
                             return d.agentTime.substring(0, 10);
                         }
                     },
-                    { field: 'agentLogin', title: '登录', width: 60, align: "center" },
+                    { field: 'agentLogin', title: '登录', width: 145, align: "center" },
+                    //uifix_104 End
                     { title: '操作', width: 280, templet: '#agentListBar', fixed: "right", align: "center" },
                 ]
             ]
@@ -111,33 +108,6 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                 layui.layer.full(index);
             })
         }
-        // $(".agentAdd_btn").click(function() {
-        //         agentAdd();
-        //     })
-        //     //添加一级代理
-        // function add1st(add1st) {
-        //     var index = layui.layer.open({
-        //         title: "添加一级代理",
-        //         type: 2,
-        //         content: "add1stagent.html",
-        //         success: function(layero, index) {
-
-        //             setTimeout(function() {
-        //                 layui.layer.tips('点击此处返回文章列表', '.layui-layer-setwin .layui-layer-close', {
-        //                     tips: 3
-        //                 });
-        //             }, 500)
-        //         }
-        //     })
-        //     layui.layer.full(index);
-        //     //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
-        //     $(window).on("resize", function() {
-        //         layui.layer.full(index);
-        //     })
-        // }
-        // $(".add1st").click(function() {
-        //     add1st();
-        // })
 
         //编辑文章
         function editAgent(edit) {
@@ -174,27 +144,6 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
         $(".agentedit_btn").click(function() {
                 agentedit();
             })
-            //批量删除
-            // $(".delAll_btn").click(function(){
-            //     var checkStatus = table.checkStatus('agentListTable'),
-            //         data = checkStatus.data,
-            //         agentId = [];
-            //     if(data.length > 0) {
-            //         for (var i in data) {
-            //             agentId.push(data[i].agentId);
-            //         }
-            //         layer.confirm('确定删除选中的文章？', {icon: 3, title: '提示信息'}, function (index) {
-            //             // $.get("删除文章接口",{
-            //             //     agentId : agentId  //将需要删除的agentId作为参数传入
-            //             // },function(data){
-            //             tableIns.reload();
-            //             layer.close(index);
-            //             // })
-            //         })
-            //     }else{
-            //         layer.msg("请选择需要删除的文章");
-            //     }
-            // })
 
         //上級查看
         table.on('tool(agentList)', function(obj) {
@@ -254,11 +203,3 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
 
     })
-    // blockquote.on('tool(add1st)', function(obj) {
-    //     var layEvent = obj.event,
-    //         data = obj.data;
-
-//     if (layEvent === 'add1st') { //添加
-//         add1st(data);
-//     }
-// });

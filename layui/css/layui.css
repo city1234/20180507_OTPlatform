@@ -3173,7 +3173,8 @@ input.layui-login::placeholder {
 
 .layui-table-view .layui-table td,
 .layui-table-view .layui-table th {
-    padding: 5px 0;
+    /* 20180615 Amanda */
+    padding: 3px 0;
     border-top: none;
     border-left: none;
 }
