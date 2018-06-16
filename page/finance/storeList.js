@@ -141,6 +141,21 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
             });
         } else if (layEvent === 'look') { //预览
             layer.alert("此功能需要前台展示，实际开发中传入对应的必要参数进行文章内容页面访问")
+        } else if (layEvent === 'chosebank') { //银行选择//uifix_addoutpage
+            var index = layui.layer.open({
+                title: "新易付支付银行对应表",
+                type: 2,
+                content: "storeStoreList.html",
+                success: function (layero, index) {
+                    var body = layui.layer.getChildFrame('body', index);
+                }
+            })
+            layui.layer.full(index);
+            window.sessionStorage.setItem("index", index);
+            //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
+            $(window).on("resize", function () {
+                layui.layer.full(window.sessionStorage.getItem("index"));
+            })
         }
     });
 

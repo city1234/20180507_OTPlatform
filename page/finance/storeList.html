@@ -19,7 +19,9 @@
         <div class="nav-4th">
             <a class="layui-btn layui-btn-gray" href="storeOrdersSearch.html">订单号查询</a>
             <a class="layui-btn layui-btn-gray active" href="storeList.html">商号列表</a>
+            <!--uifix_delete
             <a class="layui-btn layui-btn-gray" href="storeStoreList.html">银行商家对应表</a>
+            -->
             <a class="layui-btn layui-btn-gray" href="storeOrder.html">设定商号顺序</a>
             <a class="layui-btn layui-btn-gray" href="storeStopAmount.html">设定商号停用金额</a>
             <a class="layui-btn layui-btn-gray" href="storeTimesStatistics.html">金额次数统计</a>
@@ -84,10 +86,16 @@
             {{# if(d.storeListBar == "0"){ }}
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editStoreList.html">修改商号资讯</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="recover()">恢复</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a> {{# } else { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>
+            <!--uifix_add-->
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosebank" href="javascript:void(0);">银行选择</a> {{# } else { }}
+            <!--uifix_end-->
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editStoreList.html">修改商号资讯</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="suspend()">暂停</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>{{# }}}
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>
+            <!--uifix_add-->
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosebank" href="javascript:void(0);">银行选择</a>{{# }}}
+            <!--uifix_end-->
         </script>
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
