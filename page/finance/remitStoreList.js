@@ -58,16 +58,16 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
     });
 
     
-    //列表操作
+    //列表操作//uifix_121
     table.on('tool(remitStoreList)', function(obj) {
         var layEvent = obj.event,
             data = obj.data;
 
-        if (layEvent === 'chosecard') { //银行选择//uifix_addoutpage
-            var index = layui.layer.open({
-                title: "网易点卡点卡对应表",
+        if (layEvent === 'chosebank') { //银行选择//uifix_addoutpage
+                var index = layui.layer.open({
+                title: "新易付支付银行对应表",
                 type: 2,
-                content: "storePayCardList.html",
+                content: "storePayBankList.html",
                 success: function (layero, index) {
                     var body = layui.layer.getChildFrame('body', index);
                 }
