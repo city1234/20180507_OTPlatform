@@ -28,7 +28,9 @@
                     <a class="layui-btn layui-btn-normal">统计资料更新</a>
                 </div>
                 <div class="layui-inline">
-                    <p>最后更新时间: <span> 2018-05-07 01:42:09</span></p>
+                    <p>最后更新时间:
+                        <span> 2018-05-07 01:42:09</span>
+                    </p>
                 </div>
                 <div class="layui-inline  data-output">
                     <div class="layui-form-item">
@@ -40,7 +42,7 @@
                                 <option value="2">11111</option>
                                 <option value="3">VIP</option>
                                 <option value="5">TEST</option>
-                              </select>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -79,13 +81,16 @@
                     <td class="layui-blue">2504</td>
                     <td></td>
                     <td></td>
-                    <td><a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="payPlatform()">支付平台</a></td>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="payPlatform()">支付平台</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>A0031</td>
                     <td>洗码层1</td>
                     <td>
-                        2018-01-01 18:58:42<br> 2018-01-22 18:58:53
+                        2018-01-01 18:58:42
+                        <br> 2018-01-22 18:58:53
                     </td>
                     <td>1</td>
                     <td>1.0</td>
@@ -99,13 +104,16 @@
                         <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="Levels()">分层</a>
                         <a class="layui-btn layui-btn-xs layui-btn-border-normal " method="offset" onclick="reUndefine()">回归</a>
                     </td>
-                    <td><a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="payPlatform()">支付平台</a></td>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="payPlatform()">支付平台</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>A0033</td>
                     <td>BWT</td>
                     <td>
-                        2014-02-01 16:09:33<br> 2014-06-14 16:09:35
+                        2014-02-01 16:09:33
+                        <br> 2014-06-14 16:09:35
                     </td>
                     <td>497</td>
                     <td>10622842.35</td>
@@ -119,7 +127,9 @@
                         <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="Levels()">分层</a>
                         <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="reUndefine()">回归</a>
                     </td>
-                    <td><a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="payPlatform()">支付平台</a></td>
+                    <td>
+                        <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="payPlatform()">支付平台</a>
+                    </td>
                 </tr>
             </tbody>
 
@@ -129,32 +139,32 @@
                 <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1">
                     <span class="layui-laypage-count">共 3 条</span>
                     <span class="layui-laypage-limits">
-                            <select lay-ignore="">
-                                <option value="10" selected="">10 条/页</option>
-                                <option value="20">20 条/页</option>
-                                <option value="30">30 条/页</option>
-                                <option value="40">40 条/页</option>
-                                <option value="50">50 条/页</option>
-                                <option value="60">60 条/页</option>
-                                <option value="70">70 条/页</option>
-                                <option value="80">80 条/页</option>
-                                <option value="90">90 条/页</option>
-                            </select>
-                        </span>
+                        <select lay-ignore="">
+                            <option value="10" selected="">10 条/页</option>
+                            <option value="20">20 条/页</option>
+                            <option value="30">30 条/页</option>
+                            <option value="40">40 条/页</option>
+                            <option value="50">50 条/页</option>
+                            <option value="60">60 条/页</option>
+                            <option value="70">70 条/页</option>
+                            <option value="80">80 条/页</option>
+                            <option value="90">90 条/页</option>
+                        </select>
+                    </span>
                     <a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">
                         <i class="layui-icon"></i>
                     </a>
                     <span class="layui-laypage-curr">
-                            <em class="layui-laypage-em"></em>
-                            <em>1</em>
-                        </span>
+                        <em class="layui-laypage-em"></em>
+                        <em>1</em>
+                    </span>
                     <a href="javascript:;" class="layui-laypage-next" data-page="2">
                         <i class="layui-icon"></i>
                     </a>
                     <span class="layui-laypage-skip">到第
-                            <input type="text" min="1" value="1" class="layui-input">页
-                            <button type="button" class="layui-laypage-btn">确定</button>
-                        </span>
+                        <input type="text" min="1" value="1" class="layui-input">页
+                        <button type="button" class="layui-laypage-btn">确定</button>
+                    </span>
                 </div>
             </div>
         </div>
@@ -213,11 +223,11 @@
         layer.open({
             type: 1,
             closeBtn: 1,
-            btn: ['送交', '关闭'],
+            btn: ['查询', '关闭'],
             btnAlign: 'c',
             shadeClose: true,
-            title: '设定币别',
-            area: ['450px', '450px'],
+            title: '支付平台设置',
+            area: ['350px', '300px'],
             content: '<iframe src="hPayPlatform.html" width="100%" height="90%"></iframe>'
 
         });

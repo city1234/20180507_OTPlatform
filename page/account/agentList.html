@@ -96,15 +96,15 @@
         <!--审核状态-->
         <script type="text/html" id="agentAccount">
             {{# if( d.agentAccount == "0"){ }}
-            <span class="layui-blue">启用</span> {{# } else if( d.agentAccount == "1") { }}
-            <span class="layui-red">停用</span> {{# } else if( d.agentAccount == "2") { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用" checked=""> {{# } else if( d.agentAccount == "1") { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用"> {{# } else if( d.agentAccount == "2") { }}
             <span class="layui-red">冻结</span> {{# }}}
         </script>
 
         <script type="text/html" id="agentBet">
             {{# if( d.agentBet == "0"){ }}
-            <span class="layui-blue">启用</span> {{# } else { }}
-            <span class="layui-red">停用</span> {{# }}}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用" checked=""> {{# } else { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用"> {{# }}}
         </script>
 
         <!--操作-->

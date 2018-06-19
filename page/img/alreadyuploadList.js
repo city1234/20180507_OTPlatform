@@ -41,7 +41,8 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
                     field: 'alreadyCaseDisplay',
                     title: '状态',
                     width: 150,
-                    align: "center"
+                    align: "center",
+                    templet: "#alreadyuploadStatus"
                 },
                 { title: '操作', width: 300, templet: '#alreadyuploadListBar', fixed: "right", align: "center" },
             ]

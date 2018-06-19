@@ -67,7 +67,12 @@
 
         </blockquote>
         <table id="alreadyuploadList" lay-filter="alreadyuploadList"></table>
-
+        <!--状态-->
+        <script type="text/html" id="alreadyuploadStatus">
+            {{# if( d.alreadyuploadStatus == "0"){ }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="显示 | 不显示" checked=""> {{# } else if( d.alreadyuploadStatus == "1") { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="显示 | 不显示"> {{# }}}
+        </script>
         <!--操作-->
         <script type="text/html" id="alreadyuploadListBar">
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="newCase()">创建新案件</a>

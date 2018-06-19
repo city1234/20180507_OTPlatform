@@ -2622,10 +2622,16 @@ input.layui-login::placeholder {
     color: #c2c2c2;
 }
 
+
+/* uifix_153*/
+
 .layui-form-radio>i:hover,
 .layui-form-radioed>i {
-    color: #5FB878;
+    color: #1e9fff;
 }
+
+
+/* uifix_153*/
 
 .layui-radio-disbaled>i {
     color: #e2e2e2 !important;
@@ -3173,10 +3179,11 @@ input.layui-login::placeholder {
 
 .layui-table-view .layui-table td,
 .layui-table-view .layui-table th {
-    /* 20180615 Amanda */
+    /* uifix_102 */
     padding: 3px 0;
     border-top: none;
     border-left: none;
+    /* uifix_102 */
 }
 
 .layui-table-view .layui-table td {
@@ -4989,9 +4996,16 @@ td[data-field="rebateBet"] {
     color: #55acee;
 }
 
+
+/* uifix_117~119 */
+
 .userinfo .layui-input-block {
     margin-bottom: 15px !important;
+    margin-left: 130px;
 }
+
+
+/* uifix_117~119 */
 
 
 /* 20180508 4th nav Spec Setting -- Sharlene */
@@ -5018,8 +5032,7 @@ td[data-field="rebateBet"] {
     background: url("../../images/welcome.png") no-repeat top center;
 }
 
-Sharlene Liao,
-[09.05.18 12:50]
+
 /* 20180509 iframed table input Setting — Sharlene */
 
 .childrenBody #memberTable {
@@ -5331,62 +5344,74 @@ td[data-field="withdrawCheckContent"] {
     padding: 5px !important;
 }
 
-float: right;
-text-align: right;
-
-}
 .authorityShare .third-layer .layui-form-checkbox[lay-skin=primary] span {
     font-size: 13px;
 }
 
+
 /* 20180525 Sharlene */
+
 p.tag-content {
     display: inline-block;
     vertical-align: middle;
     padding: 5px 10px 0px 0px;
 }
 
+
 /* 20180526 subList Authority list Setting --Sharlene */
+
 ul.subSelect {
     margin-left: 28px;
 }
 
+
 /* 2018 loginHistory pages sorts setting when table switches --Sharlene */
+
 div[id*="dynamicTable"] .layui-table-box {
     height: 92%;
     /* fallback if needed */
-    
     height: calc(100% - 39px);
 }
 
+
 /* 20180526 blockquote select-form-item margin top setting --Sharlene */
+
 blockquote>.layui-form-item .layui-form-checkbox[lay-skin=primary] {
     margin-top: 0;
 }
+
 blockquote>.layui-form-item .layui-form-checkbox[lay-skin=primary] span {
     padding-right: 5px;
 }
 
+
 /* 20180530 width 100% Setting: Sharlene */
+
 table.width100 {
     width: 100%;
 }
+
 table.layui-table .layui-input-block,
 table.layui-table .layui-inline {
     margin-left: 0px;
     margin-bottom: 10px;
 }
+
 table.layui-table .layui-input-block:last-child,
 table.layui-table .layui-inline:last-child {
     margin-bottom: 0px;
 }
 
+
 /* 20180601 Table Cell Height Auto */
+
 .tCellHeightAuto td[data-field="remitStopAmount"] div.layui-table-cell {
     height: auto;
 }
 
+
 /* 20180604 取款稽核 內容td Setting */
+
 td[data-field="withdrawCheckContent"] {
     text-align: left;
     padding: 5px !important;

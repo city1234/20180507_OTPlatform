@@ -136,12 +136,8 @@
     <!--审核状态-->
     <script type="text/html" id="storeOrdersSearchStatus">
         {{# if( d.storeOrdersSearchStatus == "0"){ }}
-        <div class="layui-blue">
-            <span>成功</span>
-        </div> {{# } else if( d.storeOrdersSearchStatus == "1") { }}
-        <div class="layui-red">
-            <span>未处理</span>
-        </div> {{# }}}
+        <input type="checkbox" name="" lay-skin="switch" lay-text="成功 | 未处理" checked=""> {{# } else if( d.storeOrdersSearchStatus == "1") { }}
+        <input type="checkbox" name="" lay-skin="switch" lay-text="成功 | 未处理"> {{# }}}
     </script>
     <!--操作状态-->
     <script type="text/html" id="storeOrdersSearchStatus">

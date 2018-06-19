@@ -135,12 +135,8 @@
         <!--操作-->
         <script type="text/html" id="paymentAlready">
             {{# if(d.paymentAlready == "0"){ }}
-            <span class="layui-red yo-info">已取消
-                <i class="layui-icon info-icon"> &#xe60b;</i>
-            </span> {{# } else if(d.paymentAlready == "1") { }}
-            <span class="layui-blue yo-info">已出款
-                <i class="layui-icon info-icon"> &#xe60b;</i>
-            </span> {{# } else if(d.paymentAlready == "2") { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="已出款 | 已取消"> {{# } else if(d.paymentAlready == "1") { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="已出款 | 已取消" checked=""> {{# } else if(d.paymentAlready == "2") { }}
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="paymentAudit.html">稽核</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal">预备出款</a> {{# } else { }}
             <a class="layui-btn layui-btn-xs layui-btn-border-normal">自动出款</a>
