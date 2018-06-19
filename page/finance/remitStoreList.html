@@ -65,10 +65,12 @@
             {{# if(d.remitStoreListBar == "0"){ }}
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editRemitStoreList.html">修改商号资讯</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="recover()">恢复</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a> {{# } else { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="chosebank()" lay-event="chosebank" href="javascript:void(0);">银行选择</a> {{# } else { }}
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editRemitStoreList.html">修改商号资讯</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="suspend()">暂停</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>{{# }}}
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="chosebank()" lay-event="chosebank" href="javascript:void(0);">银行选择</a>{{# }}}
         </script>
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
@@ -120,6 +122,23 @@
             area: ['260px', '160px'],
             content: '是否确认修改？'
         });
+    }
+    // 全屏弹窗
+        function chosebank() {
+            var index = layui.layer.open({
+                title: "网易点卡点卡对应表",
+                type: 2,
+                content: "storePayCardList.html",
+                success: function (layero, index) {
+                    var body = layui.layer.getChildFrame('body', index);
+                }
+            })
+            layui.layer.full(index);
+            window.sessionStorage.setItem("index", index);
+            //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
+            $(window).on("resize", function () {
+                layui.layer.full(window.sessionStorage.getItem("index"));
+            })
     }
 </script>
 

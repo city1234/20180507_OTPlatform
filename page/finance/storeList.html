@@ -88,13 +88,22 @@
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="recover()">恢复</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>
             <!--uifix_add-->
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosebank" href="javascript:void(0);">银行选择</a> {{# } else { }}
+            {{# if( d.payuse == "0"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosebank" href="javascript:void(0);">银行选择</a>
+            {{# }  else if( d.payuse == "1"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosecard" href="javascript:void(0);">点卡选择</a>
+            {{# }}}
+            {{# } else { }}
             <!--uifix_end-->
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editStoreList.html">修改商号资讯</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="suspend()">暂停</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>
             <!--uifix_add-->
-            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosebank" href="javascript:void(0);">银行选择</a>{{# }}}
+            {{# if( d.payuse == "0"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosebank" href="javascript:void(0);">银行选择</a>
+            {{# }  else if( d.payuse == "1"){ }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" lay-event="chosecard" href="javascript:void(0);">点卡选择</a>
+            {{# }}}{{# }}}
             <!--uifix_end-->
         </script>
     </form>
