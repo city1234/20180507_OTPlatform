@@ -18,25 +18,25 @@
 <body class="childrenBody">
     <div class="searchAgent"><a class="layui-btn layui-btn-xs layui-btn-normal" href="memberPopNews.html"><i class="layui-icon">&#xe603;</i>  返回上頁</a></div>
     <div class="layui-form">
-        <table class="layui-table">
+        <table class="layui-table addMemberPopNotice">
             <tbody>
                 <tr>
-                    <th>标题</th>
+                    <th>标题：</th>
                     <td>
                         <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
                     </td>
                 </tr>
                 <tr>
-                    <th>首次弹框</td>
-                    <td>
-                        <div class="layui-input-inline">
-                            <input type="radio" name="titile1" lay-skin="primary" title="是">
-                            <input type="radio" name="titile1" lay-skin="primary" title="否">
-                        </div>
-                    </td>
+                    <th>首次弹框：</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="radio" name="titile1" lay-skin="primary" title="是">
+                                <input type="radio" name="titile1" lay-skin="primary" title="否">
+                            </div>
+                        </td>
                 </tr>
                 <tr>
-                    <th rowspan="2">代理</th>
+                    <th rowspan="2">代理：</th>
                     <td>
                         <div class="layui-input-inline">
                             <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
@@ -54,7 +54,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>作用层级</th>
+                    <th>作用层级：</th>
                     <td>
                         <div class="layui-block">
                             <input type="checkbox" name="" lay-skin="primary" title="全选">
@@ -74,7 +74,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>弹框宽度</th>
+                    <th>弹框宽度：</th>
                     <td>
                         <div class="layui-input-inline">
                             <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
@@ -82,7 +82,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>弹框高度</th>
+                    <th>弹框高度：</th>
                     <td>
                         <div class="layui-input-inline">
                             <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
@@ -90,27 +90,27 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>使用图片</td>
-                    <td>
-                        <div class="layui-input-inline">
-                            <input type="radio" name="ues1" lay-skin="primary" title="是">
-                            <input type="radio" name="ues1" lay-skin="primary" title="否">
-                        </div>
-                    </td>
+                    <th>使用图片：</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="radio" name="ues1" lay-skin="primary" title="是">
+                                <input type="radio" name="ues1" lay-skin="primary" title="否">
+                            </div>
+                        </td>
                 </tr>
                 <tr>
-                    <th>内容</td>
-                    <td>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </td>
+                    <th>内容：</td>
+                        <td>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="layui-center">
         <div class="layui-inline">
-            <button type="button" class="layui-btn layui-btn-normal"lay-submit="" lay-filter="systemParameter">预览</button>
-            <button type="button" class="layui-btn layui-btn-normal"lay-submit="" lay-filter="systemParameter">新增</button>
+            <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="systemParameter">预览</button>
+            <button type="button" class="layui-btn layui-btn-normal" lay-submit="" lay-filter="systemParameter">新增</button>
         </div>
     </div>
     <script src="../../layui/layui.js"></script>
@@ -119,7 +119,7 @@
         layui.use('form', function() {
             var form = layui.form;
             var $ = layui.jquery
-             
+
         });
     </script>
 </body>

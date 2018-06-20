@@ -128,7 +128,7 @@
             "agentSubMember": "<a href='searchMember.html' class='layui-blue'>12</a>",
             "agentLevel": "<a href='#' lay-event='Leveldetail' class='layui-blue'>5</a>",
             "agentRebate": "<a href='#' lay-event='Rebatedetail' class='layui-blue'>查看</a>",
-            "agentAccount": "2",
+            "agentAccount": "1",
             "agentBet": "0",
             "agentTime": "2018-03-18",
             "agentLogin": "<a href='#' class='layui-blue'>7</a>",

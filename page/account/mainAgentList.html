@@ -20,7 +20,9 @@
             <form class="layui-form">
                 <div class="layui-inline">
                     <div class="layui-input-inline">
-                        <input type="text" class="layui-input searchVal" placeholder="请输入查询内容" />
+                        <!-- uifix_131 -->
+                        <input type="text" class="layui-input searchVal" />
+                        <!--  -->
                     </div>
                     <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
                 </div>
@@ -33,22 +35,19 @@
         </blockquote>
 
         <table id="mainAgentList" lay-filter="mainAgentList"></table>
-        
+
         <!--审核状态-->
         <script type="text/html" id="mainAgentAccount">
             {{# if( d.mainAgentAccount == "0"){ }}
-            <span class="layui-blue">启用</span> 
-            {{# } else if( d.mainAgentAccount == "1") { }}
-            <span class="layui-red">停用</span> 
-            {{# } else if( d.mainAgentAccount == "2") { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用" checked=""> {{# } else if( d.mainAgentAccount == "1") { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用"> {{# } else if( d.mainAgentAccount == "2") { }}
             <span class="layui-red">冻结</span> {{# }}}
         </script>
 
         <script type="text/html" id="mainAgentBet">
             {{# if( d.mainAgentBet == "0"){ }}
-            <span class="layui-blue">启用</span>
-            {{# } else { }}
-            <span class="layui-red">停用</span> {{# }}}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用" checked=""> {{# } else { }}
+            <input type="checkbox" name="" lay-skin="switch" lay-text="启用 | 停用"> {{# }}}
         </script>
 
         <!--操作-->
