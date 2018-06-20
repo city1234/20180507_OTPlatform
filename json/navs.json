@@ -3,7 +3,8 @@
             "title": "维修页面",
             "icon": "&#xe670;",
             "href": "page/repair.html",
-            "spread": false
+            "spread": false,
+            "target": "_blank"
         }, {
             "title": "账号管理",
             "icon": "&#xe673;",
