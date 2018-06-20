@@ -1,5 +1,10 @@
 {
     "contentManagement": [{
+            "title": "维修页面",
+            "icon": "&#xe670;",
+            "href": "page/repair.html",
+            "spread": false
+        }, {
             "title": "账号管理",
             "icon": "&#xe673;",
             "href": "",
