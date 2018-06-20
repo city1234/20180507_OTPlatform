@@ -145,7 +145,22 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
             var index = layui.layer.open({
                 title: "新易付支付银行对应表",
                 type: 2,
-                content: "storeStoreList.html",
+                content: "storePayBankList.html",
+                success: function (layero, index) {
+                    var body = layui.layer.getChildFrame('body', index);
+                }
+            })
+            layui.layer.full(index);
+            window.sessionStorage.setItem("index", index);
+            //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
+            $(window).on("resize", function () {
+                layui.layer.full(window.sessionStorage.getItem("index"));
+            })
+        } else if (layEvent === 'chosecard') { //银行选择//uifix_addoutpage
+            var index = layui.layer.open({
+                title: "网易点卡点卡对应表",
+                type: 2,
+                content: "storePayCardList.html",
                 success: function (layero, index) {
                     var body = layui.layer.getChildFrame('body', index);
                 }

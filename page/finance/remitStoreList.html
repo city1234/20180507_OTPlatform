@@ -54,6 +54,11 @@
                         </div>
                     </div>
                 </div>
+                <!--uifix_121-->
+                <div class="layui-inline">
+                    <a href="addRemitStoreList.html" class="layui-btn layui-btn-normal">查询</a>
+                </div>
+                <!--uifix_end-->
                 <div class="layui-inline">
                     <a href="addRemitStoreList.html" class="layui-btn layui-btn-normal">添加商号</a>
                 </div>
@@ -65,10 +70,12 @@
             {{# if(d.remitStoreListBar == "0"){ }}
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editRemitStoreList.html">修改商号资讯</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="recover()">恢复</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a> {{# } else { }}
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="chosebank()" lay-event="chosebank" href="javascript:void(0);">银行选择</a> {{# } else { }}
             <a class="layui-btn layui-btn-xs layui-btn-border-normal" href="editRemitStoreList.html">修改商号资讯</a>
             <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="suspend()">暂停</a>
-            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>{{# }}}
+            <a class="layui-btn layui-btn-xs layui-btn-border-danger" method="offset" onclick="disabled()">停用</a>
+            <a class="layui-btn layui-btn-xs layui-btn-border-normal" method="offset" onclick="chosebank()" lay-event="chosebank" href="javascript:void(0);">银行选择</a>{{# }}}
         </script>
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
