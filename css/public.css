@@ -1206,18 +1206,19 @@ h2.method {
 .addImage tbody>tr>td:nth-child(odd),
 .addagentone1stmember tbody>tr>td:nth-child(odd) {
     background-color: #f2f2f2;
-    /* uifix_135 */
-    text-align: left;
-    width: 80px;
-    /* uifix_135 */
+    text-align: right;
+    width: 75px;
 }
 
-.addImage input {
-    width: 190px;
+.addImage tbody>tr>td {
+    text-align: left !important;
 }
 
-.addImage tbody>tr>td:last-child {
-    text-align: left;
+@media (max-width: 768px) {
+    .addagent tbody>tr>tdnth-child(odd),
+    .addagentone1stmember tbody>tr>tdnth-child(odd) {
+        padding: 9px 3px !important;
+    }
 }
 
 
@@ -1253,35 +1254,6 @@ h2.method {
 .addagentone1stmember .rebatebox .layui-input-block {
     margin-left: 0;
 }
-
-
-/* uifix_103 152 153*/
-
-.addagent input {
-    width: 190px;
-}
-
-.addagent table.layui-table .layui-input-block,
-table.layui-table .layui-inline {
-    margin-bottom: 0;
-}
-
-.addagent .layui-table td,
-.layui-table th {
-    padding: 8px 15px;
-}
-
-.editMemberPopNotice th,
-.addMemberPopNotice th {
-    text-align: right;
-}
-
-.addNews td:nth-child(2n+1) {
-    text-align: right;
-}
-
-
-/* uifix_103 152 153*/
 
 
 /* 2018/05/08 Amanda */
@@ -1356,9 +1328,6 @@ table.layui-table .layui-inline {
 .addmainagent span,
 .addhierarchy span {
     color: #ff5823;
-    /* uifix_105 */
-    padding: 0 3px;
-    /* uifix_105 */
 }
 
 .addtemplate .layui-layer-title,
@@ -1473,24 +1442,13 @@ table.layui-table .layui-inline {
 
 /* 2018/05/08 amanda */
 
-
-/* uifix_117~119 */
-
+.userinfo .layui-form-label,
 .backwater .layui-form-label,
 .addtemplate .layui-form-label {
     text-align: left;
     width: 85px;
     color: #343434;
 }
-
-.userinfo .layui-form-label {
-    text-align: right;
-    width: 100px;
-    color: #343434;
-}
-
-
-/* uifix_117~119 */
 
 
 /* 20180523 Sharlene */
@@ -1836,43 +1794,23 @@ span.mark {
 }
 
 
-/* 20180619 Amanda */
+/* 20180615 Amanda */
 
-.storeOrdersSearch .layui-form-switch,
 .alreadyupload .layui-form-switch {
     width: 55px;
 }
 
-.storeOrdersSearch .layui-form-switch em,
 .alreadyupload .layui-form-switch em {
     right: 16px;
 }
 
-.storeOrdersSearch .layui-form-onswitch i,
 .alreadyupload .layui-form-onswitch i {
     left: 44px;
 }
 
-.storeOrdersSearch .layui-form-onswitch em,
 .alreadyupload .layui-form-onswitch em {
     left: 12px;
 }
 
-.paymentRecordsBody .layui-form-switch {
-    width: 55px;
-}
 
-.paymentRecordsBody .layui-form-switch em {
-    right: 16px;
-}
-
-.paymentRecordsBody .layui-form-onswitch i {
-    left: 44px;
-}
-
-#hierarchyTable {
-    text-align: center;
-}
-
-
-/* 20180619 Amanda */
+/* 20180615 Amanda */

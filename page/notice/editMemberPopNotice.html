@@ -15,8 +15,7 @@
 </head>
 
 <body class="childrenBody">
-    <div class="addagent">
-        <!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
+    <div class="addagent"> <!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
         <div class="searchAgent">
             <a class="layui-btn layui-btn-xs layui-btn-normal" href="memberPopNews.html">
                 <i class="layui-icon"></i> 返回上頁</a>
@@ -31,7 +30,7 @@
                 <a class="layui-btn layui-btn-primary">繁体中文</a>
                 <a class="layui-btn layui-btn-primary">English</a>
             </div>
-            <table class="layui-table editMemberPopNotice">
+            <table class="layui-table">
                 <colgroup>
                     <col width="100">
                     <col>
@@ -43,7 +42,7 @@
                 </thead> -->
                 <tbody>
                     <tr>
-                        <td>首次弹窗：</td>
+                        <td>首次弹窗</td>
                         <td>
                             <div class="layui-inline">
                                 <input type="radio" name="agree" value="否" title="否" checked="">
@@ -52,7 +51,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>代理：</td>
+                        <td>代理</td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input">
@@ -68,11 +67,11 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>作用层级：</td>
+                        <td>作用层级</td>
                         <td>
                             <div class="layui-form-item" pane="">
                                 <div class="layui-block">
-                                    <input type="checkbox" name="like1[selectAll]" lay-skin="primary" title="全选">
+                                    <input type="checkbox" name="like1[selectAll]" lay-skin="primary" title="全选" >
                                 </div>
                                 <div class="layui-inline">
                                     <input type="checkbox" name="like1[None]" lay-skin="primary" title="未分层" checked="">
@@ -92,7 +91,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>弹窗宽度：</td>
+                        <td>弹窗宽度</td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input" placeholder="600">
@@ -100,7 +99,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>弹窗高度：</td>
+                        <td>弹窗高度</td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input" placeholder="480">
@@ -108,7 +107,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>首次弹窗：</td>
+                        <td>首次弹窗</td>
                         <td>
                             <div class="layui-inline">
                                 <input type="radio" name="agree" value="否" title="否">
@@ -117,7 +116,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>图片：</td>
+                        <td>图片</td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input">
@@ -144,7 +143,7 @@
         //Demo
         layui.use('form', function() {
             var form = layui.form,
-                upload = layui.upload;
+            upload = layui.upload;
 
             //监听提交
             form.on('submit(formDemo)', function(data) {
@@ -152,43 +151,42 @@
                 return false;
             });
         });
-
-        layui.use('upload', function() {
+        
+        layui.use('upload', function(){
             var $ = layui.jquery,
-                upload = layui.upload;
+            upload = layui.upload;
             //普通图片上传
             upload.render({
-                elem: '#uploadDoc',
-                url: '/upload/',
-                accept: 'file' //普通文件
-                    ,
-                done: function(res) {
-                    console.log(res)
+                elem: '#uploadDoc'
+                ,url: '/upload/'
+                ,accept: 'file' //普通文件
+                ,done: function(res){
+                console.log(res)
                 }
             });
             var uploadInst = upload.render({
-                elem: '#uploadImg',
-                url: '/upload/',
-                before: function(obj) {
-                    //预读本地文件示例，不支持ie8
-                    obj.preview(function(index, file, result) {
-                        $('#demo1').attr('src', result); //图片链接（base64）
-                    });
-                },
-                done: function(res) {
-                    //如果上传失败
-                    if (res.code > 0) {
-                        return layer.msg('上传失败');
-                    }
-                    //上传成功
-                },
-                error: function() {
-                    //演示失败状态，并实现重传
-                    var demoText = $('#demoText');
-                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
-                    demoText.find('.demo-reload').on('click', function() {
-                        uploadInst.upload();
-                    });
+                elem: '#uploadImg'
+                ,url: '/upload/'
+                ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                obj.preview(function(index, file, result){
+                    $('#demo1').attr('src', result); //图片链接（base64）
+                });
+                }
+                ,done: function(res){
+                //如果上传失败
+                if(res.code > 0){
+                    return layer.msg('上传失败');
+                }
+                //上传成功
+                }
+                ,error: function(){
+                //演示失败状态，并实现重传
+                var demoText = $('#demoText');
+                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                demoText.find('.demo-reload').on('click', function(){
+                    uploadInst.upload();
+                });
                 }
             });
         });

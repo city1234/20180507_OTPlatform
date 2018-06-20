@@ -28,7 +28,7 @@
                     <span class="title">标题：</span>
                     <div class="layui-inline">
                         <div class="layui-input-inline">
-                            <input type="text" class="layui-input searchVal" placeholder="">
+                            <input type="text" class="layui-input searchVal" placeholder="请输入搜索内容">
                         </div>
                         <a class="layui-btn search_btn layui-btn-normal" data-type="reload">搜索</a>
                     </div>
@@ -44,19 +44,19 @@
                         </button>
                     </div>
                     <div class="layui-inline">
-                        <button type="button" class="layui-btn layui-btn-normal">
+                    <button type="button" class="layui-btn layui-btn-normal">
                         未分组
                     </button>
                     </div>
                     <div class="layui-inline">
-                        <button type="button" class="layui-btn layui-btn-normal">
+                    <button type="button" class="layui-btn layui-btn-normal">
                         <i class="layui-icon">&#xe640;</i>优惠活动图
                     </button>
                     </div>
                 </div>
                 <div class="layui-block">
                     <div class="layui-inline">
-                        <span class="title">全选：</span>
+                    <span class="title">全选：</span>
                         <input type="checkbox" name="selectAll" id="selectAll" lay-filter="selectAll" lay-skin="primary" title="">
                         <button type="button" class="layui-btn layui-btn-normal">
                             移动至分组
@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </form>
-
+            
         </blockquote>
         <form class="layui-form">
             <ul class="layer-photos-demo" id="Images"></ul>
@@ -100,8 +100,8 @@
                 align: 'l',
                 shadeClose: true,
                 title: '新增图片',
-                area: ['550px', '450px'],
-                content: '<iframe src="addImages.html" width="100%" height="90%"></iframe>'
+                area: ['550px', '400px'],
+                content: '\<table class="layui-table addImage"><tbody><tr><td>标题：</td><td><div class="layui-inline"><input type="text" class="layui-input"></div></td></tr><tr><td>图片分组：</td><td><div class="layui-inline"><select name=""><option value="0">未分组</option><option value="1">优惠活动图</option></select></div></td></tr><tr><td>图片：</td><td><input type="file" title="选择图片"></td></tr><tr><td colspan="2">温馨提醒<br/>1、png图片最大可上传600KB;<br/>2、jpg图片最大可上传400KB;</td></tr></tbody></table>'
             });
         }
         // 编辑图片弹窗 

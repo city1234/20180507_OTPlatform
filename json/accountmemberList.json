@@ -137,7 +137,7 @@
             "memberSup": "<a href='#' lay-event='Supdetail' class='layui-blue'>查看</a>",
             "memberBalance": "<a href='#' lay-event='Balancedetail' class='layui-blue'>12000.01</a>",
             "memberRebate": "<a href='#' lay-event='Rebatedetail' class='layui-blue'>查看</a>",
-            "memberAccount": "1",
+            "memberAccount": "2",
             "memberBet": "0",
             "memberTime": "2018-03-18",
             "memberLogin": "<a href='#' class='layui-blue'>7</a>",
