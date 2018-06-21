@@ -42,7 +42,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">代理账号：</label>
                         <div class="layui-input-block">
-                            <input type="text" class="layui-input searchVal" placeholder="请输入代理账号" />
+                            <input type="text" class="layui-input searchVal" placeholder="" />
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">单号：</label>
                         <div class="layui-input-block">
-                            <input type="text" class="layui-input searchVal" placeholder="请输入查询单号" />
+                            <input type="text" class="layui-input searchVal" placeholder="" />
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                     <a class="layui-btn layui-btn-normal">查询</a>
                 </div>
                 <div class="layui-inline data-output">
-                    <a method="offser" onclick="dataOutput()"  class="layui-btn layui-btn-primary">数据导出</a>
+                    <a method="offser" onclick="dataOutput()" class="layui-btn layui-btn-primary">数据导出</a>
                     <div class="layui-inline">
                         <i class="layui-icon info-icon"> &#xe60b;</i>
                     </div>
@@ -123,19 +123,19 @@
         }
         // 数据导出
         function dataOutput() {
-                layer.open({
-                    type:1,
-                    // skin: 'layui-layer-nobg',
-                    closeBtn:1,
-                    btn: '确认',
-                    btnAlign: 'c',
-                    shadeClose:true,
-                    title:'数据导出',
-                    area:['280px','180px'],
-                    content:'确定导出数据？'
-                        
-                });
-            }
+            layer.open({
+                type: 1,
+                // skin: 'layui-layer-nobg',
+                closeBtn: 1,
+                btn: '确认',
+                btnAlign: 'c',
+                shadeClose: true,
+                title: '数据导出',
+                area: ['280px', '180px'],
+                content: '确定导出数据？'
+
+            });
+        }
     </script>
 </body>
 

@@ -3026,11 +3026,14 @@
         -webkit-transition: all .3s;
     }
     /* 20180502 Table th Setting: color --Sharlene */
+    /* uifix_147 */
     
     .layui-table th {
         color: #343434;
         background-color: #f2f2f2;
+        text-align: right;
     }
+    /* uifix_147 */
     
     .layui-table thead tr,
     .layui-table-click,

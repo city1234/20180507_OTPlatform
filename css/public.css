@@ -1255,10 +1255,15 @@ h2.method {
 }
 
 
-/* uifix_103 152 153*/
+/* uifix_103 148 152 153*/
 
+.agentDeposit input,
 .addagent input {
     width: 190px;
+}
+
+.agentDeposit td:nth-child(3n+1) {
+    text-align: right;
 }
 
 .addagent table.layui-table .layui-input-block,
@@ -1281,7 +1286,7 @@ table.layui-table .layui-inline {
 }
 
 
-/* uifix_103 152 153*/
+/* uifix_103 148 152 153*/
 
 
 /* 2018/05/08 Amanda */

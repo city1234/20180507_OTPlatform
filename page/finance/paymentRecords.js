@@ -71,12 +71,12 @@ layui.use(['form', 'layer', 'laydate', 'table', 'laytpl'], function() {
 
         if (layEvent === 'note') { //备注
             layer.confirm('<table class="layui-table"><colgroup><col width="180"><col width="300"></colgroup>' +
-                '<tbody><tr><th>会员账号</th><td>' +
+                '<tbody><tr><th>会员账号:</th><td>' +
                 obj.data.paymentMember +
-                '</td></tr><tr><th>出款日期</th><td>' +
+                '</td></tr><tr><th>出款日期:</th><td>' +
                 obj.data.paymentTime +
-                '<br>（当地时间）</td></tr><tr><th>操作时间</th><td>' +
-                '</td></tr><tr><th>前台备注</th><td><textarea class="layui-textarea" name="" id="" cols="20" rows="3"></textarea></td></tr><tr><th>后台备注</th><td><textarea class="layui-textarea" name="" id="" cols="20" rows="3"></textarea></td></tr></tbody></table>', {
+                '<br>（当地时间）</td></tr><tr><th>操作时间:</th><td>' +
+                '</td></tr><tr><th>前台备注:</th><td><textarea class="layui-textarea" name="" id="" cols="20" rows="3"></textarea></td></tr><tr><th>后台备注:</th><td><textarea class="layui-textarea" name="" id="" cols="20" rows="3"></textarea></td></tr></tbody></table>', {
                     title: '备注'
                 },
                 function(index) {

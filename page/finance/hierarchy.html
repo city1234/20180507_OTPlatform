@@ -78,7 +78,7 @@
                     <td>0.0</td>
                     <td>0</td>
                     <td>0.0</td>
-                    <td class="layui-blue">2504</td>
+                    <td class="layui-blue" method="offset" onclick="memberNumber()">2504</td>
                     <td></td>
                     <td></td>
                     <td>
@@ -174,6 +174,7 @@
 </body>
 <script>
     // 查询会员名单
+    // uifix_138
     function memberSearch() {
         layer.open({
             type: 1,
@@ -182,15 +183,16 @@
             btnAlign: 'c',
             shadeClose: true,
             title: '查询会员名单',
-            area: ['500px', '400px'],
+            area: ['500px', '340px'],
             content: '<form  class="layui-form">\
                         <div class="layui-form-item">\
-                                <p class="layui-red" style="line-height: 3;">以半角逗号,分隔多个帐号，最大支持300会员查询</p>\
-                                    <textarea name="desc" placeholder="请输入内容" class="layui-textarea" style="height: 200px"></textarea>\
+                            <textarea name="desc" placeholder="以半角逗号,分隔多个帐号，最大支持300会员查询" class="layui-textarea" style="height: 200px"></textarea>\
                         </div>\
                     </form>'
         });
     }
+    // 
+
     // 层级分层
     function Levels() {
         layer.open({
@@ -230,6 +232,19 @@
             area: ['350px', '300px'],
             content: '<iframe src="hPayPlatform.html" width="100%" height="90%"></iframe>'
 
+        });
+    }
+    // 会员人数 
+    function memberNumber() {
+        layer.open({
+            type: 1,
+            closeBtn: 1,
+            btn: ['查询', '关闭'],
+            btnAlign: 'c',
+            shadeClose: true,
+            title: '支付平台设置',
+            area: ['350px', '300px'],
+            content: '<iframe src="hPayMember.html" width="100%" height="90%"></iframe>'
         });
     }
 </script>

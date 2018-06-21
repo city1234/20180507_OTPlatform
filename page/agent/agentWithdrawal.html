@@ -19,7 +19,7 @@
         <blockquote class="layui-elem-quote quoteBox">
             <label>账号：</label>
             <div class="layui-input-inline">
-                <input type="text" class="layui-input searchVal" placeholder="请输入搜索内容">
+                <input type="text" class="layui-input searchVal" placeholder="">
             </div>
             <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
         </blockquote>
@@ -38,17 +38,17 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>账号</td>
+                        <td>账号:</td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>现金余额</td>
+                        <td>现金余额:</td>
                         <td>0.0</td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>出款</td>
+                        <td><span class="layui-red">*</span>出款:</td>
                         <td>
                             <div class="layui-inline">
                                 <input type="text" class="layui-input">
@@ -61,7 +61,7 @@
                         </td>
                     </tr>
                     <tr id="item1">
-                        <td>优惠稽核</td>
+                        <td>优惠稽核:</td>
                         <td>
                             <div class="layui-input-inline">
                                 <input type="checkbox" name="" lay-skin="primary" title="清除稽核点">
@@ -70,7 +70,7 @@
                         <td>
                     </tr>
                     <tr id="item2">
-                        <td>常态性稽核</td>
+                        <td>常态性稽核:</td>
                         <td>
                             <div class="layui-input-inline">
                                 <input type="checkbox" name="" lay-skin="primary" title="清除稽核点">
@@ -79,7 +79,7 @@
                         <td>
                     </tr>
                     <tr>
-                        <td>提出项目</td>
+                        <td>提出项目:</td>
                         <td>
                             <div class="layui-inline">
                                 <div class="layui-form-item">
@@ -106,7 +106,8 @@
         </div>
     </div>
     <style>
-        #item1,#item2{
+        #item1,
+        #item2 {
             display: none;
         }
     </style>
@@ -125,12 +126,12 @@
             });
             //下拉选项判断
             form.on('select(category)', function(data) {
-                category = data.value;  
-                categoryName = data.elem[data.elem.selectedIndex].text;  
+                category = data.value;
+                categoryName = data.elem[data.elem.selectedIndex].text;
                 form.render('select');
-                if (category==3) {
+                if (category == 3) {
                     $('#item1, #item2').show()
-                } else if (category==6) {
+                } else if (category == 6) {
                     $('#item1').hide()
                     $('#item2').show()
                 } else {
