@@ -924,12 +924,16 @@ h2.method {
     cursor: pointer;
 }
 
+
+/* uifix_155  预览删除及图片滑入灰色*/
+
 #Images li .imgBox {
-    position: relative;
+    /* position: relative; */
     font-size: 12px;
 }
 
-#Images li .imgPreview {
+
+/* #Images li .imgPreview {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -949,7 +953,10 @@ h2.method {
     padding: 6px 14px;
     border-radius: 4px;
     cursor: pointer;
-}
+} */
+
+
+/* uifix_155  预览删除*/
 
 #Images li .operatetop {
     display: block;
@@ -966,6 +973,9 @@ h2.method {
     background: #f4f5f9;
 }
 
+
+/* uifix_155 */
+
 #Images li .operatetop .check,
 #Images li .size {
     float: left;
@@ -975,8 +985,11 @@ h2.method {
     padding: 11px 0;
     width: 74%;
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
 }
+
+
+/* uifix_155 */
 
 #Images li .operatetop .check .layui-form-checkbox[lay-skin=primary] {
     width: 100%;
@@ -1878,6 +1891,9 @@ span.mark {
 #hierarchyTable {
     text-align: center;
 }
+
+
+/* 20180619 Amanda */
 
 
 /* 20180619 Amanda */

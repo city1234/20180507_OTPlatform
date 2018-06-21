@@ -15,23 +15,12 @@
 </head>
 
 <body class="childrenBody">
-    <form class="layui-form agentList">
-        <div id="hierarchyTable">
-            <div class="layui-inline">
-                <div class="layui-form-item">
-                    <label class="layui-form-label">模板选择：</label>
-                    <div class="layui-input-block">
-                        <select name="city" lay-verify="required">
-							<option value="0">预设</option>
-						</select>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <form class="layui-form">
+        <table id="hPayMember" lay-filter="hPayMember"></table>
     </form>
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="../../layui/layui.all.js"></script>
-
+    <script type="text/javascript" src="hPayMember.js"></script>
 </body>
 
 </html>

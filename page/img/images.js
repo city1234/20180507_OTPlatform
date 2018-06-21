@@ -19,7 +19,7 @@ layui.config({
                 var maxPage = imgNums * page < data.length ? imgNums * page : data.length;
                 setTimeout(function() {
                     for (var i = imgNums * (page - 1); i < maxPage; i++) {
-                        imgList.push('<li><div class="operatetop"><div class="check"><input type="checkbox" name="belle" lay-filter="choose" lay-skin="primary" title="' + data[i].alt + '"></div></div><div class="size"> ' + data[i].size + '</div><div class="imgBox"><img layer-src="../../' + data[i].src + '" src="../../' + data[i].thumb + '" alt="' + data[i].alt + '"><div class="imgPreview">预览</div></div><div class="operate"><i class="layui-icon img_del">&#xe640;<span>删除</span></i><i class="layui-icon file"  method="offset" onclick="editImage()">&#xe621;<span>编辑</span></i></div></li>');
+                        imgList.push('<li><div class="operatetop"><div class="check"><input type="checkbox" name="belle" lay-filter="choose" lay-skin="primary" title="' + data[i].alt + '"></div></div><div class="size"> ' + data[i].size + '</div><div class="imgBox"><img layer-src="../../' + data[i].src + '" src="../../' + data[i].thumb + '" alt="' + data[i].alt + '"></div><div class="operate"><i class="layui-icon img_del">&#xe640;<span>删除</span></i><i class="layui-icon file"  method="offset" onclick="editImage()">&#xe621;<span>编辑</span></i></div></li>');
                     }
                     next(imgList.join(''), page < (data.length / imgNums));
                     form.render();
