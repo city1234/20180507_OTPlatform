@@ -62,7 +62,11 @@ html #layuicss-layer {
 .layui-layer-ico {
     background: url(icon.png) no-repeat;
 }
-
+/* 20180628 Sharlene */
+.layui-layer-newsPops .layui-layer-ico {
+    background: url(icon01.png) no-repeat;
+}
+/* */
 .layui-layer-btn a,
 .layui-layer-dialog .layui-layer-ico,
 .layui-layer-setwin a {
