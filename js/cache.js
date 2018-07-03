@@ -309,3 +309,32 @@ layui.use(['form', 'jquery', "layer"], function() {
     })
 
 })
+
+//目录
+var siteDir = $('.site-dir');
+if (siteDir[0] && $(window).width() > 750) {
+    layer.ready(function() {
+        layer.open({
+            type: 1,
+            content: siteDir,
+            skin: 'layui-layer-dir',
+            area: 'auto',
+            maxHeight: $(window).height() - 300,
+            title: '目录'
+                //,closeBtn: false
+                ,
+            offset: 'r',
+            shade: false,
+            success: function(layero, index) {
+                layer.style(index, {
+                    marginLeft: -15
+                });
+            }
+        });
+    });
+    siteDir.find('li').on('click', function() {
+        var othis = $(this);
+        othis.find('a').addClass('layui-this');
+        othis.siblings().find('a').removeClass('layui-this');
+    });
+}

@@ -3031,7 +3031,7 @@
     .layui-table th {
         color: #343434;
         background-color: #f2f2f2;
-        text-align: right;
+        /* text-align: right; */
     }
     /* uifix_147 */
     
@@ -5303,25 +5303,3 @@
         font-size: 18px;
         margin-top: 1.5vw;
     }
-
-/* 20180628 Sharlene */
-.layui-layer.layui-layer-newsPops{
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-.layui-layer-newsPops .layui-layer-title{
-    background: #55ACEF;
-    color: #FFFFFF;
-    font-size: 16px;
-    border-bottom: none;
-}
-.layui-layer-newsPops .layui-layer-content{
-    border: 1px solid #55ACEF;
-    text-align: left;
-    font-size: 12px;
-    line-height: 1.6;
-    letter-spacing: 0.1em ;
-    color: #666666;
-    overflow: hidden;
-}

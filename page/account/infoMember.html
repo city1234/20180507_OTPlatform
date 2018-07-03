@@ -15,177 +15,182 @@
 </head>
 
 <body class="childrenBody">
-    <div class="addagent"> <!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
-        <div class="searchAgent">
-            <a class="layui-btn layui-btn-xs layui-btn-normal" href="../account/memberList.html">
-                <i class="layui-icon"></i> 返回上頁</a>
+    <form class="layui-form layui-row">
+        <div class="addagent">
+            <!-- 原本額外加的 class =addagentone1stmember editOnestagent -->
+            <div class="searchAgent">
+                <a class="layui-btn layui-btn-xs layui-btn-normal" href="../account/memberList.html">
+                    <i class="layui-icon"></i> 返回上頁</a>
+            </div>
+            <div class="layui-form">
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>项目</th>
+                            <th>内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>真实姓名：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="text" class="layui-input layui-disabled" disabled>
+                                </div>
+                                <a href="#" class="layui-blue">修改</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>中文昵称：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="text" class="layui-input layui-disabled" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>英文昵称：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="text" class="layui-input layui-disabled" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>生日：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="text" class="layui-input layui-disabled" id="birthday" placeholder="2018-01-01" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>国家：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="text" class="layui-input layui-disabled" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>身份证号：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="text" class="layui-input layui-disabled" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>护照号码：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="text" class="layui-input layui-disabled" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>手机：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="number" class="layui-input layui-disabled" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>QQ：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="number" class="layui-input layui-disabled" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <td>Email：</td>
+                        <td>
+                            <div class="layui-inline">
+                                <input type="email" class="layui-input layui-disabled" disabled>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>取款银行：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <select name="" class="layui-disabled" disabled>
+                                        <option value="0">请选择</option>
+                                        <option value="1">中国工商银行</option>
+                                        <option value="2">中国农业银行</option>
+                                        <option value="3">北京银行 </option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>省：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="text" class="layui-input layui-disabled" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>县/市：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="text" class="layui-input layui-disabled" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>取款账号：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="number" class="layui-input layui-disabled" disabled>
+                                </div>
+                                <a href="#" class="layui-blue">修改</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>取款密码：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="password" class="layui-input layui-disabled" placeholder="1234" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>备注：</td>
+                            <td>
+                                <div class="layui-input-block">
+                                    <textarea placeholder="请输入内容" class="layui-disabled layui-textarea" disabled></textarea>
+                                </div>
+                                <button class="layui-btn layui-btn-sm layui-btn-gray" lay-submit="" lay-filter="systemParameter">修改备注</button>
+                                <span>(备注限200个字以内)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>动态口令(操作人)：</td>
+                            <td>
+                                <div class="layui-inline">
+                                    <input type="text" class="layui-input layui-disabled" disabled>
+                                </div>
+                                <span>(未绑定请留空)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="magt10 layui-center button-wrap">
+                <div class="button">
+                    <div class="tool-tip">无此操作权限，请联系上级</div>
+                    <button class="layui-btn-gray layui-btn" lay-submit="" lay-filter="systemParameter">保存</button>
+                </div>
+            </div>
         </div>
-        <div class="layui-form">
-            <table class="layui-table">
-                <colgroup>
-                    <col width="150">
-                    <col>
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>项目</th>
-                        <th>内容</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>真实姓名：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input">
-                            </div>
-                            <a href="#" class="layui-blue">修改</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>中文昵称：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>英文昵称：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>生日：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input" id="birthday" placeholder="2018-01-01">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>国家：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>身份证号：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>护照号码：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>手机：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="number" class="layui-input">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                    <td>QQ：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="number" class="layui-input">
-                            </div>
-                        </td>
-                    </tr>
-                    <td>Email：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="email" class="layui-input">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>取款银行：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <select name="">
-                                    <option value="0">请选择</option>
-                                    <option value="1">中国工商银行</option>
-                                    <option value="2">中国农业银行</option>
-                                    <option value="3">北京银行 </option>
-                                </select>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>省：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>县/市：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>取款账号：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="number" class="layui-input">
-                            </div>
-                            <a href="#" class="layui-blue">修改</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>取款密码：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="password" class="layui-input" placeholder="1234">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>备注：</td>
-                        <td>
-                            <div class="layui-input-block">
-                                <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
-                            </div>
-                            <button class="layui-btn layui-btn-sm layui-btn-normal" lay-submit="" lay-filter="systemParameter">修改备注</button>
-                            <span>(备注限200个字以内)</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>动态口令(操作人)：</td>
-                        <td>
-                            <div class="layui-inline">
-                                <input type="text" class="layui-input">
-                            </div>
-                            <span>(未绑定请留空)</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="magt10 layui-center">
-            <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">保存</button>
-            <!-- <button class="layui-btn-normal layui-btn" lay-submit="" lay-filter="systemParameter">返回</button> -->
-        </div>
-    </div>
+    </form>
+
     <script type="text/javascript" src="../../layui/layui.js"></script>
     <script type="text/javascript" src="../../js/index.js"></script>
     <script>
