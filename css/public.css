@@ -1945,3 +1945,19 @@ span.mark {
 
 
 /* 20180703 infoMember button Setting --Amanda */
+
+
+/* 20180704 hPayMember button Setting --Amanda */
+
+.hPayMember table thead {
+    display: none;
+}
+
+.hPayMember .allSelect {
+    padding: 8px 22px;
+    border: 1px solid #eee;
+    border-bottom: 0;
+}
+
+
+/* 20180704 hPayMember button Setting --Amanda */
